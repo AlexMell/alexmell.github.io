@@ -29,7 +29,6 @@ function less2() {
  */
 function less3() {
     var obj = {};
-    obj = 'str';
     console.log(obj);
 }
 
@@ -48,7 +47,10 @@ function less5() {
     var numberQuestion = +prompt('Число?', '');
 
     numberQuestion = numberQuestion > 0 ? console.log('1') : numberQuestion < 0 ? console.log('-1') : numberQuestion === 0 ? console.log('0') : console.log('asd');
+
+    console.log(numberQuestion);
 }
+
 /*
  Lesson from learn.js.ru (if else)
  */
@@ -61,17 +63,19 @@ function less6() {
  Lesson from learn.js.ru (if else)
  */
 function less7() {
-    var login = '';
+    var login = 'Вася';
 
     if (login == 'Вася') {
-        var a = 'Привет';
+        less7 = 'Привет';
     } else if (login == 'Директор') {
-        var a = 'Здравствуйте';
+        less7 = 'Здравствуйте';
     } else if (login == '') {
-        var a = 'Нет логина';
+        less7 = 'Нет логина';
     } else {
-        var a = '';
+        less7 = '';
     }
+
+    console.log(less7);
 }
 
 /*
@@ -127,4 +131,3 @@ function less10() {
     console.log(null == "\n0\n");
     console.log(+null == +"\n0\n");
 }
-less10();
