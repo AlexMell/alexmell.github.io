@@ -2,96 +2,129 @@
 /*
  First lesson learn.js.ru (Variables)
  */
-var admin, name;
-name = 'vasiliy';
-admin = name;
+function less1() {
+    var admin, name;
+    name = 'vasiliy';
+    admin = name;
+    console.log('name');
+    console.log(admin);
+}
+
 /*
  Second lesson learn.js.ru (Variables)
  */
-var planet = 'Earth';
-var ourPlanetEarth = 'Earth';
-var person = 'Petya';
-var userName = 'Petya';
+function less2() {
+    var planet = 'Earth',
+        ourPlanetEarth = 'Earth',
+        person = 'Petya',
+        userName = 'Petya';
+    console.log(planet);
+    console.log(ourPlanetEarth);
+    console.log(person);
+    console.log(userName);
+}
+
 /*
  Types dates JS (Sorax)
  */
-var obj = {};
-obj = 'str';
-/*
- Lesson from learn.js.ru (if else)
- */
-function less1() {
-    var question = prompt('Какое оффициальное название JavaScript?', '');
-    question = question === 'EcmaScript' ? console.log('Верно!') : console.log('Не знаешь ? Дебил!');
+function less3() {
+    var obj = {};
+    obj = 'str';
+    console.log(obj);
 }
-/*
- Lesson from learn.js.ru (if else)
- */
-function less2() {
-    var numberQuestion = +prompt('Число?', '');
-    numberQuestion = numberQuestion > 0 ? console.log('1') : numberQuestion < 0 ? console.log('-1') : numberQuestion === 0 ? console.log('0') : console.log('asd');
-}
-/*
- Lesson from learn.js.ru (if else)
- */
-function less3() {}
-// var result,
-// result = a + b < 4 ? 'Мало' : 'Много';
 
 /*
  Lesson from learn.js.ru (if else)
  */
 function less4() {
-    var login = '';
-    if (login == 'Вася') {
-        message = 'Привет';
-    } else if (login == 'Директор') {
-        message = 'Здравствуйте';
-    } else if (login == '') {
-        message = 'Нет логина';
-    } else {
-        message = '';
-    }
+    var question = prompt('Какое оффициальное название JavaScript?', '');
+    question = question === 'EcmaScript' ? console.log('Верно!') : console.log('Не знаешь ? Дебил!');
 }
-/*`
+
+/*
  Lesson from learn.js.ru (if else)
  */
 function less5() {
-    login == 'Вася' ? message = 'Привет' : login == 'Директор' ? message = 'Здравсвувйте' : login == '' ? message = 'Нет логина' : message = '';
-    var message = login == 'Вася' ? 'Привет' : login == 'директор' ? 'Здравсуйте' : login == '' ? 'Нет логина' : '';
+    var numberQuestion = +prompt('Число?', '');
+
+    numberQuestion = numberQuestion > 0 ? console.log('1') : numberQuestion < 0 ? console.log('-1') : numberQuestion === 0 ? console.log('0') : console.log('asd');
 }
 /*
-    Lesson from learn.js.ru (Type compare primitive);
+ Lesson from learn.js.ru (if else)
  */
-// var a = +'123';
-// var a = +NaN;
-// var a = +'undefined';
-// var a = +null;
-var a = +true;
-console.log(a);
-console.log(typeof a);
+function less6() {
+    var result = a + b < 4 ? 'Мало' : 'Много';
+    console.log(result);
+}
 
 /*
-    Lesson from learn.js.ru (Type compare primitive);
+ Lesson from learn.js.ru (if else)
  */
+function less7() {
+    var login = '';
 
-console.log("" - 1 + 0);
-console.log("" + 1 + 0);
-console.log("2" * "3");
-console.log(4 + 5 + "px");
-console.log(6 / "3");
-console.log("$" + 4 + 5);
-console.log(true + false);
-console.log("4" - 2);
-console.log("4px" - 2);
-console.log(7 / 0);
-console.log("  -9\n" + 5);
-console.log("  -9\n" - 5);
-console.log(5 && 2);
-console.log(2 && 5);
-console.log(5 || 0);
-console.log(0 || 5);
-console.log(null + 1);
-console.log(undefined + 1);
-console.log(null == "\n0\n");
-console.log(+null == +"\n0\n");
+    if (login == 'Вася') {
+        var a = 'Привет';
+    } else if (login == 'Директор') {
+        var a = 'Здравствуйте';
+    } else if (login == '') {
+        var a = 'Нет логина';
+    } else {
+        var a = '';
+    }
+}
+
+/*
+ Lesson from learn.js.ru (if else)
+ */
+function less8() {
+    var login = 'директор';
+
+    var message = login == 'Вася' ? 'Привет' : login == 'директор' ? 'Здравсуйте' : login == '' ? 'Нет логина' : '';
+
+    console.log(message);
+}
+
+/*
+ Lesson from learn.js.ru (Type compare primitive);
+ */
+function less9() {
+    var a1 = +'123';
+    var a2 = +NaN;
+    var a3 = +'undefined';
+    var a4 = +null;
+    var a5 = +true;
+
+    console.log(a1, typeof a1);
+    console.log(a2, typeof a2);
+    console.log(a3, typeof a3);
+    console.log(a4, typeof a4);
+    console.log(a5, typeof a5);
+}
+
+/*
+ Lesson from learn.js.ru (Type compare primitive);
+ */
+function less10() {
+    console.log("" - 1);
+    console.log("" + 1 + 0);
+    console.log("2" * "3");
+    console.log(4 + 5 + "px");
+    console.log(6 / "3");
+    console.log("$" + 4 + 5);
+    console.log(true + false);
+    console.log("4" - 2);
+    console.log("4px" - 2);
+    console.log(7 / 0);
+    console.log("  -9\n" + 5);
+    console.log("  -9\n" - 5);
+    console.log(5 && 2);
+    console.log(2 && 5);
+    console.log(5 || 0);
+    console.log(0 || 5);
+    console.log(null + 1);
+    console.log(undefined + 1);
+    console.log(null == "\n0\n");
+    console.log(+null == +"\n0\n");
+}
+less10();
