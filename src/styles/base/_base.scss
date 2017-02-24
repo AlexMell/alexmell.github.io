@@ -5,12 +5,16 @@ body {
     min-width: $minWidth;
     font: 400 16px/1.1 $family;
     -webkit-text-size-adjust: 100%;
+    color: $colorText;
     @include bp(980) {
         font: 400 24px/1.1 $family;
     }
     @include bp(640) {
         font: 400 12px/1.1 $family;
     }
+}
+main {
+    flex: 1;
 }
 a {
     color: $colorLink;
