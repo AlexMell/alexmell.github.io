@@ -1,4 +1,12 @@
 .footer {
     background: #37474f;
-    padding: 25px 20px;
+    padding: 30px 20px;
+    .soc-net {
+        &__label {
+            color: #fff;
+        }
+        &__mail-link {
+            color: #fff;
+        }
+    }
 }

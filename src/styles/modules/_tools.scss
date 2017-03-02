@@ -1,0 +1,51 @@
+.tools {
+    &__heading {
+        letter-spacing: -1px;
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: 80px;
+        font-weight: normal;
+        color: #757575;
+    }
+    &__grid {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    &__division {
+        margin-bottom: 50px;
+    }
+    &__title {
+        display: inline-block;
+        font-size: 1.5em;
+        padding-bottom: 3px;
+        padding-left: 25px;
+        margin-bottom: 20px;
+        color: #010101;
+        border-bottom: 1px solid #000;
+    }
+    &__item {
+        position: relative;
+        padding-left: 25px;
+        margin: 0 0 17px;
+    }
+    &__frame {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 43%;
+        transform: translateY(-50%);
+    }
+    &__link {
+        font-size: 1em;
+    }
+    &__lang {
+        font-size: .6em;
+    }
+}
+
+#grid[data-columns]::before {
+    content: '3 .column.size-1of3';
+}
+.column { float: left; }
+.size-1of3 { width: 33.333%; }

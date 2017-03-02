@@ -39,4 +39,11 @@
             transform: rotate(45deg) scaleX(1.2);
         }
     }
+    &--tools {
+        background-color: #ccc;
+        &:before,
+        &:after {
+            background: #ccc;
+        }
+    }
 }

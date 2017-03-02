@@ -1,4 +1,53 @@
 .header {
-    background: #fff;
+    background: rgb(63,81,181);
     padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .author {
+        text-align: center;
+        color: #fff;
+        &__name {
+            display: block;
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 3px;
+            color: #fff;
+        }
+        &__job {
+            font-size: 0.8em;
+            display: block;
+        }
+        &__job-link {
+            color: #fff;
+            border-bottom: 1px dotted #fff;
+            &:hover {
+                border: none;
+            }
+        }
+    }
+    .soc-net {
+        &__list {
+            display: flex;
+            align-items: center;
+            margin: 0 0 8px;
+        }
+        &__item {
+
+        }
+        &__link {
+            display:  block;
+            font-size: 2em;
+            color: #fff;
+            margin: 0 15px 0 0;
+        }
+        &__mail {
+            text-align: center;
+        }
+        &__mail-link {
+            display: block;
+            color: #fff;
+        }
+    }
 }
+
