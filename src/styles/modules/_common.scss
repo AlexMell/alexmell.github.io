@@ -9,3 +9,16 @@
         background: #3d5100;
     }
 }
+
+.btn {
+    display: block;
+    padding: 10px 25px;
+    background: rgb(63,81,181);
+    color: #fff;
+    border-radius: 5px;
+    @include anim($dur: .1s);
+    &:hover {
+        color: #fff;
+        background: rgb(255,64,129);
+    }
+}

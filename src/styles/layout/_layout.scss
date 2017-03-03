@@ -11,4 +11,7 @@
 }
 .main {
     padding: 40px 20px;
+    @include bp(640){
+        padding: 20px 10px;
+    }
 }

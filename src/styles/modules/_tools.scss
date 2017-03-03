@@ -42,10 +42,60 @@
     &__lang {
         font-size: .6em;
     }
+    @include bp(980) {
+        &__heading {
+            margin-bottom: 15px;
+            font-size: 2.5em;
+        }
+        &__grid {
+            max-width: 100%;
+        }
+        &__division {
+            margin-bottom: 25px;
+        }
+        &__item {
+            padding-left: 35px;
+        }
+        &__title {
+            font-size: 1.2em;
+        }
+        &__frame {
+            top: 35%;
+        }
+    }
+    @include bp(640){
+        &__item {
+            padding: 0;
+            margin-bottom: 14px;
+        }
+        &__frame {
+            display: none;
+        }
+
+    }
 }
 
+// Grid
 #grid[data-columns]::before {
     content: '3 .column.size-1of3';
 }
-.column { float: left; }
-.size-1of3 { width: 33.333%; }
+.column {
+    float: left;
+}
+.size-1of3 {
+    width: 33.333%;
+}
+
+@include bp(980){
+    .size-1of3 {
+        width: 48.333%;
+    }
+}
+@include bp(640){
+    .column {
+        float: none;
+    }
+    .size-1of3 {
+        width: 100%;
+    }
+}

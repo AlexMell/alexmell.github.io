@@ -1,5 +1,6 @@
 .header {
     background: rgb(63,81,181);
+    color: #fff;
     padding: 25px 20px;
     display: flex;
     align-items: center;
@@ -30,10 +31,8 @@
         &__list {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin: 0 0 8px;
-        }
-        &__item {
-
         }
         &__link {
             display:  block;
@@ -47,6 +46,46 @@
         &__mail-link {
             display: block;
             color: #fff;
+        }
+    }
+    @include bp(980){
+        .author {
+            &__name {
+                font-size: 1em;
+            }
+            &__job {
+                font-size: .6em;
+            }
+        }
+        .soc-net {
+            &__mail-link {
+                font-size: 0.7em;
+            }
+            &__link {
+                font-size: 1em;
+            }
+        }
+    }
+    @include bp(640){
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+        .author {
+            margin: 0 0 15px;
+            &__name {
+                font-size: 2em;
+            }
+            &__job {
+                font-size: 1.2em;
+            }
+        }
+        .soc-net {
+            &__mail-link {
+                font-size: 1.2em;
+            }
+            &__link {
+                font-size: 2em;
+            }
         }
     }
 }

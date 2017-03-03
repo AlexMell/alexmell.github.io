@@ -34,7 +34,7 @@ var person = new Person();
 // Вид всех людей
 var PeopleView = Backbone.View.extend({
     tagName: 'ul',
-    className: 'suki-list',
+    className: 'user__list',
     initialize: function () {
     },
     render: function () {
@@ -51,11 +51,11 @@ var PeopleView = Backbone.View.extend({
 // Вид одного человека
 var PersonView = Backbone.View.extend({
     tagName: 'li',
-    className: 'suki-list__item',
+    className: 'user__item',
     template: template('person'),
     initialize: function () {
         this.render();
-        $('.tab-one').append(peopleView.el);
+        $('.js-tab-all').append(peopleView.el);
     },
     render: function () {
         this.$el.html( this.template(this.model) );

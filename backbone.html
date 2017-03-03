@@ -10,32 +10,36 @@
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
     <link rel="stylesheet" href="dist/styles/styles.min.css">
 </head>
-<body>
-<header></header>
-<main>
-    <div class="btns">
-        <a class="btn js-all" href="#">all users</a>
-        <a class="btn js-list" href="#">list users</a>
-    </div>
-    <div class="tab-content">
-        <div class="tab-one js-tab-all"></div>
-        <div class="tab-two js-tab-list">
-            <div>
-                Mister
-                <span class="st-mr"></span>
-            </div>
-            <div>
-                Missis
-                <span class="st-ms"></span>
-            </div>
-            <div>
-                Miriesessrse
-                <span class="st-mrs"></span>
+<body class="body-backbone">
+<div class="wrapper">
+    <header class="header">Header</header>
+    <main class="main">
+        <div class="param">
+            <div class="param__list">
+                <a class="btn param__name js-all" href="#">all users</a>
+                <a class="btn param__name js-list" href="#">list users</a>
             </div>
         </div>
-    </div>
-</main>
-<footer></footer>
+        <div class="tab-content">
+            <div class="tab-users js-tab-all"></div>
+            <div class="tab-quantity js-tab-list">
+                <div>
+                    Mister
+                    <span class="st-mr"></span>
+                </div>
+                <div>
+                    Missis
+                    <span class="st-ms"></span>
+                </div>
+                <div>
+                    Miriesessrse
+                    <span class="st-mrs"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">Footer</footer>
+</div>
 <script type="text/template" id="person">
     <div class="user">
         <div class="user__img">
