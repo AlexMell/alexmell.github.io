@@ -254,8 +254,7 @@ h4 {
 
 p {
   font-size: 1.125em;
-  line-height: 1.75;
-  margin-bottom: 25px; }
+  line-height: 1.75; }
 
 .header {
   background: #3f51b5;
@@ -618,14 +617,22 @@ p {
   display: inline-block;
   padding: 15px 25px; }
 
+.body-vue [id^="app-"] {
+  margin: 20px 0; }
+
 .row {
   display: block;
   width: 100%;
+  background: #ccc;
   padding: 40px 50px; }
   .row__burger {
     background: #002931; }
   .row__arrow {
     background: #3d5100; }
+  .row__vue {
+    background: #f2f2f2;
+    margin: 0 0 10px;
+    color: #424242; }
 
 .btn {
   display: block;

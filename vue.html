@@ -14,11 +14,112 @@
 <div class="wrapper">
     <header class="header">Header</header>
     <main class="main">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi ducimus, ex fugit iste, iusto laudantium nihil officiis perferendis quo, ratione recusandae rem suscipit veritatis.
+        <div class="row row__vue">
+            <div id="app">
+                <label for="change_title">Изменить текст</label>
+                    <input type="text" id="change_title" style="display: block; width: 100%; margin: 0 0 5px;" v-on:input="changeTitle">
+                <span>{{ message }}</span>
+                 <span>{{ message }}</span>
+                <span>{{ sayHello() }}</span>
+                <div v-html="someBlock"></div>
+            </div>
+        </div>
+
+        <div class="row row__vue">
+            <div id="app-2">
+                <span class="" v-bind:title="message">
+                        Подержи курсор надо мной пару секунд, чтобы увидеть динамически связанное значение title!
+                </span>
+            </div>
+        </div>
+
+        <div class="row row__vue">
+            <div id="app-3">
+                <span v-if="seen">Пропадаем</span>
+            </div>
+        </div>
+
+        <div class="row row__vue">
+            <div id="app-4">
+                <ul>
+                    <li v-for="todo in todos">
+                        {{ todo.text }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row row__vue">
+            <div id="app-5">
+                <p>{{ message }}</p>
+                <a v-bind:href="link" target="_blank">Link to alexmell github</a>
+                <button v-on:click="reverseMessage">Обратить порядок букв в сообщении</button>
+            </div>
+        </div>
+        <div class="row row__vue">
+            <div id="app-6">
+                <p>{{ message }}</p>
+                <input type="text" v-model="message">
+            </div>
+        </div>
+        <div class="row row__vue">
+            <div id="exercise">
+                <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+                <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+                <!-- 2) Output your age, multiplied by 3 -->
+                <p>Multiply age: {{ multiplyAge() }}</p>
+                <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+                <p>Random: {{ randomAge() }}</p>
+                <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+                <br>
+                <div>
+                    <img v-bind:src="imgLink" style="width:100px; height:100px">
+                </div>
+                <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+                <br>
+                <div>
+                    <input type="text" v-bind:value="name">
+                </div>
+            </div>
+        </div>
+
+        <div class="row row__vue">
+            <div id="app-7">
+                <button type="submit" v-on:click="increase(2)">Click for add to counter + 2</button>
+                <button type="submit" v-on:click="counter++">Click for add to counter</button>
+                <button type="submit" v-on:click="counter--">Click for less to counter</button>
+                <span>{{ counter * 2 > 10 ? 'Its more than 10' : 'Its less then 10' }}</span>
+                <span>{{ counter }}</span>
+                <span v-on:mousemove="updateCoordinates" style="display: block; margin: 10px 0;">Coordinates: {{ x }} {{ y }}
+                - <span v-on:mousemove.stop>stop event is here</span>
+                </span>
+                <input type="text" v-on:keyup.enter.space="alertMe">
+            </div>
+        </div>
+        <div class="row row__vue">
+            <div id="exercise-2">
+                <!-- 1) Show an alert when the Button gets clicked -->
+                <div>
+                    <button v-on:click="showAlert" type="submit">Show Alert</button>
+                </div>
+                <br>
+                <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
+                <div>
+                    <input type="text" v-on:keydown="storeValue">
+                    <p>{{ value }}</p>
+                </div>
+                <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
+                <div>
+                    <input type="text" v-on:keydown.enter="storeValue">
+                    <p>{{ value }}</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">Footer</footer>
 </div>
 <script src="src/plugins/jquery-3.1.1.js"></script>
-<script src="dist/scripts/vue/vue.min.js"></script>
+<script src="src/plugins/vue.js"></script>
+<script src="dist/scripts/learn-vue/learn-vue.min.js"></script>
 </body>
 </html>

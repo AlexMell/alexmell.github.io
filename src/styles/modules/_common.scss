@@ -1,6 +1,7 @@
 .row {
     display: block;
     width: 100%;
+    background: #ccc;
     padding: 40px 50px;
     &__burger {
         background: #002931;
@@ -8,8 +9,12 @@
     &__arrow {
         background: #3d5100;
     }
+    &__vue {
+        background: #f2f2f2;
+        margin: 0 0 10px;
+        color: #424242;
+    }
 }
-
 .btn {
     display: block;
     padding: 10px 25px;
