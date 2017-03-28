@@ -1,3 +1,5 @@
+'use strict';
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -113,6 +115,75 @@ var exercise2 = new Vue({
         },
         storeValue: function (event) {
             this.value = event.target.value
+        }
+    }
+});
+
+var exercise3 = new Vue({
+    el: '#exercise-3',
+    data: {
+        value: 0
+    },
+    computed: {
+        output: function () {
+            return this.value >= 35 ? 'done!' : 'not there yet'
         },
+    },
+    methods: {
+        result: function () {
+            return this.value >= 35 ? 'done!' : 'not there yet'
+        }
+    },
+    watch: {
+        value: function (value) {
+            let vm = this;
+            setTimeout(function () {
+                vm.value = 0
+            }, 5000)
+        },
+    },
+});
+
+var app8 = new Vue({
+    el: '#app-8',
+    data: {
+        attachRed: false,
+        color: 'green'
+    },
+    divClass: function (){
+        return {
+            red: this.attachRed,
+            blue: !this.attachRed
+        }
+    }
+});
+
+var app9 = new Vue({
+    el: '#app-9',
+    data: {
+        color: 'gray',
+        width: 100
+    },
+    computed: {
+        myStyle: function () {
+            return {
+                backgroundColor: this.color,
+                width: this.width + 'px'
+            };
+        }
+    }
+});
+
+var exercise4 = new Vue({
+    el: '#exercise-4',
+    data: {
+        class: 'highlight-vue'
+    },
+    computed: {
+        startEffect: function () {
+            return {
+                class: this.class
+            }
+        }
     }
 });
