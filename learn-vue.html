@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Try Vue</title>
     <meta name="description" content="">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    <link rel="stylesheet" href="dist/styles/styles.min.css">
+    <link rel="shortcut icon" type="image/png" href="../../../favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="../../../favicon.ico"/>
+    <link rel="stylesheet" href="../../../dist/styles/styles.min.css">
 </head>
 <body class="body-vue">
 <div class="wrapper">
@@ -17,10 +17,8 @@
         <div class="row row__vue">
             <div id="app">
                 <label for="change_title">Изменить текст</label>
-                    <input type="text" id="change_title" style="display: block; width: 100%; margin: 0 0 5px;" v-on:input="changeTitle">
-                <span>{{ message }}</span>
-                 <span>{{ message }}</span>
-                <span>{{ sayHello() }}</span>
+                <input type="text" id="change_title" style="display: block; width: 100%; margin: 0 0 5px;" v-on:input="changeTitle">
+                <span>{{ message }}</span> <span>{{ message }}</span> <span>{{ sayHello() }}</span>
                 <div v-html="someBlock"></div>
             </div>
         </div>
@@ -74,8 +72,7 @@
                 <div>
                     <img v-bind:src="imgLink" style="width:100px; height:100px">
                 </div>
-                <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
-                <br>
+                <!-- 5) Pre-Populate this input with your name (set the "value" attribute) --><br>
                 <div>
                     <input type="text" v-bind:value="name">
                 </div>
@@ -90,8 +87,7 @@
                 <span>{{ counter }}</span>
                 <span v-on:mousemove="updateCoordinates" style="display: block; margin: 10px 0;">Coordinates: {{ x }} {{ y }}
                 - <span v-on:mousemove.stop>stop event is here</span>
-                </span>
-                <input type="text" v-on:keyup.enter.space="alertMe">
+                </span> <input type="text" v-on:keyup.enter.space="alertMe">
             </div>
         </div>
         <div class="row row__vue">
@@ -142,8 +138,7 @@
                 <div class="demo-square" :style="{backgroundColor: color}"></div>
                 <div class="demo-square" :style="myStyle"></div>
                 <div class="demo-square" :style="[myStyle, {height: width + 'px'}]"></div>
-                <input type="text" v-model="color">
-                <input type="text" v-model="width">
+                <input type="text" v-model="color"> <input type="text" v-model="width">
             </div>
         </div>
         <div class="row row__vue">
@@ -162,8 +157,7 @@
                 </div>
                 <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
                 <div>
-                    <input type="text">
-                    <input type="text">
+                    <input type="text"> <input type="text">
                     <div></div>
                 </div>
                 <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
@@ -173,8 +167,8 @@
                 </div>
                 <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
                 <!--<div>-->
-                    <!--<button v-on:click="startProgress">Start Progress</button>-->
-                    <!--<div></div>-->
+                <!--<button v-on:click="startProgress">Start Progress</button>-->
+                <!--<div></div>-->
                 <!--</div>-->
             </div>
         </div>

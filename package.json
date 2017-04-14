@@ -9,6 +9,7 @@
     "author": "AlexMell",
     "devDependencies": {
         "browser-sync": "2.6.5",
+//        "gulp-pug": "*",
         "gulp": "3.9.1",
         "gulp-autoprefixer": "2.1.0",
         "gulp-babel": "5.1.0",

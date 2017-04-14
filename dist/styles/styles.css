@@ -428,6 +428,7 @@ p {
 
 .burger {
   position: relative;
+  display: block;
   width: 40px;
   height: 30px;
   padding: 13px 0;
@@ -830,6 +831,33 @@ label:first-child {
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg); } }
 
+.menu-holder {
+  position: relative; }
+
+.circle-label .menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: .5s box-shadow ease-in-out, .5s border-radius ease-in-out;
+          transition: .5s box-shadow ease-in-out, .5s border-radius ease-in-out;
+  box-shadow: 0 0 0 0 #3f51b5, 0 0 0 0 #3f51b5;
+  cursor: pointer; }
+
+.circle-label input {
+  display: none; }
+
+.circle-label input:checked + .menu {
+  box-shadow: 0 0 0 200vw #3f51b5, 0 0 0 200vh #3f51b5;
+  border-radius: 0; }
+
+.circle-label input:checked + .menu + ul {
+  opacity: 1; }
+
 .row {
   display: block;
   width: 100%;
@@ -839,6 +867,8 @@ label:first-child {
     background: #002931; }
   .row__arrow {
     background: #3d5100; }
+  .row__arrow-dropdown {
+    background: #000963; }
   .row__vue {
     background: #f2f2f2;
     margin: 0 0 10px;
@@ -855,3 +885,31 @@ label:first-child {
   .btn:hover {
     color: #fff;
     background: #ff4081; }
+
+.arrow-dropdown {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px; }
+  .arrow-dropdown:before, .arrow-dropdown:after {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 10px;
+    width: 4px;
+    height: 24px;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: .3s -webkit-transform;
+            transition: .3s transform; }
+  .arrow-dropdown:after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: 28px; }
+  .arrow-dropdown.is__active:before {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg); }
+  .arrow-dropdown.is__active:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
