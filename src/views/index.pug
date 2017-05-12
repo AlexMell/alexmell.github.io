@@ -1,0 +1,26 @@
+extends layout
+block content
+    div.pages
+
+        mixin list(item)
+            ul.pages__list
+                li.pages__item
+                    a(class="btn pages__link", href=item.url)= item.btn
+
+        div.pages__division
+            span.pages__title Just for fun
+            ul.pages__list
+                for item in itemsFun
+                    +list(item)
+
+        div.pages__division
+            span.pages__title Native
+            ul.pages__list
+                for item in itemsNative
+                    +list(item)
+
+        div.pages__division
+            span.pages__title Libraries/Frameworks
+            ul.pages__list
+                for item in itemsPlugins
+                    +list(item)

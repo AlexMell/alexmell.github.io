@@ -77,7 +77,6 @@ function less7() {
 
     console.log(less7);
 }
-
 /*
  Lesson from learn.js.ru (if else)
  */

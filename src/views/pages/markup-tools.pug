@@ -1,0 +1,81 @@
+extends ../layout
+
+block append scripts
+    script(src='../../../src/plugins/salvattore.min.js')
+    script(src='../../../dist/scripts/tools/tools.min.js')
+    script(src='../../../dist/scripts/css/css.min.js')
+
+block content
+    div.tools
+        div.tools__heading-holder
+            h1.tools__heading #{mainTitle}
+        div(id="grid", class="tools__grid", data-columns="3")
+
+            mixin list(item)
+                li.tools__item
+                    div.tools__frame
+                        i.icon-books
+                    a(class="tools__link", href=item.url)= item.text
+                        if item.lang
+                            span.tools__lang= '(' + item.lang + ')'
+                        else
+
+            div.tools__division
+                span.tools__title Education
+                ul.tools__list
+                    for item in educationList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title News/Articles
+                ul.tools__list
+                    for item in newsList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Help/Secondary
+                ul.tools__list
+                    for item in helpList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Libraries/Plugins
+                ul.tools__list
+                    for item in pluginsList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Channels
+                ul.tools__list
+                    for item in channelList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Productivity
+                ul.tools__list
+                    for item in productivityList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Blogs
+                ul.tools__list
+                    for item in blogList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Clouds
+                ul.tools__list
+                    for item in cloudList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Link
+                ul.tools__list
+                    for item in cloudList
+                        +list(item)
+
+            div.tools__division
+                span.tools__title Browser/Extension
+                ul.tools__list
+                    for item in cloudList
+                        +list(item)

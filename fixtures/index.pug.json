@@ -1,0 +1,38 @@
+{
+    "pageTitle": "Education",
+    "bodyClass": "body-main",
+    "itemsFun": [
+        {
+            "btn": "Markup toools",
+            "url": "pages/markup-tools.html"
+        },
+        {
+            "btn": "Steps",
+            "url": "pages/steps.html"
+        },
+        {
+            "btn": "Circle Menu",
+            "url": "pages/circle-menu.html"
+        }
+    ],
+    "itemsNative": [
+        {
+            "btn": "Learn CSS",
+            "url": "pages/native-css.html"
+        },
+        {
+            "btn": "Learn JS",
+            "url": "pages/native-js.html"
+        }
+    ],
+    "itemsPlugins": [
+        {
+            "btn": "Learn Backbone.js",
+            "url": "pages/learn-backbone.html"
+        },
+        {
+            "btn": "Learn Vue.js",
+            "url": "pages/learn-vue.html"
+        }
+    ]
+}

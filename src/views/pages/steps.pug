@@ -1,0 +1,38 @@
+extends ../layout
+
+block append scripts
+    script(src='../../../src/plugins/salvattore.min.js')
+    script(src='../../../dist/scripts/step/steps.min.js')
+
+block content
+    div(class="modal-wrap")
+        div.modal-header
+            span.is-active
+            span
+            span
+        div.modal-bodies
+            div(class="modal-body modal-body-step-1 is-showing")
+                div.title Step 1
+                div.description Hell theere, Let's play a game.
+                form
+                    input(type="text" placeholder="Name")
+                    input(type="email" placeholder="Email")
+                    div.text-center
+                        div.button Start
+            div(class="modal-body modal-body-step-2")
+                div.title Step 2
+                div.description Would you rather
+                form
+                    label Live one life that lasts 1,000
+                        input(type="radio" name="radio")
+                    label Live one life asd lasts 1,000
+                        input(type="radio" name="radio" id="radio2")
+                    div(class="text-center fade-in")
+                        div.button Next
+            div(class="modal-body modal-body-step-3")
+                div.title Step 3
+                div.description Check your email for the game results
+                div.text-center
+                    div.button Done!
+        div.text-center
+            div.rerun-button ReRun

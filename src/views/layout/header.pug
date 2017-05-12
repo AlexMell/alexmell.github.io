@@ -1,0 +1,34 @@
+header.header
+    div(class="header__author author")
+        a(class="author__name" href="/dist/html/index.html") AlexMell
+        span(class="author__job") HTML/CSS Developer in
+            a(class="author__job-link" href="http://branderstudio.com/ru/index" target="_blank") Brander
+    if hamburger
+        div.menu-holder
+            label.circle-label
+                input(type="checkbox")
+                span.menu
+                    span(class="burger js-burger")
+    else
+        div(class="header__soc-net soc-net")
+            ul(class="soc-net__list")
+                li(class="soc-net__item")
+                    a(class="soc-net__link" href="https://twitter.com/Mell2Alex" target="_blank")
+                        i(class="icon-twitter")
+                li(class="soc-net__item")
+                    a(class="soc-net__link" href="https://www.facebook.com/alex.mielnikov" target="_blank")
+                        i(class="icon-facebook2")
+                li(class="soc-net__item")
+                    a(class="soc-net__link" href="https://github.com/" target="_blank")
+                        i(class="icon-github")
+                li(class="soc-net__item")
+                    a(class="soc-net__link" href="https://www.instagram.com/alex2mell/" target="_blank")
+                        i(class="icon-instagram")
+                li(class="soc-net__item")
+                    a(class="soc-net__link" href="https://www.linkedin.com/in/alexmell/" target="_blank")
+                        i(class="icon-linkedin")
+                li(class="soc-net__item")
+                    a(class="soc-net__link" href="https://vk.com/mellalex" target="_blank")
+                        i(class="icon-vk")
+            div(class="soc-net__mail")
+                a(class="soc-net__mail-link" href="mailto:alex2mell@gmail.com") alex2mell@gmail.com

@@ -1,0 +1,31 @@
+extends ../layout
+
+block append scripts
+    script(src='../../../src/plugins/underscore.js')
+    script(src='../../../src/plugins/backbone.js')
+    script(src='../../../dist/scripts/backbone/backbone.min.js')
+
+block content
+    div.param
+        div.param__list
+            a(class="btn param__name js-all" href="#") all users
+            a(class="btn param__name js-list" href="#") list users
+    div.tab-content
+        div(class="tab-users js-tab-all")
+        div(class="tab-quantity js-tab-list")
+            div Mister
+                span.st-mr
+            div Missis
+                span.st-ms
+            div Miriesesserse
+                span.st-mrs
+    script(type="text/template" id="person")
+        div.user
+            div.user__img
+                img(src="<%= picture.medium %>" alt="")
+            div.user__info
+                i <%= name.title %>
+                strong <%= gender %>
+                span <%= name.first %>
+                span <%= location.city %>
+                span <%= registered %><

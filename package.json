@@ -1,15 +1,17 @@
 {
-    "name": "Practice",
-    "version": "1.0.0",
-    "description": "Practice",
+    "name": "Alex Mell Study",
+    "version": "2.0.0",
+    "description": "Education",
     "main": "gulpfile.js",
     "scripts": {
-        "test": "test"
+        "Empty": "Empty"
     },
-    "author": "AlexMell",
+    "author": "https://github.com/AlexMell",
     "devDependencies": {
         "browser-sync": "2.6.5",
-//        "gulp-pug": "*",
+        "gulp-pug": "*",
+        "gulp-swig": "*",
+        "gulp-data": "*",
         "gulp": "3.9.1",
         "gulp-autoprefixer": "2.1.0",
         "gulp-babel": "5.1.0",
