@@ -74,9 +74,9 @@ function less7() {
     } else {
         less7 = '';
     }
-
     console.log(less7);
 }
+
 /*
  Lesson from learn.js.ru (if else)
  */
@@ -129,4 +129,108 @@ function less10() {
     console.log(undefined + 1);
     console.log(null == "\n0\n");
     console.log(+null == +"\n0\n");
+}
+/*
+    Lesson from learn.js.ru (For and Switch )
+     Какое последнее значение выведет этот код? Почему?
+     var i = 3;
+         while (i) {
+         alert( i-- );
+     }
+*/
+function less11() {
+    var i = 3;
+    while (i) {
+        alert(i--);
+    }
+}
+
+/*
+     Lesson from learn.js.ru (For and Switch )
+     Для каждого цикла запишите, какие значения он выведет. Потом сравните с ответом.
+*/
+function less12() {
+    // Префиксный вариант
+    var i = 0;
+    while (++i < 5) alert(i);
+    // 1,2,3,4,5
+
+    // Постфиксный вариант
+    var a = 0;
+    while (a++ < 1) alert(a);
+    // 0,1,2,3,4
+}
+
+/*
+    Lesson from learn.js.ru (For and Switch )
+    При помощи цикла for выведите числа от 2 до 10.
+ */
+function less13() {
+    for (var i = 2; i <= 10; i++) {
+        console.log(i);
+    }
+}
+
+/*
+    Lesson from learn.js.ru (For and Switch ) 
+    При помощи цикла for выведите чётные числа от 2 до 10.
+ */
+function less14() {
+    for (var i = 0; i <= 10; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+
+/*
+ Lesson from learn.js.ru ( Function )
+ Parametres
+ */
+function less15(text1, text2) {
+    console.log(text1 + " " + text2);
+}
+//less15('Hello', 'World');
+
+/*
+ Lesson from learn.js.ru ( Function )
+ Следующая функция возвращает true, если параметр age больше 18. В ином случае она задаёт вопрос confirm и возвращает его результат.
+ */
+//    function checkAge(age) {
+//        if (age > 18) {
+//            return true;
+//        } else {
+//            return confirm('Родители разрешили?');
+//        }
+//    }
+// Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку. Сделайте два варианта функции checkAge:
+//Используя оператор '?'
+//Используя оператор ||
+function less16(age) {
+    return age > 18 ? true : prompt('Родители разрешили ?', '');
+    //    return (age > 18) || prompt('Родители разрешили?', '');
+}
+
+/*
+ Lesson from learn.js.ru ( Function )
+ Напишите функцию min(a,b), которая возвращает меньшее из чисел a,b.
+ */
+function less17(a, b) {
+    if (a < b) {
+        return console.log(a);
+    } else {
+        return console.log(b);
+    }
+}
+
+/*
+ Lesson from learn.js.ru ( Function )
+ Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
+ */
+function less18(x, n) {
+    var c = x;
+    for (var i = 1; i < n; i++) {
+        c *= x;
+    }
+    return console.log(c);
 }

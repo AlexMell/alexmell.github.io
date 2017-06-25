@@ -5,14 +5,6 @@
         {
             "btn": "Markup toools",
             "url": "pages/markup-tools.html"
-        },
-        {
-            "btn": "Steps",
-            "url": "pages/steps.html"
-        },
-        {
-            "btn": "Circle Menu",
-            "url": "pages/circle-menu.html"
         }
     ],
     "itemsNative": [
@@ -23,6 +15,14 @@
         {
             "btn": "Learn JS",
             "url": "pages/native-js.html"
+        },
+        {
+            "btn": "Learn Canvas",
+            "url": "pages/learn-canvas.html"
+        },
+        {
+            "btn": "Brander Task",
+            "url": "pages/brander-tasks.html"
         }
     ],
     "itemsPlugins": [
