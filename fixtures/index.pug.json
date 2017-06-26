@@ -1,6 +1,8 @@
 {
     "pageTitle": "Education",
     "bodyClass": "body-main",
+    "mainClass": "main-page",
+    "headerClass": "--transparent",
     "itemsFun": [
         {
             "btn": "Markup toools",

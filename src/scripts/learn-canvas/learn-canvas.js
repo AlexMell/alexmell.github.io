@@ -1,5 +1,5 @@
 function example() {
-    let example = document.getElementById("example"),
+    var example = document.getElementById("example"),
         ctx     = example.getContext('2d');
     example.height = 480;
     example.width  = 640;
@@ -8,11 +8,12 @@ function example() {
     ctx.strokeRect(18, 18, 260, 260);
     ctx.fillStyle = '#AF5200'; // меняем цвет клеток
     ctx.fillRect(20, 20, 256, 256);
-    for (let i = 0; i < 8; i += 2)
-        for (let j = 0; j < 8; j += 2) {
+    for (var i = 0; i < 8; i += 2) {
+        for (var j = 0; j < 8; j += 2) {
             ctx.clearRect(20 + i * 32, 20 + j * 32, 32, 32);
             ctx.clearRect(20 + (i + 1) * 32, 20 + (j + 1) * 32, 32, 32);
         }
+    }
 }
 example();
 
@@ -37,7 +38,7 @@ example();
 
 function firstCanvas() {
 // Tank's level
-    let example = document.getElementById("first"),
+    var example = document.getElementById("first"),
         ctx = example.getContext('2d'),
         // Размер одной ячейки на карте
         cellSize = 32,
@@ -73,12 +74,12 @@ function firstCanvas() {
     example.width = 16 * cellSize;
     example.height = 15 * cellSize;
     ctx.fillStyle = '#000';
-    ctx.fillRect(cellSize, cellSize, 13 * cellSize, 13 * cellSize)
+    ctx.fillRect(cellSize, cellSize, 13 * cellSize, 13 * cellSize);
 // Цикл обрабатывающий массив в котором содержатся значения элементов карты
 // если попадается 1 то рисуется кирпичный блок
 // если 2, то бетонная стена
-    for (let j = 0; j < 26; j++)
-        for (let i = 0; i < 26; i++) {
+    for (var j = 0; j < 26; j++)
+        for (var i = 0; i < 26; i++) {
             switch (map[j][i]) {
                 case 1:
                     DrawBrick(i * cellSize / 2 + cellSize, j * cellSize / 2 + cellSize);

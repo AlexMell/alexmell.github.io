@@ -208,7 +208,7 @@ body {
   min-width: 320px;
   font: 400 16px/1.1 "GothamPro", Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
-  color: #444; }
+  color: #fff; }
   @media screen and (max-width: 980px) {
     body {
       font: 400 24px/1.1 "GothamPro", Arial, Helvetica, sans-serif; } }
@@ -269,7 +269,13 @@ p {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
+  .header.--transparent {
+    background: none; }
   .header .author {
     text-align: center;
     color: #fff; }
@@ -357,8 +363,10 @@ p {
           flex-direction: column; }
 
 .main {
-  padding: 40px 20px;
-  background: #fdfdfd; }
+  padding: 154px 40px 20px;
+  background-color: #fafafa; }
+  .main.main-page {
+    background: url(../../../../../dist/images//wallpaper.jpg) no-repeat; }
   @media screen and (max-width: 640px) {
     .main {
       padding: 20px 10px;

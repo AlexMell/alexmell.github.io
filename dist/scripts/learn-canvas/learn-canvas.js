@@ -55,18 +55,18 @@ function firstCanvas() {
     // Цикл обрабатывающий массив в котором содержатся значения элементов карты
     // если попадается 1 то рисуется кирпичный блок
     // если 2, то бетонная стена
-    for (var j = 0; j < 26; j++) {
-        for (var i = 0; i < 26; i++) {
-            switch (map[j][i]) {
-                case 1:
-                    DrawBrick(i * cellSize / 2 + cellSize, j * cellSize / 2 + cellSize);
-                    break;
-                case 2:
-                    DrawHardBrick(i * cellSize / 2 + cellSize, j * cellSize / 2 + cellSize);
-                    break;
-            }
+    for (var j = 0; j < 26; j++) for (var i = 0; i < 26; i++) {
+        switch (map[j][i]) {
+            case 1:
+                DrawBrick(i * cellSize / 2 + cellSize, j * cellSize / 2 + cellSize);
+                break;
+            case 2:
+                DrawHardBrick(i * cellSize / 2 + cellSize, j * cellSize / 2 + cellSize);
+                break;
         }
-    } // Рисуем часть кирпичной стены
+    }
+
+    // Рисуем часть кирпичной стены
     function DrawBrick(x, y) {
         // Отрисовка основного цвета кирпича
         ctx.fillStyle = '#fc9';
