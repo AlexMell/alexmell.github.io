@@ -21,10 +21,6 @@
         {
             "btn": "Learn Canvas",
             "url": "pages/learn-canvas.html"
-        },
-        {
-            "btn": "Brander Task",
-            "url": "pages/brander-tasks.html"
         }
     ],
     "itemsPlugins": [

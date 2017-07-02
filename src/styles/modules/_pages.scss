@@ -6,6 +6,7 @@
         display: block;
         font-size: 1.166em;
         margin: 0 0 5px;
+        color: #fff;
     }
     &__list {
         display: flex;
@@ -19,5 +20,13 @@
     &__link {
         display: inline-block;
         padding: 15px 25px;
+    }
+    @include bp(640) {
+        &__list {
+            flex-flow: row wrap;
+        }
+        &__item {
+            margin-bottom: 10px;
+        }
     }
 }
