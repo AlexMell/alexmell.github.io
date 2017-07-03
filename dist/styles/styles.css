@@ -346,6 +346,9 @@ p {
   background-color: #fafafa; }
   .main.main-page {
     background: url(../../../../../dist/images//wallpaper.jpg) no-repeat; }
+  .main.mushroom-page {
+    background: #ccc;
+    padding: 0; }
   @media screen and (max-width: 640px) {
     .main {
       padding: 20px 10px;

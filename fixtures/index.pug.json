@@ -7,6 +7,10 @@
         {
             "btn": "Markup toools",
             "url": "pages/markup-tools.html"
+        },
+        {
+            "btn": "Mushrooms",
+            "url": "pages/mushroom.html"
         }
     ],
     "itemsNative": [
