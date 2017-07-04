@@ -19,6 +19,20 @@ function mushroom() {
     context.fillStyle = grd;
     context.fillRect(0, 0, canvas.width, canvas.height);
     context.closePath();
+    
+
+    // Create first mushroom
+    context.beginPath();
+    context.fillStyle='#000';
+    context.moveTo(canvas.width/2,canvas.height);
+    context.quadraticCurveTo(25,25,25,62,5);
+    context.quadraticCurveTo(25,100,50, 100);
+    context.quadraticCurveTo(50,120,30,125);
+    context.quadraticCurveTo(60,120,65,100);
+    context.quadraticCurveTo(125,100,125,62.5);
+    context.quadraticCurveTo(125,25,75,25);
+    context.stroke();
+    context.closePath();
 
 }
 mushroom();

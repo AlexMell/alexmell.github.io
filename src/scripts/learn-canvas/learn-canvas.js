@@ -331,7 +331,7 @@ function example8() {
         }
     }
 }
-// example8();
+example8();
 
 // test draw triangle
 function secondCanvas() {
