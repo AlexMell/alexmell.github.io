@@ -4,20 +4,23 @@
     background: #ccc;
     padding: 40px 50px;
     margin-bottom: 20px;
-    &__canvas {
+    &--canvas {
         padding: 0;
         background: #f1f1f1;
     }
-    &__burger {
+    &--burger {
         background: #002931;
     }
-    &__arrow {
+    &--arrow {
         background: #3d5100;
     }
-    &__arrow-dropdown {
+    &--arrow-dropdown {
         background: #000963;
     }
-    &__vue {
+    &--icon-user {
+        background: #7236FF;
+    }
+    &--vue {
         background: #f2f2f2;
         margin: 0 0 10px;
         color: #424242;

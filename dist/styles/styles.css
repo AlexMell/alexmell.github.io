@@ -345,7 +345,8 @@ p {
   padding: 154px 40px 20px;
   background-color: #fafafa; }
   .main.main-page {
-    background: url(../../../../../dist/images//wallpaper.jpg) no-repeat; }
+    background: url(../../../../../dist/images//wallpaper2.jpg) no-repeat;
+    background-size: 100%; }
   .main.mushroom-page {
     background: #ccc;
     padding: 0; }
@@ -473,6 +474,35 @@ p {
     border-right-style: none;
     border-left-style: solid;
     border-bottom-style: solid; }
+
+.icon-user {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: relative;
+  overflow: hidden; }
+  .icon-user__head {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .icon-user__body {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px; }
 
 .tools__heading {
   letter-spacing: -1px;
@@ -618,16 +648,18 @@ p {
   background: #ccc;
   padding: 40px 50px;
   margin-bottom: 20px; }
-  .row__canvas {
+  .row--canvas {
     padding: 0;
     background: #f1f1f1; }
-  .row__burger {
+  .row--burger {
     background: #002931; }
-  .row__arrow {
+  .row--arrow {
     background: #3d5100; }
-  .row__arrow-dropdown {
+  .row--arrow-dropdown {
     background: #000963; }
-  .row__vue {
+  .row--icon-user {
+    background: #7236FF; }
+  .row--vue {
     background: #f2f2f2;
     margin: 0 0 10px;
     color: #424242; }

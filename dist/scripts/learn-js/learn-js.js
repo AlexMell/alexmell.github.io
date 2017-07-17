@@ -234,3 +234,12 @@ function less18(x, n) {
     }
     return console.log(c);
 }
+
+/*
+ Lesson from learn.js.ru ( number )
+ Напишите функцию getDecimal(num), которая возвращает десятичную часть числа:
+ */
+function less19(num) {
+    console.log(Math.round(num));
+}
+less19(123.1123213123);

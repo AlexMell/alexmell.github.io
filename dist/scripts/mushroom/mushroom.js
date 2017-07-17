@@ -23,15 +23,20 @@ function mushroom() {
     context.closePath();
 
     // Create first mushroom
+    var HALF_WIDTH = canvas.width / 2;
+    var HALF_HEIGHT = canvas.height / 2;
+    var FULL_WIDTH = canvas.width;
+    var FULL_HEIGHT = canvas.height;
+
     context.beginPath();
-    context.fillStyle = '#000';
-    context.moveTo(canvas.width / 2, canvas.height);
-    context.quadraticCurveTo(25, 25, 25, 62, 5);
-    context.quadraticCurveTo(25, 100, 50, 100);
-    context.quadraticCurveTo(50, 120, 30, 125);
-    context.quadraticCurveTo(60, 120, 65, 100);
-    context.quadraticCurveTo(125, 100, 125, 62.5);
-    context.quadraticCurveTo(125, 25, 75, 25);
+    context.strokeStyle = "#4DB2B5";
+    context.lineWidth = 3;
+    context.moveTo(HALF_WIDTH - 400, FULL_HEIGHT);
+    context.quadraticCurveTo(HALF_WIDTH - 400, FULL_HEIGHT - 40, HALF_WIDTH - 380, HALF_HEIGHT);
+    context.moveTo(HALF_WIDTH - 400, FULL_HEIGHT - 515);
+    context.quadraticCurveTo(HALF_WIDTH, FULL_HEIGHT - 40, HALF_WIDTH - 380, HALF_HEIGHT);
+    context.fillStyle = '#ff';
+    context.fill();
     context.stroke();
     context.closePath();
 }

@@ -5,11 +5,16 @@ block append scripts
     script(src='../../../dist/scripts/css/css.min.js')
 
 block content
-    div(class="row row__burger")
+    div(class="row row--burger")
         div(class="burger js-burger")
 
-    div(class="row row__arrow")
+    div(class="row row--arrow")
         div(class="arrow js-arrow")
 
-    div(class="row row__arrow-dropdown")
+    div(class="row row--arrow-dropdown")
         span(class="arrow-dropdown js-arrow-dropdown")
+        
+    div(class="row row--icon-user")
+        a(href="#" class="icon-user")
+            span(class="icon-user__head")
+            span(class="icon-user__body")
