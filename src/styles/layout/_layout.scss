@@ -14,7 +14,7 @@
     background-color: #fafafa;
     &.main-page {
         background: url(#{$imgurl}/wallpaper2.jpg) no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     &.mushroom-page {
         background: #ccc;

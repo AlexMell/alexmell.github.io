@@ -346,7 +346,7 @@ p {
   background-color: #fafafa; }
   .main.main-page {
     background: url(../../../../../dist/images//wallpaper2.jpg) no-repeat;
-    background-size: 100%; }
+    background-size: cover; }
   .main.mushroom-page {
     background: #ccc;
     padding: 0; }

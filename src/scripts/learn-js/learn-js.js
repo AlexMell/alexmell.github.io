@@ -248,4 +248,50 @@ function less18(x,n) {
 function less19(num) {
     console.log(Math.round(num));
 }
-less19(123.1123213123);
+
+// Напишите функцию ucFirst(str), которая возвращает строку str с заглавным первым символом, например:
+function less20(str) {
+    var newStr = str[0].toUpperCase() + str.slice(1);
+
+    console.log(newStr);
+}
+
+/*
+ Lesson from learn.js.ru ( number )
+ Напишите функцию checkSpam(str), которая возвращает true, если строка str содержит „viagra“ или „XXX“, а иначе false.
+ */
+function less21(str) {
+    var tolowercase = str.toLowerCase();
+}
+
+/*
+ Создайте функцию truncate(str, maxlength), которая проверяет длину строки str, и если она превосходит maxlength – заменяет конец str на "...", так чтобы ее длина стала равна maxlength.
+ */
+function less22(str, maxlength) {
+    if (str.length >= maxlength) {
+        console.log(str.slice(0, maxlength) + '...');
+    } else {
+        console.log('suka');
+    }
+}
+
+
+/*
+    // Мини-задача на синтаксис объектов. Напишите код, по строке на каждое действие.
+    // Создайте пустой объект user.
+    // Добавьте свойство name со значением Вася.
+    // Добавьте свойство surname со значением Петров.
+    // Поменяйте значение name на Сергей.
+    // Удалите свойство name из объекта.
+*/
+function less23() {
+    var user = {
+        name: 'vasya',
+        surname: 'petrov',
+    }
+
+    user.name = 'sergey'
+    delete user.name
+    console.log(user);
+}
+less23();
