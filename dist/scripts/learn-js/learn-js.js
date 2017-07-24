@@ -287,4 +287,116 @@ function less23() {
     delete user.name;
     console.log(user);
 }
-less23();
+// less23();
+
+// Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.
+function less24() {
+    function isEmpty(obj) {
+
+        var counter = 0;
+
+        for (var key in obj) {
+            counter++;
+        }
+        var keyLength = counter;
+        console.log(keyLength >= 1 ? 'ne pustoy' : 'pustoy');
+    }
+
+    var schedule = {
+        name: 'vasya',
+        surname: 'pupkin'
+    };
+
+    isEmpty(schedule);
+}
+
+// Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
+// Если объект пустой, то результат должен быть 0.
+function less25() {
+    var salaries = {
+        "Вася": 100,
+        "Петя": 300,
+        "Даша": 250
+    };
+
+    var summ = 0;
+    for (var key in salaries) {
+        summ += salaries[key];
+    }
+    console.log('Cумма', summ);
+
+    var max = 0;
+    var maxName = '';
+    for (var key in salaries) {
+        if (max < salaries[key]) {
+            max = salaries[key];
+            maxName = key;
+        }
+    }
+    console.log(maxName);
+}
+
+/*
+    Как получить последний элемент из произвольного массива?
+    У нас есть массив goods. Сколько в нем элементов – не знаем, но можем прочитать из goods.length.
+    Напишите код для получения последнего элемента goods.
+*/
+function less26() {
+    var goods = ["s1", "s2", "s3"];
+    console.log(goods.length);
+    console.log(goods[goods.length - 1]);
+}
+
+/*
+    Как добавить элемент в конец произвольного массива?
+    У нас есть массив goods. Напишите код для добавления в его конец значения «Компьютер».
+*/
+function less27() {
+    var goods = ["s1", "s2", "s3"];
+    goods.push('Компютер');
+    goods[goods.length] = 'Компьютерasd';
+    console.log(goods);
+}
+
+/*
+    Задача из 5 шагов-строк:
+
+    Создайте массив styles с элементами «Джаз», «Блюз».
+    Добавьте в конец значение «Рок-н-Ролл»
+    Замените предпоследнее значение с конца на «Классика». Код замены предпоследнего значения должен работать для массивов любой длины.
+    Удалите первое значение массива и выведите его alert.
+    Добавьте в начало значения «Рэп» и «Регги».
+    Массив в результате каждого шага:
+
+    Джаз, Блюз
+    Джаз, Блюз, Рок-н-Ролл
+    Джаз, Классика, Рок-н-Ролл
+    Классика, Рок-н-Ролл
+    Рэп, Регги, Классика, Рок-н-Ролл
+*/
+
+function less28() {
+    var styles = ['Джаз', 'Блюз'];
+    styles.push('Рок-н-ролл');
+    styles[styles.length - 2] = "Классика";
+    console.log(styles.shift());
+    styles.unshift('Рэп', 'Регги');
+
+    console.log(styles);
+}
+
+/*
+    Напишите код для вывода alert случайного значения из массива:
+    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    P.S. Код для генерации случайного целого от min to max включительно:
+    var rand = min + Math.floor(Math.random() * (max + 1 - min));
+*/
+function less29() {
+
+    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+
+    var rand = min + Math.floor(Math.random() * (max + 1 - min));
+
+    console.log(arr[rand]);
+}
+less29();

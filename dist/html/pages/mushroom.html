@@ -28,7 +28,13 @@
       </header>
       <main class="main mushroom-page">
         <div class="container">
-          <canvas id="mushroom"></canvas>
+          <canvas class="mushroom-canvas" id="mushroom"></canvas>
+          <div class="mushroom-slider">
+            <input id="range">
+          </div>
+          <div class="mushroom-slider2">
+            <input id="range2">
+          </div>
         </div>
       </main>
       <!--include layout/footer-->
@@ -36,6 +42,7 @@
     <script src="../../../../src/plugins/jquery-3.1.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="../../../../dist/scripts/main/main.js"></script>
+    <script src="../../../../src/plugins/ion.rangeSlider.js"></script>
     <script src="../../../../dist/scripts/mushroom/mushroom.min.js"></script>
   </body>
 </html>

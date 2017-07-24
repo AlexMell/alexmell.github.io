@@ -1,0 +1,20 @@
+.mushroom-slider {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1500;
+    width: 350px;
+}
+.mushroom-slider2 {
+    position: absolute;
+    right: 150px;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 1500;
+    width: 350px;
+}
+
+.mushroom-canvas {
+    background: linear-gradient(45deg, #3b0539 0%,#090854 47%,#491792 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}

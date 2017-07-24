@@ -37,8 +37,8 @@ function less3() {
  Lesson from learn.js.ru (if else)
  */
 function less4() {
-     var question = prompt('Какое оффициальное название JavaScript?', '');
-     question = (question === 'EcmaScript') ? console.log('Верно!') : console.log('Не знаешь ? Дебил!');
+    var question = prompt('Какое оффициальное название JavaScript?', '');
+    question = (question === 'EcmaScript') ? console.log('Верно!') : console.log('Не знаешь ? Дебил!');
 }
 
 /*
@@ -48,8 +48,8 @@ function less5() {
     var numberQuestion = +prompt('Число?', '');
 
     numberQuestion = (numberQuestion > 0) ? console.log('1') :
-    numberQuestion < 0 ? console.log('-1') :
-    numberQuestion === 0 ? console.log('0') : console.log('asd');
+        numberQuestion < 0 ? console.log('-1') :
+        numberQuestion === 0 ? console.log('0') : console.log('asd');
 
     console.log(numberQuestion);
 }
@@ -58,8 +58,8 @@ function less5() {
  Lesson from learn.js.ru (if else)
  */
 function less6() {
-   var result = a + b < 4 ? 'Мало' : 'Много';
-   console.log(result);
+    var result = a + b < 4 ? 'Мало' : 'Много';
+    console.log(result);
 }
 
 /*
@@ -90,7 +90,7 @@ function less8() {
         (login == 'Вася') ? 'Привет' :
         (login == 'директор') ? 'Здравсуйте' :
         (login == '') ? 'Нет логина' : '';
-    
+
     console.log(message);
 }
 
@@ -147,7 +147,7 @@ function less10() {
 function less11() {
     let i = 3;
     while (i) {
-        alert( i-- );
+        alert(i--);
     }
 }
 
@@ -158,12 +158,12 @@ function less11() {
 function less12() {
     // Префиксный вариант
     let i = 0;
-    while (++i < 5) alert( i );
+    while (++i < 5) alert(i);
     // 1,2,3,4,5
 
     // Постфиксный вариант
     let a = 0;
-    while (a++ < 1) alert( a );
+    while (a++ < 1) alert(a);
     // 0,1,2,3,4
 }
 
@@ -214,14 +214,14 @@ function less15(text1, text2) {
 //Используя оператор ||
 function less16(age) {
     return (age > 18) ? true : prompt('Родители разрешили ?', '');
-//    return (age > 18) || prompt('Родители разрешили?', '');
+    //    return (age > 18) || prompt('Родители разрешили?', '');
 }
 
 /*
  Lesson from learn.js.ru ( Function )
  Напишите функцию min(a,b), которая возвращает меньшее из чисел a,b.
  */
-function less17(a,b) {
+function less17(a, b) {
     if (a < b) {
         return console.log(a);
     } else {
@@ -233,7 +233,7 @@ function less17(a,b) {
  Lesson from learn.js.ru ( Function )
  Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
  */
-function less18(x,n) {
+function less18(x, n) {
     let c = x;
     for (let i = 1; i < n; i++) {
         c *= x;
@@ -294,4 +294,117 @@ function less23() {
     delete user.name
     console.log(user);
 }
-less23();
+// less23();
+
+// Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.
+function less24() {
+    function isEmpty(obj) {
+
+        var counter = 0;
+
+        for (var key in obj) {
+            counter++;
+        }
+        var keyLength = counter;
+        console.log(keyLength >= 1 ? 'ne pustoy' : 'pustoy');
+    }
+
+    var schedule = {
+        name: 'vasya',
+        surname: 'pupkin'
+    };
+
+    isEmpty(schedule);
+
+}
+
+// Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
+// Если объект пустой, то результат должен быть 0.
+function less25() {
+    var salaries = {
+        "Вася": 100,
+        "Петя": 300,
+        "Даша": 250
+    };
+
+    var summ = 0;
+    for (var key in salaries) {
+        summ += salaries[key]
+    }
+    console.log('Cумма', summ);
+
+    var max = 0;
+    var maxName = '';
+    for (var key in salaries) {
+        if (max < salaries[key]) {
+            max = salaries[key];
+            maxName = key;
+        }
+    }
+    console.log(maxName);
+}
+
+/*
+    Как получить последний элемент из произвольного массива?
+    У нас есть массив goods. Сколько в нем элементов – не знаем, но можем прочитать из goods.length.
+    Напишите код для получения последнего элемента goods.
+*/
+function less26() {
+    var goods = ["s1", "s2", "s3"];
+    console.log(goods.length);
+    console.log(goods[goods.length - 1]);
+}
+
+/*
+    Как добавить элемент в конец произвольного массива?
+    У нас есть массив goods. Напишите код для добавления в его конец значения «Компьютер».
+*/
+function less27() {
+    var goods = ["s1", "s2", "s3"];
+    goods.push('Компютер');
+    goods[goods.length] = 'Компьютерasd'
+    console.log(goods);
+}
+
+/*
+    Задача из 5 шагов-строк:
+
+    Создайте массив styles с элементами «Джаз», «Блюз».
+    Добавьте в конец значение «Рок-н-Ролл»
+    Замените предпоследнее значение с конца на «Классика». Код замены предпоследнего значения должен работать для массивов любой длины.
+    Удалите первое значение массива и выведите его alert.
+    Добавьте в начало значения «Рэп» и «Регги».
+    Массив в результате каждого шага:
+
+    Джаз, Блюз
+    Джаз, Блюз, Рок-н-Ролл
+    Джаз, Классика, Рок-н-Ролл
+    Классика, Рок-н-Ролл
+    Рэп, Регги, Классика, Рок-н-Ролл
+*/
+
+function less28() {
+    var styles = ['Джаз', 'Блюз'];
+    styles.push('Рок-н-ролл');
+    styles[styles.length - 2] = "Классика" 
+    console.log(styles.shift());
+    styles.unshift('Рэп', 'Регги');
+
+    console.log(styles);
+}
+
+/*
+    Напишите код для вывода alert случайного значения из массива:
+    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    P.S. Код для генерации случайного целого от min to max включительно:
+    var rand = min + Math.floor(Math.random() * (max + 1 - min));
+*/
+function less29() {
+
+    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    
+    var rand = min + Math.floor(Math.random() * (max + 1 - min));
+
+    console.log(arr[rand]);
+}
+less29();

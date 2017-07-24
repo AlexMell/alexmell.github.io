@@ -1,8 +1,13 @@
 extends ../layout
 
 block append scripts
+    script(src='../../../../src/plugins/ion.rangeSlider.js')
     script(src='../../../../dist/scripts/mushroom/mushroom.min.js')
 
 block content
     div.container
-        canvas(id="mushroom")
+        canvas(id="mushroom" class="mushroom-canvas")
+        div.mushroom-slider
+            input(id="range")
+        div.mushroom-slider2
+            input(id="range2")
