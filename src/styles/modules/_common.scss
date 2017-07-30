@@ -18,11 +18,21 @@
         background: #000963;
     }
     &--icon-user {
-        background: #7236FF;
+        background: #98c379;
     }
     &--vue {
         background: #f2f2f2;
         margin: 0 0 10px;
         color: #424242;
+    }
+    &--checkbox {
+        display: flex;
+        justify-content: flex-start;
+        background: #abb2bf;
+    }
+    &--radio {
+        display: flex;
+        justify-content: flex-start;
+        background: #cfd7e6;
     }
 }

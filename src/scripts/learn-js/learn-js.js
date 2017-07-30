@@ -386,7 +386,7 @@ function less27() {
 function less28() {
     var styles = ['Джаз', 'Блюз'];
     styles.push('Рок-н-ролл');
-    styles[styles.length - 2] = "Классика" 
+    styles[styles.length - 2] = "Классика"
     console.log(styles.shift());
     styles.unshift('Рэп', 'Регги');
 
@@ -402,9 +402,180 @@ function less28() {
 function less29() {
 
     var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
-    
+
     var rand = min + Math.floor(Math.random() * (max + 1 - min));
 
     console.log(arr[rand]);
 }
-less29();
+
+/*
+    В объекте есть свойство className, которое содержит список «классов» – слов, разделенных пробелом:
+    var obj = {
+        className: 'open menu'
+    }
+    Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет: 
+    addClass(obj, 'new'); // obj.className='open menu new'
+    addClass(obj, 'open'); // без изменений (класс уже существует)
+    addClass(obj, 'me'); // obj.className='open menu new me'
+    alert( obj.className ); // "open menu new me"
+    P.S  Ваша функция не должна добавлять лишних пробелов.
+*/
+function less30() {
+
+    function addClass(obj, cls) {
+        var classes = obj.className ? obj.className.split(' ') : [];
+
+        for (var i = 0; i < classes.length; i++) {
+            if (classes[i] == cls) {
+                return console.log(obj.className);
+            }
+        }
+
+        classes.push(cls);
+        console.log(classes);
+    }
+    var obj = {
+        className: 'open menu'
+    }
+    addClass(obj, 'open');
+}
+
+/*
+    Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+
+    То есть, дефисы удаляются, а все слова после них получают заглавную букву.
+
+    Например:
+
+    camelize("background-color") == 'backgroundColor';
+    camelize("list-style-image") == 'listStyleImage';
+    camelize("-webkit-transition") == 'WebkitTransition';
+    Такая функция полезна при работе с CSS.
+
+    P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
+*/
+function less31() {
+
+    function camelize(str) {
+        var arr = str.split('-');
+
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        }
+
+        return arr.join('');
+
+    }
+    console.log(camelize('my-short-string'));
+}
+
+/*
+    У объекта есть свойство className, которое хранит список «классов» – слов, разделенных пробелами:
+
+    var obj = {
+    className: 'open menu'
+    };
+    Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть:
+
+    removeClass(obj, 'open'); // obj.className='menu'
+    removeClass(obj, 'blabla'); // без изменений (нет такого класса)
+    P.S. Дополнительное усложнение. Функция должна корректно обрабатывать дублирование класса в строке:
+
+    obj = {
+    className: 'my menu menu'
+    };
+    removeClass(obj, 'menu');
+    alert( obj.className ); // 'my'
+    Лишних пробелов после функции образовываться не должно.
+*/
+function less32() {
+
+    function removeClass(obj, cls) {
+        
+        var classes = obj.className ? obj.className.split(' ') : [];
+        
+        for (var i = 0; i < classes.length; i++) {
+            if (classes[i] === cls) {
+                classes.splice(i, 1); // удалить класс
+            }
+        }
+        
+        obj.className = classes.join(' ');
+        
+        return classes
+    }
+
+    var obj = {
+        className: 'open open suka menu'
+    };
+
+    console.log(removeClass(obj, 'open'));
+
+    // Решение заключается в том, чтобы разбить className в массив классов, а затем пройтись по нему циклом. Если класс есть – удаляем его splice, заново объединяем массив в строку и присваиваем объекту.
+
+    // function removeClass(obj, cls) {
+    // var classes = obj.className.split(' ');
+
+    // for (var i = 0; i < classes.length; i++) {
+    //     if (classes[i] == cls) {
+    //     classes.splice(i, 1); // удалить класс
+    //     i--; // (*)
+    //     }
+    // }
+    // obj.className = classes.join(' ');
+
+    // }
+
+    // var obj = {
+    // className: 'open menu menu'
+    // }
+
+    // removeClass(obj, 'blabla');
+    // removeClass(obj, 'menu')
+    // alert(obj.className) // open
+    // В примере выше есть тонкий момент. Элементы массива проверяются один за другим. При вызове splice удаляется текущий, i-й элемент, и те элементы, которые идут дальше, сдвигаются на его место.
+
+    // Таким образом, на месте i оказывается новый, непроверенный элемент.
+
+    // Чтобы это учесть, строчка (*) уменьшает i, чтобы следующая итерация цикла заново проверила элемент с номером i. Без нее функция будет работать с ошибками.
+}
+
+/*
+    Как в функции отличить отсутствующий аргумент от undefined?
+
+    function f(x) {
+      // выведите 1, если первый аргумент есть, и 0 - если нет
+    }
+
+    f(undefined); // 1
+    f(); // 0
+*/
+function less34() {
+
+    function f(x) {
+        if (arguments.length) {
+            console.log('1');
+        } else {
+            console.log('0');
+        }
+    }
+    f(undefined);
+    f();
+
+}
+
+/*
+    Напишите функцию sum(...), которая возвращает сумму всех своих аргументов:
+*/
+function less35() {
+
+    let result = 0;
+
+    for (let i = 0; i < arguments.length; i++) {
+        result += arguments[i];
+    }
+
+    console.log(result);
+
+}
+less35(1,3,4)

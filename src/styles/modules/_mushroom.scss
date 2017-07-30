@@ -1,20 +1,49 @@
-.mushroom-slider {
-    position: absolute;
-    right: 150px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1500;
-    width: 350px;
-}
-.mushroom-slider2 {
-    position: absolute;
-    right: 150px;
-    top: 60%;
-    transform: translateY(-50%);
-    z-index: 1500;
-    width: 350px;
-}
-
-.mushroom-canvas {
-    background: linear-gradient(45deg, #3b0539 0%,#090854 47%,#491792 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.mushroom {
+    min-width: 1024px;
+    &__canvas {
+        background: linear-gradient(45deg, #3b0539 0%,#090854 47%,#491792 100%);
+    }
+    &__control {
+        position: absolute;
+        top: 50%;
+        right: -2px;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.5);
+        border: 2px solid #ccc;
+        border-radius: 14px 0 0 14px;
+        &-holder {
+            padding: 15px 20px 30px 20px;
+        }
+        &-slider {
+            z-index: 1500;
+            width: 350px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & + & {
+                margin-top: 20px;
+            }
+        }
+        &-title {
+            color: #fff;
+            font-size: 16px;
+            line-height: 18px;
+            margin-right: 20px;
+            padding-top: 22px;
+        }
+        .irs {
+            height: 45px;
+            flex: 1;
+            &-bar,
+            &-line,
+            &-bar-edge {
+                height: 6px;
+            }
+            &-slider {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
 }

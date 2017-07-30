@@ -5,9 +5,21 @@ block append scripts
     script(src='../../../../dist/scripts/mushroom/mushroom.min.js')
 
 block content
-    div.container
-        canvas(id="mushroom" class="mushroom-canvas")
-        div.mushroom-slider
-            input(id="range")
-        div.mushroom-slider2
-            input(id="range2")
+    div.container.mushroom
+        .mushroom__canvas
+            canvas#mushroom.mushroom-canvas
+        .mushroom__control
+            .mushroom__control-holder
+                .mushroom__control-dragger
+                .mushroom__control-slider
+                    span.mushroom__control-title Point 1X
+                    input(id="range")
+                .mushroom__control-slider
+                    span.mushroom__control-title Point 1Y
+                    input(id="range2")
+                .mushroom__control-slider
+                    span.mushroom__control-title Point 2X
+                    input(id="range3")
+                .mushroom__control-slider
+                    span.mushroom__control-title Point 2Y
+                    input(id="range4")

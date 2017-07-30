@@ -27,13 +27,26 @@
         </div>
       </header>
       <main class="main mushroom-page">
-        <div class="container">
-          <canvas class="mushroom-canvas" id="mushroom"></canvas>
-          <div class="mushroom-slider">
-            <input id="range">
+        <div class="container mushroom">
+          <div class="mushroom__canvas">
+            <canvas class="mushroom-canvas" id="mushroom"></canvas>
           </div>
-          <div class="mushroom-slider2">
-            <input id="range2">
+          <div class="mushroom__control">
+            <div class="mushroom__control-holder">
+              <div class="mushroom__control-dragger"></div>
+              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 1X</span>
+                <input id="range">
+              </div>
+              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 1Y</span>
+                <input id="range2">
+              </div>
+              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 2X</span>
+                <input id="range3">
+              </div>
+              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 2Y</span>
+                <input id="range4">
+              </div>
+            </div>
           </div>
         </div>
       </main>

@@ -1,65 +1,126 @@
-// Mushroom canvas
+// Create first mushroom
+'use strict';
+
+window.addEventListener('load', eventWindowLoaded, false);
+
+function eventWindowLoaded() {
+    canvasApp();
+}
+
+function canvasApp() {
 
     // Create canvas
-    var canvas = document.getElementById('mushroom'),
+    let canvas = document.getElementById('mushroom'),
         context = canvas.getContext('2d');
 
-    // Make canvas full width
+    // Canvas full width
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Create gradient rectangle full width
-    // context.beginPath();
+    let HALF_WIDTH = canvas.width / 2;
+    let HALF_HEIGHT = canvas.height / 2;
+    let FULL_WIDTH = canvas.width;
+    let FULL_HEIGHT = canvas.height;
 
-    // var grd = context.createLinearGradient(0, canvas.height, canvas.width, 0);
-    // grd.addColorStop(0, "#3b0539");
-    // grd.addColorStop(0.5, "#090854");
-    // grd.addColorStop(1, "#491792");
+    // Create default points
+    let lineOne = {
+        start: {
+            x: 500,
+            y: FULL_HEIGHT + 20,
+        },
+        cp1: {
+            x: 825,
+            y: 589
+        },
+        cp2: {
+            x: 316,
+            y: 919
+        },
+        end: {
+            x: 550,
+            y: 450,
+        }
+    };
 
-    // context.fillStyle = grd;
-    // context.fillRect(0, 0, canvas.width, canvas.height);
-    // context.closePath();
+    // Init range sliders with default points
+    function init() {
 
-    // Create first mushroom
-    var HALF_WIDTH = canvas.width / 2;
-    var HALF_HEIGHT = canvas.height / 2;
-    var FULL_WIDTH = canvas.width
-    var FULL_HEIGHT = canvas.height
+        let $range = $("#range");
+        let $range2 = $("#range2");
+        let $range3 = $("#range3");
+        let $range4 = $("#range4");
 
-    var $range = $("#range");
-    var $range2 = $("#range2");
+        $range.ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 1000,
+            hide_min_max: true,
+            from: lineOne.cp1.x
+        });
+        
+        $range2.ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 1000,
+            hide_min_max: true,
+            from: lineOne.cp1.y
+        });
+        
+        $range3.ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 1000,
+            hide_min_max: true,
+            from: lineOne.cp2.x
+        });
 
-    $range.ionRangeSlider({
-        type: "single",
-        min: 0,
-        max: 1000,
-        from: 50
-    });
-    
-    $range2.ionRangeSlider({
-        type: "single",
-        min: 0,
-        max: 1000,
-        from: 50
-    });
-    
-    $range.on("change", function () {
-        var $this = $(this),
-            value = $this.prop("value");
-            
-    });
+        $range4.ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 1000,
+            hide_min_max: true,
+            from: lineOne.cp2.y
+        });
 
-    $range2.on("change", function () {
-        var $this = $(this),
-            value = $this.prop("value");
-    });
+        $range.on("change", function () {
+            let $this = $(this);
+            lineOne.cp1.x = $this.prop("value");
+            draw();
+        });
+        
+        $range2.on("change", function () {
+            let $this = $(this);
+            lineOne.cp1.y = $this.prop("value");
+            draw();
+        });
 
+        $range3.on("change", function () {
+            let $this = $(this);
+            lineOne.cp2.x = $this.prop("value");
+            draw();
+        });
 
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.beginPath();
-    context.strokeStyle = "#4DB2B5";
-    context.lineWidth = 20;
-    context.moveTo(HALF_WIDTH - 450, FULL_HEIGHT);
-    context.bezierCurveTo(HALF_WIDTH, FULL_HEIGHT - range1, HALF_WIDTH, range2, 200, HALF_HEIGHT);
-    context.closePath();
-    context.stroke();
+        $range4.on("change", function () {
+            let $this = $(this);
+            lineOne.cp2.y = $this.prop("value");
+            draw();
+        });
+
+        draw();
+    }
+
+    // init draw function for change points into lineOne variable
+    function draw () {
+
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.beginPath();
+        context.strokeStyle = '#0985B3';
+        context.lineWidth = 20;
+        context.moveTo(lineOne.start.x, lineOne.start.y);
+        context.bezierCurveTo(lineOne.cp1.x, lineOne.cp1.y, lineOne.cp2.x, lineOne.cp2.y, lineOne.end.x, lineOne.end.y);
+        context.stroke();
+
+    }
+
+    init();
+}
