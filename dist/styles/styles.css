@@ -884,6 +884,29 @@ p {
     justify-content: flex-start;
     background: #cfd7e6; }
 
+.b-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%; }
+  .b-grid__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  .b-grid__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #181a1f;
+    width: 100px;
+    height: 100px;
+    color: #fff; }
+    .b-grid__item.--specially {
+      background: #3b4048;
+      grid-row-start: 2;
+      grid-column-end: -2; }
+
 .btn {
   display: block;
   padding: 10px 25px;

@@ -567,4 +567,26 @@ function less35() {
 
     console.log(result);
 }
-less35(1, 3, 4);
+
+/*
+    Напишите counter
+*/
+function less36() {
+
+    function needCounter() {
+        var thisCount = 1;
+        return function () {
+            return thisCount++;
+        };
+    }
+
+    var fromCounter = needCounter();
+    console.log(fromCounter());
+    console.log(fromCounter());
+    console.log(fromCounter());
+    console.log(fromCounter());
+}
+
+/*
+    Напишите counter
+*/
