@@ -1,4 +1,5 @@
 {
     "pageTitle": "Learn CSS",
-    "bodyClass": "body-learn-js"
+    "bodyClass": "body-learn-js",
+    "mainClass": "canvas-page"
 }

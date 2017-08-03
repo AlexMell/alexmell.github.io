@@ -20,6 +20,11 @@
         background: #ccc;
         padding: 0;
     }
+    &.canvas-page {
+        display: flex;
+        align-items: flex-start;
+        flex-flow: row wrap;
+    }
     @include bp(640){
         padding: 20px 10px;
         width: 100%;

@@ -1,4 +1,5 @@
 'use strict';
+
 /*
  First lesson learn.js.ru (Variables)
  */
@@ -46,11 +47,9 @@ function less4() {
  */
 function less5() {
     var numberQuestion = +prompt('Число?', '');
-
     numberQuestion = (numberQuestion > 0) ? console.log('1') :
         numberQuestion < 0 ? console.log('-1') :
-        numberQuestion === 0 ? console.log('0') : console.log('asd');
-
+            numberQuestion === 0 ? console.log('0') : console.log('asd');
     console.log(numberQuestion);
 }
 
@@ -67,7 +66,6 @@ function less6() {
  */
 function less7() {
     var login = 'Вася';
-
     if (login == 'Вася') {
         less7 = 'Привет';
     } else if (login == 'Директор') {
@@ -85,12 +83,10 @@ function less7() {
  */
 function less8() {
     var login = 'директор';
-
     var message =
         (login == 'Вася') ? 'Привет' :
-        (login == 'директор') ? 'Здравсуйте' :
-        (login == '') ? 'Нет логина' : '';
-
+            (login == 'директор') ? 'Здравсуйте' :
+                (login == '') ? 'Нет логина' : '';
     console.log(message);
 }
 
@@ -103,7 +99,6 @@ function less9() {
     var a3 = +'undefined';
     var a4 = +null;
     var a5 = +true;
-
     console.log(a1, typeof a1);
     console.log(a2, typeof a2);
     console.log(a3, typeof a3);
@@ -136,6 +131,7 @@ function less10() {
     console.log(null == "\n0\n");
     console.log(+null == +"\n0\n");
 }
+
 /*
     Lesson from learn.js.ru (For and Switch )
      Какое последнее значение выведет этот код? Почему?
@@ -160,7 +156,6 @@ function less12() {
     let i = 0;
     while (++i < 5) alert(i);
     // 1,2,3,4,5
-
     // Постфиксный вариант
     let a = 0;
     while (a++ < 1) alert(a);
@@ -196,8 +191,8 @@ function less14() {
 function less15(text1, text2) {
     console.log(text1 + " " + text2);
 }
-//less15('Hello', 'World');
 
+//less15('Hello', 'World');
 /*
  Lesson from learn.js.ru ( Function )
  Следующая функция возвращает true, если параметр age больше 18. В ином случае она задаёт вопрос confirm и возвращает его результат.
@@ -252,7 +247,6 @@ function less19(num) {
 // Напишите функцию ucFirst(str), которая возвращает строку str с заглавным первым символом, например:
 function less20(str) {
     var newStr = str[0].toUpperCase() + str.slice(1);
-
     console.log(newStr);
 }
 
@@ -275,7 +269,6 @@ function less22(str, maxlength) {
     }
 }
 
-
 /*
     // Мини-задача на синтаксис объектов. Напишите код, по строке на каждое действие.
     // Создайте пустой объект user.
@@ -289,19 +282,16 @@ function less23() {
         name: 'vasya',
         surname: 'petrov',
     }
-
     user.name = 'sergey'
     delete user.name
     console.log(user);
 }
-// less23();
 
+// less23();
 // Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.
 function less24() {
     function isEmpty(obj) {
-
         var counter = 0;
-
         for (var key in obj) {
             counter++;
         }
@@ -313,9 +303,7 @@ function less24() {
         name: 'vasya',
         surname: 'pupkin'
     };
-
     isEmpty(schedule);
-
 }
 
 // Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
@@ -326,13 +314,11 @@ function less25() {
         "Петя": 300,
         "Даша": 250
     };
-
     var summ = 0;
     for (var key in salaries) {
         summ += salaries[key]
     }
     console.log('Cумма', summ);
-
     var max = 0;
     var maxName = '';
     for (var key in salaries) {
@@ -382,14 +368,12 @@ function less27() {
     Классика, Рок-н-Ролл
     Рэп, Регги, Классика, Рок-н-Ролл
 */
-
 function less28() {
     var styles = ['Джаз', 'Блюз'];
     styles.push('Рок-н-ролл');
     styles[styles.length - 2] = "Классика"
     console.log(styles.shift());
     styles.unshift('Рэп', 'Регги');
-
     console.log(styles);
 }
 
@@ -400,11 +384,8 @@ function less28() {
     var rand = min + Math.floor(Math.random() * (max + 1 - min));
 */
 function less29() {
-
     var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
-
     var rand = min + Math.floor(Math.random() * (max + 1 - min));
-
     console.log(arr[rand]);
 }
 
@@ -421,19 +402,17 @@ function less29() {
     P.S  Ваша функция не должна добавлять лишних пробелов.
 */
 function less30() {
-
     function addClass(obj, cls) {
         var classes = obj.className ? obj.className.split(' ') : [];
-
         for (var i = 0; i < classes.length; i++) {
             if (classes[i] == cls) {
                 return console.log(obj.className);
             }
         }
-
         classes.push(cls);
         console.log(classes);
     }
+
     var obj = {
         className: 'open menu'
     }
@@ -455,17 +434,14 @@ function less30() {
     P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
 */
 function less31() {
-
     function camelize(str) {
         var arr = str.split('-');
-
         for (var i = 0; i < arr.length; i++) {
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         }
-
         return arr.join('');
-
     }
+
     console.log(camelize('my-short-string'));
 }
 
@@ -489,33 +465,24 @@ function less31() {
     Лишних пробелов после функции образовываться не должно.
 */
 function less32() {
-
     function removeClass(obj, cls) {
-        
         var classes = obj.className ? obj.className.split(' ') : [];
-        
         for (var i = 0; i < classes.length; i++) {
             if (classes[i] === cls) {
                 classes.splice(i, 1); // удалить класс
             }
         }
-        
         obj.className = classes.join(' ');
-        
         return classes
     }
 
     var obj = {
         className: 'open open suka menu'
     };
-
     console.log(removeClass(obj, 'open'));
-
     // Решение заключается в том, чтобы разбить className в массив классов, а затем пройтись по нему циклом. Если класс есть – удаляем его splice, заново объединяем массив в строку и присваиваем объекту.
-
     // function removeClass(obj, cls) {
     // var classes = obj.className.split(' ');
-
     // for (var i = 0; i < classes.length; i++) {
     //     if (classes[i] == cls) {
     //     classes.splice(i, 1); // удалить класс
@@ -523,20 +490,15 @@ function less32() {
     //     }
     // }
     // obj.className = classes.join(' ');
-
     // }
-
     // var obj = {
     // className: 'open menu menu'
     // }
-
     // removeClass(obj, 'blabla');
     // removeClass(obj, 'menu')
     // alert(obj.className) // open
     // В примере выше есть тонкий момент. Элементы массива проверяются один за другим. При вызове splice удаляется текущий, i-й элемент, и те элементы, которые идут дальше, сдвигаются на его место.
-
     // Таким образом, на месте i оказывается новый, непроверенный элемент.
-
     // Чтобы это учесть, строчка (*) уменьшает i, чтобы следующая итерация цикла заново проверила элемент с номером i. Без нее функция будет работать с ошибками.
 }
 
@@ -551,7 +513,6 @@ function less32() {
     f(); // 0
 */
 function less34() {
-
     function f(x) {
         if (arguments.length) {
             console.log('1');
@@ -559,34 +520,29 @@ function less34() {
             console.log('0');
         }
     }
+
     f(undefined);
     f();
-
 }
 
 /*
     Напишите функцию sum(...), которая возвращает сумму всех своих аргументов:
 */
 function less35() {
-
     let result = 0;
-
     for (let i = 0; i < arguments.length; i++) {
         result += arguments[i];
     }
-
     console.log(result);
-
 }
 
 /*
     Напишите counter
 */
 function less36() {
-
     function needCounter() {
         let thisCount = 1;
-        return function() {
+        return function () {
             return thisCount++;
         };
     }
@@ -596,9 +552,646 @@ function less36() {
     console.log(fromCounter());
     console.log(fromCounter());
     console.log(fromCounter());
-
 }
 
 /*
-    Напишите counter
+    Напишите counter cо свойствами (остановка, сохранить, обновить)
 */
+function less37() {
+    function makeCounter() {
+        let initialCount = 1;
+        return {
+            continue: function () {
+                return initialCount++;
+            },
+            reset: function () {
+                return initialCount = 1;
+            },
+            set: function (value) {
+                initialCount = value
+            }
+        }
+    }
+    let firstCount = makeCounter();
+    console.log(firstCount.continue());
+    console.log(firstCount.continue());
+    console.log(firstCount.continue());
+    console.log(firstCount.continue());
+    console.log(firstCount.reset());
+    console.log(firstCount.continue());
+    console.log(firstCount.set(24));
+    console.log(firstCount.continue());
+    console.log(firstCount.continue());
+}
+
+/*
+    Напишите функцию sum, которая работает так: sum(a)(b) = a+b.
+
+    Да, именно так, через двойные скобки (это не опечатка). Например:
+
+    sum(1)(2) = 3
+    sum(5)(-1) = 4
+*/
+function less38() {
+    function first(a) {
+        return function(b) {
+            return a + b;
+        }
+    }
+    console.log(first(5)(-1));
+}
+
+/*
+    В некоторых языках программирования существует объект «строковый буфер», который аккумулирует внутри себя значения. Его функционал состоит из двух возможностей:
+
+    Добавить значение в буфер.
+    Получить текущее содержимое.
+    Задача – реализовать строковый буфер на функциях в JavaScript, со следующим синтаксисом:
+
+    Создание объекта: var buffer = makeBuffer();.
+    Вызов makeBuffer должен возвращать такую функцию buffer, которая при вызове buffer(value) добавляет значение в некоторое внутреннее хранилище, а при вызове без аргументов buffer() – возвращает его.
+
+    Вот пример работы:
+
+    function makeBuffer() { Ваш Код}
+
+    var buffer = makeBuffer();
+
+    // добавить значения к буферу
+    buffer('Замыкания');
+    buffer(' Использовать');
+    buffer(' Нужно!');
+
+    // получить текущее значение
+    alert( buffer() ); // Замыкания Использовать Нужно!
+    Буфер должен преобразовывать все данные к строковому типу:
+
+        var buffer = makeBuffer();
+    buffer(0);
+    buffer(1);
+    buffer(0);
+
+    alert( buffer() ); // '010'
+    Решение не должно использовать глобальные переменные.
+*/
+function less39() {
+    function makeBuffer() {
+        let initValue = '';
+        return function (word) {
+            return initValue += word
+        }
+    }
+    let buffer = makeBuffer();
+    buffer('raz');
+    buffer('dva');
+    buffer('tri');
+    console.log(buffer());
+}
+
+/*
+    Добавьте буферу из решения задачи Функция - строковый буфер метод buffer.clear(), который будет очищать текущее содержимое буфера:
+    function makeBuffer() {
+      ...ваш код...
+    }
+
+    var buffer = makeBuffer();
+
+    buffer("Тест");
+    buffer(" тебя не съест ");
+    alert( buffer() ); // Тест тебя не съест
+
+    buffer.clear();
+
+    alert( buffer() ); // ""
+*/
+function less40() {
+    function makeBuffer() {
+        let initValue = "";
+
+        function buffer(word) {
+            if (arguments.length === 0) {
+                return initValue;
+            }
+            initValue += word;
+        };
+
+        buffer.clearValue = function() {
+            initValue = "";
+        }
+
+        return buffer;
+    }
+
+    let buffer = makeBuffer();
+    buffer("Test");
+    buffer(" тебя не съест ");
+    console.log(buffer());
+    buffer.clearValue();
+    console.log(buffer());
+}
+
+/*
+    У нас есть массив объектов:
+
+    Обычно сортировка по нужному полю происходит так:
+
+    // по полю name (Вася, Маша, Петя)
+    users.sort(function(a, b) {
+      return a.name > b.name ? 1 : -1;
+    });
+
+    // по полю age  (Маша, Вася, Петя)
+    users.sort(function(a, b) {
+      return a.age > b.age ? 1 : -1;
+    });
+
+    Мы хотели бы упростить синтаксис до одной строки, вот так:
+
+    users.sort(byField('name'));
+    users.forEach(function(user) {
+      alert( user.name );
+    }); // Вася, Маша, Петя
+
+    users.sort(byField('age'));
+    users.forEach(function(user) {
+      alert( user.name );
+    }); // Маша, Вася, Петя
+
+*/
+function less41() {
+    let users = [{
+        name: "Вася",
+        surname: 'Иванов',
+        age: 20
+    }, {
+        name: "Петя",
+        surname: 'Чапаев',
+        age: 25
+    }, {
+        name: "Маша",
+        surname: 'Медведева',
+        age: 18
+    }];
+
+    function byField(field) {
+        return function(a, b) {
+            return a[field] > b[field] ? 1 : -1;
+        }
+    }
+
+    users.sort(byField('name'));
+    users.forEach(function(user) {
+        console.log(( user.name ));
+    });
+}
+
+/*
+    Создайте функцию filter(arr, func), которая получает массив arr и возвращает новый, в который входят только те элементы arr, для которых func возвращает true.
+    Создайте набор «готовых фильтров»: inBetween(a,b) – «между a,b», inArray([...]) – "в массиве [...]". Использование должно быть таким:
+    filter(arr, inBetween(3,6)) – выберет только числа от 3 до 6,
+    filter(arr, inArray([1,2,3])) – выберет только элементы, совпадающие с одним из значений массива.
+
+*/
+function less42() {
+
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+
+    function filter(arr, func) {
+
+    }
+
+    function inBetween(a,b) {
+    }
+
+//    console.log(filter(arr, function(a) {
+//        return a % 2 == 0
+//    }));
+
+    console.log( filter(arr, inBetween(3, 6)) );
+
+//    console.log( filter(arr, inArray([1, 2, 10])) );
+}
+less42();
+
+function introduceCanvas() {
+    let example = document.getElementById("intro"),
+        ctx = example.getContext('2d');
+    example.height = 100;
+    example.width = 300;
+    ctx.fillStyle = 'red';
+    ctx.beginPath();
+    ctx.moveTo(10, 30);
+    ctx.bezierCurveTo(150, 90, 159, 30, 200, 30);
+    ctx.lineTo(250, 90);
+    ctx.lineTo(20, 90);
+    ctx.closePath();
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000';
+    ctx.stroke()
+}
+
+introduceCanvas();
+
+//    Завершающий шаг это вызовом метода stroke или fill. Собственно первый обводит фигуру линиями, а второй заливает фигуру сплошным цветом.
+function example1() {
+    let canvas = document.getElementById('example1');
+    let c = canvas.getContext('2d');
+    c.fillStyle = '#fc9';
+    //beginPath используется что бы «начать» серию действий описывающих отрисовку фигуры. Каждый новый вызов этого метода сбрасывает все действия предыдущего и начинает «рисовать» занова.
+    c.beginPath();
+    //moveTo(x, y) // перемещает "курсор" в позицию x, y и делает её текущей
+    c.moveTo(100, 50);
+    //lineTo(x, y) // ведёт линию из текущей позиции в указанную, и делает в последствии указанную текущей
+    c.lineTo(190, 10);
+    c.lineTo(150, 80);
+    //closePath является не обязательным действием и по сути оно пытается завершить рисование проведя линию от текущей позиции к позиции с которой начали рисовать.
+    c.closePath();
+    //fillStyle = color   // определяет цвет заливки
+    c.fill();
+    //strokeStyle = color // цвет линий цвет задается точно так же как и css, на примере все четыре способа задания цвета
+    c.strokeStyle = 'rgb(0,128,0)';
+    c.lineWidth = 10;
+    //arc(x, y, radius, startAngle, endAngle, anticlockwise) // рисование дуги, где x и y центр окружности, далее начальный и конечный угол, последний параметр указывает направление
+    // clearRect(x, y, ширина, высота)  // Очищает область на холсте размер с прямоугольник заданного размера
+    // fillRect(x, y, ширина, высота)   // Рисует закрашенный прямоугольник
+    // strokeRect(x, y, ширина, высота) // Рисует прямоугольник
+    c.stroke();
+}
+
+example1();
+
+// Гистограмма
+function example2() {
+    let canvas = document.getElementById('example2');
+    let c = canvas.getContext('2d');
+    let data = [16, 68, 20, 30, 54, 20, 16, 68, 20, 30, 54, 20];
+    c.fillStyle = "transparent]";
+    c.fillRect(0, 0, 500, 500)
+    let gradCol = c.createRadialGradient(0, 0, 1, 100, 100, 300);
+    gradCol.addColorStop(0, '#000');
+    gradCol.addColorStop(1, '#f00');
+    c.fillStyle = gradCol
+    for (let i = 0; i < data.length; i++) {
+        let dp = data[i];
+        c.fillRect(31 + i * 40, 460 - dp * 5, 20, dp * 5);
+    }
+    c.fillStyle = "black";
+    c.lineWidth = 3.0;
+    c.beginPath();
+    c.moveTo(30, 10);
+    c.lineTo(30, 460);
+    c.lineTo(490, 460);
+    c.stroke();
+    c.fillStyle = "black";
+    for (let i = 0; i < 6; i++) {
+        c.fillText((5 - i) * 20 + "", 4, i * 80 + 60);
+        c.beginPath();
+        c.moveTo(25, i * 80 + 60);
+        c.lineTo(30, i * 80 + 60);
+        c.stroke();
+    }
+    let labels = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JULY", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    for (let i = 0; i < labels.length; i++) {
+        c.fillText(labels[i], 31 + i * 40, 475);
+    }
+}
+
+example2();
+
+// Круговая диаграмма
+function example3() {
+    let canvas = document.getElementById("example3");
+    let c = canvas.getContext("2d");
+    let data = [16, 68, 20, 30, 54];
+    c.fillStyle = "transparent";
+    c.fillRect(0, 0, 500, 500);
+    let colors = ["orange", "green", "blue", "yellow", "teal"];
+    let total = 0;
+    for (let i = 0; i < data.length; i++) {
+        total += data[i];
+    }
+    // Рисование настоящих секторов кажется сложным, но на самом деле это довольно легко. Каждый сектор начинается в центре круга (250,250), затем рисуется дуга от предыдущего угла до нового угла. Угол представляет собой данные конвертированные в радианы. Предыдущая угол — это угол от предыдущей итерации цикла (начиная с 0). Дуга с центром в 250,250 имеет радиус 100. Затем проводим линию обратно в центр, заливаем и обводим фигуру.
+    let prevAngle = 0;
+    for (let i = 0; i < data.length; i++) {
+        // дoля, предстваленная сегементом
+        let fraction = data[i] / total;
+        // высисляем начальный угол
+        let angle = prevAngle + fraction * Math.PI * 2;
+        // Рисуем сегмент
+        c.fillStyle = colors[i];
+        // заливаем радиальным градиентом
+        let grad = c.createRadialGradient(250, 250, 10, 250, 250, 100);
+        grad.addColorStop(0, "white");
+        grad.addColorStop(1, colors[i]);
+        c.fillStyle = grad;
+        // Создаем контур
+        c.beginPath();
+        c.moveTo(250, 250);
+        c.arc(250, 250, 100, prevAngle, angle, false);
+        // заливаем
+        c.lineTo(250, 250);
+        c.fill();
+        // Обдводим
+        c.strokeStyle = "black";
+        c.stroke();
+        // Обновляем для следующей итерации цикла
+        prevAngle = angle;
+    }
+    c.fillStyle = "black";
+    c.font = "25px sans-serif";
+    let text = "Sales Data from 2025";
+    let metrics = c.measureText(text);
+    c.fillText(text, 250 - metrics.width / 2, 400);
+}
+
+example3();
+
+// Opacity
+function example4() {
+    let canvas = document.getElementById("example4");
+    let c = canvas.getContext("2d");
+    c.fillStyle = "red";
+    // делим на 100 чтоьы получтиь дроь мжеду 0 и 1
+    c.globalAlpha = 50 / 100;
+    c.fillRect(0, 0, 50, 50);
+    c.globalAlpha = 30 / 100;
+    c.fillRect(10, 10, 50, 50);
+    c.globalAlpha = 1.0;
+}
+
+example4();
+
+// Translate test
+function example5() {
+    let canvas = document.getElementById("example5");
+    let c = canvas.getContext("2d");
+    c.fillStyle = "red";
+    c.translate(50, 50);
+    let rads = 30 * Math.PI * 2.0 / 360.0;
+    c.rotate(rads)
+    c.fillRect(0, 0, 100, 100);
+}
+
+example5();
+
+// Triangle mask
+function example6() {
+    let canvas = document.getElementById("example6");
+    let c = canvas.getContext("2d");
+    // Прямоугольник
+    c.fillStyle = "red";
+    c.fillRect(0, 0, 400, 100);
+    // Создаем треугольник
+    c.beginPath();
+    c.moveTo(200, 30);
+    c.lineTo(300, 300);
+    c.lineTo(0, 0);
+    c.closePath();
+    // Обводим треугольник, чтобы его увидеть
+    c.lineWidth = 5;
+    c.stroke();
+    // Используем треугольник как маску
+    c.clip();
+    // ЗАливаем прямугольник желтым цветом
+    c.fillStyle = 'yellow';
+    c.fillRect(0, 0, 400, 100);
+}
+
+example6();
+
+// first test
+function firstCanvas() {
+    let canvas = document.getElementById("first-canvas");
+    let c = canvas.getContext("2d");
+    c.fillStyle = "#fc9";
+    c.fillRect(0, 0, 100, 100);
+    c.strokeRect = 2;
+    c.beginPath();
+    c.fillStyle = "#f00";
+    c.moveTo(0, 0);
+    c.lineTo(500, 500);
+    c.lineTo(0, 500);
+    c.lineTo(0, 0);
+    c.lineWidth = 3;
+    c.stroke();
+    c.beginPath();
+}
+
+firstCanvas();
+// Animation test
+// requestAnimationFrame становится стандартом, но большинство браузеров поддерживает только свои собственные версии с префиксом. Например, Chrome использует webkitRequestAnimationFrame, а Mozilla поддерживает mozRequestAnimationFrame. Чтобы исправить это, мы воспользуемся скриптом Пола Ириша. Он просто соединяет разные варианты в новой функции: requestAnimFrame.
+window.requestAnimFrame = (function () {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
+
+function example7() {
+    let x = 0;
+
+    function drawIt() {
+        window.requestAnimFrame(drawIt);
+        let canvas = document.getElementById('example7');
+        let c = canvas.getContext('2d');
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        c.fillStyle = "red";
+        c.fillRect(x, 100, 200, 100);
+        x += 5;
+    }
+
+    window.requestAnimFrame(drawIt);
+}
+
+// example7();
+// test snow
+function example8() {
+    let canvas = document.getElementById("example8"),
+        particles = [];
+
+    function loop() {
+        window.requestAnimationFrame(loop);
+        createParticles();
+        updateParticles();
+        killParticles();
+        drawParticles();
+    }
+
+    window.requestAnimationFrame(loop);
+
+    function createParticles() {
+        if (particles.length < 100) {
+            particles.push({
+                x: Math.random() * canvas.width, // между 0 и шириной хослта
+                y: 0,
+                speed: 2 + Math.random() * 3, // Между 2 и 5
+                radius: 5 + Math.random() * 5, // между 5 и 10
+                color: "#FC9",
+            });
+        }
+    }
+
+    function updateParticles() {
+        for (let i in particles) {
+            let part = particles[i];
+            part.y += part.speed;
+        }
+    }
+
+    function killParticles() {
+        for (let i in particles) {
+            let part = particles[i];
+            if (part.y > canvas.height) {
+                part.y = 0;
+            }
+        }
+    }
+
+    function drawParticles() {
+        let c = canvas.getContext('2d');
+        c.fillStyle = "black";
+        c.fillRect(0, 0, canvas.width, canvas.height);
+        for (let i in particles) {
+            let part = particles[i];
+            c.beginPath();
+            c.arc(part.x, part.y, part.radius, 0, Math.PI * 2);
+            c.arc(part.x + 10, part.y, part.radius, 0, Math.PI * 2);
+            c.closePath();
+            c.fillStyle = part.color;
+            c.fill();
+            c.beginPath();
+            c.fillRect(part.x, part.y - part.radius - 29, part.radius, 30);
+            c.fillStyle = part.color;
+            c.closePath();
+        }
+    }
+}
+
+example8();
+
+// test draw triangle
+function secondCanvas() {
+    let canvas = document.getElementById('second-canvas');
+    let c = canvas.getContext('2d');
+    c.beginPath();
+    c.moveTo(75, 50);
+    c.lineTo(100, 75);
+    c.lineTo(100, 25);
+    c.fill();
+}
+
+secondCanvas();
+
+// test draw smile
+function thirdCanvas() {
+    let canvas = document.getElementById('third-canvas');
+    let c = canvas.getContext('2d');
+    c.arc(100, 100, 100, 0, Math.PI * 2, true); // Внешний круг
+    c.moveTo(180, 100);
+    c.arc(100, 100, 80, 0, Math.PI, false) // Рот ( по часовой стрекле )
+    c.moveTo(80, 80);
+    c.arc(60, 73, 20, 0, Math.PI * 2, true) // Левый глаз
+    c.moveTo(160, 75);
+    c.arc(140, 73, 20, 0, Math.PI * 2, true) // Правый глаз
+    c.moveTo(150, 75);
+    c.arc(140, 73, 10, 0, Math.PI * 2, true) // Правый зрачок
+    c.moveTo(73, 60);
+    c.arc(60, 73, 10, 0, Math.PI * 2, true); // Правый зрачок
+    c.stroke();
+}
+
+thirdCanvas();
+
+// Different filled and stroke triangel also differenetn lineTo and moveTo
+function fourthCanvas() {
+    let canvas = document.getElementById('fourth-canvas');
+    let c = canvas.getContext('2d');
+    // Filled triange
+    c.moveTo(25, 25);
+    c.lineTo(105, 25);
+    c.lineTo(25, 105);
+    c.fill();
+    // Stroke triangle
+    c.beginPath();
+    c.moveTo(125, 125);
+    c.lineTo(125, 45);
+    c.lineTo(45, 125);
+    c.closePath();
+    c.stroke();
+}
+
+fourthCanvas();
+
+// Test buzier
+function fifthCanvas() {
+    let canvas = document.getElementById('fifth-canvas');
+    let c = canvas.getContext('2d');
+    // c.beginPath();
+    // c.moveTo(75,25);
+    // c.quadraticCurveTo(25,25,25,62,5);
+    // c.quadraticCurveTo(25,100,50, 100);
+    // c.quadraticCurveTo(50,120,30,125);
+    // c.quadraticCurveTo(60,120,65,100);
+    // c.quadraticCurveTo(125,100,125,62.5);
+    // c.quadraticCurveTo(125,25,75,25);
+    // c.stroke();
+    c.beginPath();
+    c.moveTo(75, 40);
+    c.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    c.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    c.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    c.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    c.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    c.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    c.fill();
+}
+
+fifthCanvas();
+
+// example colors
+function example9() {
+    let ctx = document.getElementById('example9').getContext('2d');
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
+            ctx.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' +
+                Math.floor(255 - 42.5 * j) + ')';
+            ctx.beginPath();
+            ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+            ctx.stroke();
+        }
+    }
+}
+
+example9();
+
+// test canvas photos black\white
+function sixCanvas() {
+    let canvas = document.getElementById('six-canvas');
+    let c = canvas.getContext('2d');
+    let img = new Image();
+    img.onload = function () {
+        // Рисуем иозображение на холсте
+        c.drawImage(img, 0, 0);
+        // Получаем данные холста
+        let data = c.getImageData(0, 0, canvas.width, canvas.height);
+        // Инвертируем каждый пиксель
+        for (let n = 0; n < data.width * data.height; n++) {
+            let index = n * 4;
+            data.data[index] = 255 - data.data[index];
+            data.data[index + 1] = 255 - data.data[index + 1];
+            data.data[index + 2] = 255 - data.data[index + 2];
+            // Не трогайте альфу
+        }
+        // Воазвращем данные обратно
+        c.putImageData(data, 0, 0);
+    }
+    img.src = '../../images/dima.jpg';
+    console.log(img);
+}
+
+sixCanvas();

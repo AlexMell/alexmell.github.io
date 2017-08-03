@@ -49,6 +49,8 @@ function canvasApp() {
         let $range2 = $("#range2");
         let $range3 = $("#range3");
         let $range4 = $("#range4");
+        let $rangeEndX = $("#range-end-x");
+        let $rangeEndY = $("#range-end-y");
 
         $range.ionRangeSlider({
             type: "single",
@@ -82,44 +84,166 @@ function canvasApp() {
             from: lineOne.cp2.y
         });
 
+        $rangeEndX.ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 1000,
+            hide_min_max: true,
+            from: lineOne.end.x
+        });
+
+        $rangeEndY.ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 1000,
+            hide_min_max: true,
+            from: lineOne.end.y
+        });
+
         $range.on("change", function () {
             let $this = $(this);
             lineOne.cp1.x = $this.prop("value");
-            draw();
+            drawLeg();
+            drawCap();
+            gradient();
         });
         
         $range2.on("change", function () {
             let $this = $(this);
             lineOne.cp1.y = $this.prop("value");
-            draw();
+            drawLeg();
+            drawCap();
+            gradient();
         });
 
         $range3.on("change", function () {
             let $this = $(this);
             lineOne.cp2.x = $this.prop("value");
-            draw();
+            drawLeg();
+            drawCap();
+            gradient();
         });
 
         $range4.on("change", function () {
             let $this = $(this);
             lineOne.cp2.y = $this.prop("value");
-            draw();
+            drawLeg();
+            drawCap();
+            gradient();
         });
 
-        draw();
+        $rangeEndX.on("change", function () {
+            let $this = $(this);
+            lineOne.end.x = $this.prop("value");
+            drawLeg();
+            drawCap();
+            gradient();
+        });
+
+        $rangeEndY.on("change", function () {
+            let $this = $(this);
+            lineOne.end.y = $this.prop("value");
+            drawLeg();
+            drawCap();
+            gradient();
+        });
+
+        drawLeg();
+        drawCap();
+        gradient();
     }
 
-    // init draw function for change points into lineOne variable
-    function draw () {
-
+    // init drawLeg function for change points into lineOne variable
+    function drawLeg () {
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.beginPath();
-        context.strokeStyle = '#0985B3';
+        context.strokeStyle = '#0AB5B6';
         context.lineWidth = 20;
         context.moveTo(lineOne.start.x, lineOne.start.y);
         context.bezierCurveTo(lineOne.cp1.x, lineOne.cp1.y, lineOne.cp2.x, lineOne.cp2.y, lineOne.end.x, lineOne.end.y);
         context.stroke();
+    }
 
+    // init draw function for change points into lineOne variable
+    function drawCap () {
+        let centerX = lineOne.end.x;
+        let centerY = lineOne.end.y;
+        let radius = 80;
+        context.beginPath();
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        context.fillStyle = '#0AB5B6';
+        context.fill();
+    }
+
+    function gradient() {
+
+        let PI = Math.PI;
+        let points = [];
+
+
+        // cubic helper formula at T distance
+        function CubicN(T, a, b, c, d) {
+            let t2 = T * T;
+            let t3 = t2 * T;
+            return a + (-a * 3 + T * (3 * a - a * T)) * T + (3 * b + T * (-6 * b + b * 3 * T)) * T + (c * 3 - c * 3 * T) * t2 + d * t3;
+        }
+
+        function getCubicBezierXYatT(startPt, controlPt1, controlPt2, endPt, T) {
+            let x = CubicN(T, startPt.x, controlPt1.x, controlPt2.x, endPt.x);
+            let y = CubicN(T, startPt.y, controlPt1.y, controlPt2.y, endPt.y);
+            return ({
+                x: x,
+                y: y
+            });
+        }
+
+        function bezierTangent(a, b, c, d, t) {
+            return (3 * t * t * (-a + 3 * b - 3 * c + d) + 6 * t * (a - 2 * b + c) + 3 * (-a + b));
+        };
+
+        for (let t = 0; t <= 100; t += 0.25) {
+
+            let T = t / 100;
+
+            // plot a point on the curve
+            let pos = getCubicBezierXYatT(lineOne.start, lineOne.cp1, lineOne.cp2, lineOne.end, T);
+
+            // calculate the tangent angle of the curve at that point
+            let tx = bezierTangent(lineOne.start.x, lineOne.cp1.x, lineOne.cp2.x, lineOne.end.x, T);
+            let ty = bezierTangent(lineOne.start.y, lineOne.cp1.y, lineOne.cp2.y, lineOne.end.y, T);
+            let a = Math.atan2(ty, tx) - PI / 2;
+
+            // save the x/y position of the point and the tangent angle
+            // in the points array
+            points.push({
+                x: pos.x,
+                y: pos.y,
+                angle: a
+            });
+
+        }
+        // draw a gradient-stroked line tangent to each point on the curve
+        for (let i = 0; i < points.length; i++) {
+
+            // calc the topside and bottomside points of the tangent line
+            let offX1 = points[i].x + 10 * Math.cos(points[i].angle);
+            let offY1 = points[i].y + 10 * Math.sin(points[i].angle);
+            let offX2 = points[i].x + 10 * Math.cos(points[i].angle - PI);
+            let offY2 = points[i].y + 10 * Math.sin(points[i].angle - PI);
+
+            // create a gradient stretching between
+            // the calculated top & bottom points
+            let gradient = context.createLinearGradient(offX1, offY1, offX2, offY2);
+            gradient.addColorStop(0, '#0A7AAA');
+            gradient.addColorStop(1, '#190643');
+
+            // draw the gradient-stroked line at this point
+            context.strokeStyle = gradient;
+            context.beginPath();
+            context.moveTo(offX1, offY1);
+            context.lineTo(offX2, offY2);
+            context.stroke();
+        }
     }
 
     init();

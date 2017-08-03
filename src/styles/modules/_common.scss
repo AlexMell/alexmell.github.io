@@ -6,7 +6,7 @@
     margin-bottom: 20px;
     &--canvas {
         padding: 0;
-        background: #f1f1f1;
+        background: #fafafa;
     }
     &--burger {
         background: #002931;
@@ -34,32 +34,5 @@
         display: flex;
         justify-content: flex-start;
         background: #cfd7e6;
-    }
-}
-
-.b-grid {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    &__title {
-        display: block;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: #181a1f;
-        width: 100px;
-        height: 100px;
-        color: #fff;
-        &.--specially {
-            background: #3b4048;
-            grid-row-start: 2;
-            grid-column-end: -2;
-        }
     }
 }

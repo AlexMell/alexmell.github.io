@@ -21,10 +21,6 @@
         {
             "btn": "Learn JS",
             "url": "pages/native-js.html"
-        },
-        {
-            "btn": "Learn Canvas",
-            "url": "pages/learn-canvas.html"
         }
     ],
     "itemsPlugins": [
