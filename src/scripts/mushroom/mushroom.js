@@ -105,7 +105,7 @@ function canvasApp() {
             lineOne.cp1.x = $this.prop("value");
             drawLeg();
             drawCap();
-            gradient();
+//            gradient();
         });
         
         $range2.on("change", function () {
@@ -113,7 +113,7 @@ function canvasApp() {
             lineOne.cp1.y = $this.prop("value");
             drawLeg();
             drawCap();
-            gradient();
+//            gradient();
         });
 
         $range3.on("change", function () {
@@ -121,7 +121,7 @@ function canvasApp() {
             lineOne.cp2.x = $this.prop("value");
             drawLeg();
             drawCap();
-            gradient();
+//            gradient();
         });
 
         $range4.on("change", function () {
@@ -129,7 +129,7 @@ function canvasApp() {
             lineOne.cp2.y = $this.prop("value");
             drawLeg();
             drawCap();
-            gradient();
+//            gradient();
         });
 
         $rangeEndX.on("change", function () {
@@ -137,7 +137,7 @@ function canvasApp() {
             lineOne.end.x = $this.prop("value");
             drawLeg();
             drawCap();
-            gradient();
+//            gradient();
         });
 
         $rangeEndY.on("change", function () {
@@ -145,12 +145,12 @@ function canvasApp() {
             lineOne.end.y = $this.prop("value");
             drawLeg();
             drawCap();
-            gradient();
+//            gradient();
         });
 
         drawLeg();
         drawCap();
-        gradient();
+//        gradient();
     }
 
     // init drawLeg function for change points into lineOne variable

@@ -1,5 +1,7 @@
 .row {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     background: #ccc;
     padding: 40px 50px;
@@ -35,4 +37,8 @@
         justify-content: flex-start;
         background: #cfd7e6;
     }
+}
+
+.btn-section {
+    margin-right: 20px;
 }

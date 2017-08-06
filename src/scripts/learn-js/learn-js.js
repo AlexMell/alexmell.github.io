@@ -826,7 +826,7 @@ function example2() {
     let canvas = document.getElementById('example2');
     let c = canvas.getContext('2d');
     let data = [16, 68, 20, 30, 54, 20, 16, 68, 20, 30, 54, 20];
-    c.fillStyle = "transparent]";
+    c.fillStyle = "transparent";
     c.fillRect(0, 0, 500, 500)
     let gradCol = c.createRadialGradient(0, 0, 1, 100, 100, 300);
     gradCol.addColorStop(0, '#000');
@@ -1190,7 +1190,7 @@ function sixCanvas() {
         // Воазвращем данные обратно
         c.putImageData(data, 0, 0);
     }
-    img.src = '../../images/dima.jpg';
+    img.src = '../../images/02.jpg';
     console.log(img);
 }
 

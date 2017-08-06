@@ -9,15 +9,23 @@ block content
         div(class="burger js-burger")
 
     div(class="row row--arrow")
-        div(class="arrow js-arrow")
+        .btn-section
+            div(class="arrow js-arrow")
+        .btn-section
+            div(class="btn-close")
 
     div(class="row row--arrow-dropdown")
         span(class="arrow-dropdown js-arrow-dropdown")
         
     div(class="row row--icon-user")
-        a(href="#" class="icon-user")
-            span(class="icon-user__head")
-            span(class="icon-user__body")
+        .btn-section
+            a(href="#" class="icon-user")
+                span(class="icon-user__head")
+                span(class="icon-user__body")
+        .btn-section
+            a(href="#" class="icon-mouse")
+                span(class="icon-mouse__arrow --first")
+                span(class="icon-mouse__arrow --second")
     div(class="row row--checkbox")
         .checkbox-slider
             input(type="checkbox" id="checkbox-slider" class="checkbox-slider__input")
@@ -49,17 +57,6 @@ block content
         .second-grid
             .second-grid__title Grid #2
             .second-grid__list
-                .second-grid__item.--specially Specially Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item
-                .second-grid__item Item 
+                - for (var x = 1; x < 21; x++)
+                    .second-grid__item
+                        img(src="../../images/nature/" + x + ".jpg")
