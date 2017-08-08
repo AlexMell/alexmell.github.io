@@ -763,15 +763,9 @@ function less42() {
     function inBetween(a,b) {
     }
 
-//    console.log(filter(arr, function(a) {
-//        return a % 2 == 0
-//    }));
-
     console.log( filter(arr, inBetween(3, 6)) );
 
-//    console.log( filter(arr, inArray([1, 2, 10])) );
 }
-less42();
 
 function introduceCanvas() {
     let example = document.getElementById("intro"),
@@ -790,10 +784,9 @@ function introduceCanvas() {
     ctx.strokeStyle = '#000';
     ctx.stroke()
 }
-
 introduceCanvas();
 
-//    Завершающий шаг это вызовом метода stroke или fill. Собственно первый обводит фигуру линиями, а второй заливает фигуру сплошным цветом.
+// Завершающий шаг это вызовом метода stroke или fill.
 function example1() {
     let canvas = document.getElementById('example1');
     let c = canvas.getContext('2d');
@@ -818,7 +811,6 @@ function example1() {
     // strokeRect(x, y, ширина, высота) // Рисует прямоугольник
     c.stroke();
 }
-
 example1();
 
 // Гистограмма
@@ -856,7 +848,6 @@ function example2() {
         c.fillText(labels[i], 31 + i * 40, 475);
     }
 }
-
 example2();
 
 // Круговая диаграмма
@@ -904,7 +895,6 @@ function example3() {
     let metrics = c.measureText(text);
     c.fillText(text, 250 - metrics.width / 2, 400);
 }
-
 example3();
 
 // Opacity
@@ -919,7 +909,6 @@ function example4() {
     c.fillRect(10, 10, 50, 50);
     c.globalAlpha = 1.0;
 }
-
 example4();
 
 // Translate test
@@ -932,7 +921,6 @@ function example5() {
     c.rotate(rads)
     c.fillRect(0, 0, 100, 100);
 }
-
 example5();
 
 // Triangle mask
@@ -957,7 +945,6 @@ function example6() {
     c.fillStyle = 'yellow';
     c.fillRect(0, 0, 400, 100);
 }
-
 example6();
 
 // first test
@@ -977,38 +964,8 @@ function firstCanvas() {
     c.stroke();
     c.beginPath();
 }
-
 firstCanvas();
-// Animation test
-// requestAnimationFrame становится стандартом, но большинство браузеров поддерживает только свои собственные версии с префиксом. Например, Chrome использует webkitRequestAnimationFrame, а Mozilla поддерживает mozRequestAnimationFrame. Чтобы исправить это, мы воспользуемся скриптом Пола Ириша. Он просто соединяет разные варианты в новой функции: requestAnimFrame.
-window.requestAnimFrame = (function () {
-    return window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function (callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();
 
-function example7() {
-    let x = 0;
-
-    function drawIt() {
-        window.requestAnimFrame(drawIt);
-        let canvas = document.getElementById('example7');
-        let c = canvas.getContext('2d');
-        c.clearRect(0, 0, canvas.width, canvas.height);
-        c.fillStyle = "red";
-        c.fillRect(x, 100, 200, 100);
-        x += 5;
-    }
-
-    window.requestAnimFrame(drawIt);
-}
-
-// example7();
 // test snow
 function example8() {
     let canvas = document.getElementById("example8"),
@@ -1071,8 +1028,7 @@ function example8() {
         }
     }
 }
-
-example8();
+//example8();
 
 // test draw triangle
 function secondCanvas() {
@@ -1084,7 +1040,6 @@ function secondCanvas() {
     c.lineTo(100, 25);
     c.fill();
 }
-
 secondCanvas();
 
 // test draw smile
@@ -1104,7 +1059,6 @@ function thirdCanvas() {
     c.arc(60, 73, 10, 0, Math.PI * 2, true); // Правый зрачок
     c.stroke();
 }
-
 thirdCanvas();
 
 // Different filled and stroke triangel also differenetn lineTo and moveTo
@@ -1124,7 +1078,6 @@ function fourthCanvas() {
     c.closePath();
     c.stroke();
 }
-
 fourthCanvas();
 
 // Test buzier
@@ -1150,7 +1103,6 @@ function fifthCanvas() {
     c.bezierCurveTo(85, 25, 75, 37, 75, 40);
     c.fill();
 }
-
 fifthCanvas();
 
 // example colors
@@ -1166,7 +1118,6 @@ function example9() {
         }
     }
 }
-
 example9();
 
 // test canvas photos black\white
@@ -1193,5 +1144,233 @@ function sixCanvas() {
     img.src = '../../images/02.jpg';
     console.log(img);
 }
-
 sixCanvas();
+
+/*
+    Создайте объект calculator с тремя методами:
+
+    read() запрашивает prompt два значения и сохраняет их как свойства объекта
+    sum() возвращает сумму этих двух значений
+    mul() возвращает произведение этих двух значений
+
+    var calculator = {
+      ...ваш код...
+    }
+
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );
+
+*/
+function less43() {
+
+    let calculator = {
+        a: 0,
+        b: 0,
+        c: 0,
+        read: function () {
+            this.a = +prompt('a?', '');
+            this.b = +prompt('b?', '');
+        },
+        sum: function () {
+            this.c = (this.a + this.b);
+            alert(this.c);
+        },
+        mul: function () {
+            alert(this.c * this.c);
+        }
+    }
+
+    calculator.read();
+    calculator.sum();
+    calculator.mul();
+
+}
+
+/*
+    Создать Calculator при помощи конструктора
+
+    Напишите функцию-конструктор Calculator, которая создает объект с тремя методами:
+
+    Метод read() запрашивает два значения при помощи prompt и запоминает их в свойствах объекта.
+    Метод sum() возвращает сумму запомненных свойств.
+    Метод mul() возвращает произведение запомненных свойств.
+    Пример использования:
+
+    var calculator = new Calculator();
+    calculator.read();
+
+    alert( "Сумма=" + calculator.sum() );
+    alert( "Произведение=" + calculator.mul() );
+*/
+function less44() {
+    function Calculator() {
+        this.read = function () {
+            this.a = +prompt('a?','');
+            this.b = +prompt('b?','');
+        };
+        this.summ = function () {
+            return this.a + this.b;
+        };
+        this.mul = function () {
+            return this.a * this.b
+        }
+    }
+
+    let calculator = new Calculator();
+    calculator.read();
+    alert(calculator.summ());
+    alert(calculator.mul());
+}
+
+/*
+    Создайте калькулятор
+
+    Напишите конструктор Calculator, который создаёт расширяемые объекты-калькуляторы.
+
+    Эта задача состоит из двух частей, которые можно решать одна за другой.
+
+    Первый шаг задачи: вызов calculate(str) принимает строку, например «1 + 2», с жёстко заданным форматом «ЧИСЛО операция ЧИСЛО» (по одному пробелу вокруг операции), и возвращает результат. Понимает плюс + и минус -.
+
+    Пример использования:
+
+    var calc = new Calculator;
+    alert( calc.calculate("3 + 7") ); // 10
+
+    Второй шаг – добавить калькулятору метод addMethod(name, func), который учит калькулятор новой операции. Он получает имя операции name и функцию от двух аргументов func(a,b), которая должна её реализовывать.
+
+    Например, добавим операции умножить *, поделить / и возвести в степень **:
+
+    var powerCalc = new Calculator;
+    powerCalc.addMethod("*", function(a, b) {
+      return a * b;
+    });
+    powerCalc.addMethod("/", function(a, b) {
+      return a / b;
+    });
+    powerCalc.addMethod("**", function(a, b) {
+      return Math.pow(a, b);
+    });
+
+    var result = powerCalc.calculate("2 ** 3");
+    alert( result ); // 8
+    Поддержка скобок и сложных математических выражений в этой задаче не требуется.
+    Числа и операции могут состоять из нескольких символов. Между ними ровно один пробел.
+    Предусмотрите обработку ошибок. Какая она должна быть – решите сами.
+*/
+
+function less45() {
+    function Calculator() { // создаем конструктор
+
+        let methods = { // создаем объект, у него есть два метода: "-" и "+"
+            "-": function(a, b) {
+                return a - b; // этот метод возвращает разницу чисел
+            },
+            "+": function(a, b) {
+                return a + b; // этот метод возвращает сумму чисел
+            }
+        };
+
+        this.calculate = function(str) { // создаем метод конструктора
+
+            let split = str.split(' '), // разбиваем нашу строку на массив, с разделителем " "
+                a = +split[0], // в итоге у нас получится 3 элемента массива
+                op = split[1], // это у нас будут свойства(их имена), в данной строке у нас op примет значение "+" или "-" в зависимости от начальной строки
+                b = +split[2]
+
+            if (!methods[op] || isNaN(a) || isNaN(b)) { // проверка на ошибки при разбивке строки на массив
+                return NaN;
+            }
+
+            return methods[op](+a, +b); // наш метод конструктора возвращает результат вызова метода, созданного нами объекта methods,
+            //т.е. methods[op] примет значение methods."-" или methods."+", а мы знаем что делает этот метод, т.к. сами написали что ему делать(см. выше)
+        }
+
+        this.addMethod = function(name, func) { // добавляем расширяемый метод для конструктора
+            methods[name] = func; // methods[name] - это имя нашей операции, если в name мы впишем "*", то наш func сделает то, что написано в условии: return a * b;
+        };
+    }
+}
+
+/*
+    Добавить get/set-свойства
+
+    Вам попал в руки код объекта User, который хранит имя и фамилию в свойстве this.fullName:
+
+    function User(fullName) {
+      this.fullName = fullName;
+    }
+
+    var vasya = new User("Василий Попкин");
+    Имя и фамилия всегда разделяются пробелом.
+
+    Сделайте, чтобы были доступны свойства firstName и lastName, причём не только на чтение, но и на запись, вот так:
+
+    var vasya = new User("Василий Попкин");
+
+    // чтение firstName/lastName
+    alert( vasya.firstName ); // Василий
+    alert( vasya.lastName ); // Попкин
+
+    // запись в lastName
+    vasya.lastName = 'Сидоров';
+
+    alert( vasya.fullName ); // Василий Сидоров
+    Важно: в этой задаче fullName должно остаться свойством, а firstName/lastName – реализованы через get/set. Лишнее дублирование здесь ни к чему.
+*/
+
+function less46() {
+    function User(fullName) {
+        this.fullName = fullName;
+
+//        Object.defineProperty(this, "firstName", {
+//            get: function() {
+//                let spliting = fullName.split(" ");
+//                return spliting[0];
+//            }
+//        });
+//
+//        Object.defineProperty(this, "lastName", {
+//            get: function() {
+//                let spliting = fullName.split(" ");
+//                return spliting[1];
+//            },
+//            set: function() {
+//                let spliting = fullName.split(" ");
+//                return this.fullName = spliting[0] + spliting[1];
+//            }
+//        });
+
+        Object.defineProperties(this, {
+
+            firstName: {
+                get: function() {
+                    return this.fullName.split(' ')[0];
+                },
+                set: function(newFirstName) {
+                    this.fullName = newFirstName + ' ' + this.lastName;
+                }
+            },
+
+            lastName: {
+                get: function() {
+                    return this.fullName.split(' ')[1];
+                },
+                set: function(newLastName) {
+                    this.fullName = this.firstName + ' ' + newLastName;
+                }
+            }
+        });
+
+    }
+    
+    let vasya = new User('Василий Попкин');
+
+    console.log(vasya);
+    console.log(vasya.firstName);
+    console.log(vasya.lastName);
+    vasya.lastName = 'Сидоров';
+    console.log(vasya.fullName);
+    
+}
+less46();

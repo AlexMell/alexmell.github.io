@@ -37,6 +37,14 @@
         justify-content: flex-start;
         background: #cfd7e6;
     }
+    &--card {
+        background: #f2f2f2;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 30px 25px;
+    }
 }
 
 .btn-section {

@@ -37,7 +37,6 @@ block content
         .radio-circle
             input(type="checkbox" id="radio-circle" class="radio-circle__input")
             label(for="radio-circle" class="radio-circle__label")
-
     div(class="row row--grid-one")
         .first-grid
             .first-grid__title Grid #1
@@ -52,11 +51,27 @@ block content
                 .first-grid__item Item
                 .first-grid__item Item
                 .first-grid__item Item
-
-    div(class="row row--grid-one")
+    div(class="row row--grid-two")
         .second-grid
             .second-grid__title Grid #2
             .second-grid__list
-                - for (var x = 1; x < 21; x++)
+                - for (var x = 1; x < 19; x++)
                     .second-grid__item
                         img(src="../../images/nature/" + x + ".jpg")
+    div(class="row row--card")
+        .parallax-card
+            .parallax-card__holder
+                .parallax-card__front(style="background: url(../../images/nature/1.jpg) 50% 50% no-repeat;")
+                    .parallax-card__content
+                        span.parallax-card__front-title Title
+                .parallax-card__back
+                    .parallax-card__content
+                        span.parallax-card__back-descr Description
+        .parallax-card
+            .parallax-card__holder
+                .parallax-card__front(style="background: url(../../images/nature/4.jpg) 50% 50% no-repeat;")
+                    .parallax-card__content
+                        span.parallax-card__front-title Title
+                .parallax-card__back
+                    .parallax-card__content
+                        span.parallax-card__back-descr Description

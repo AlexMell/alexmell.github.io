@@ -879,8 +879,7 @@ p {
     justify-content: center;
     text-align: center;
     background: #181a1f;
-    width: 100px;
-    height: 100px;
+    padding: 20px 0;
     color: #fff; }
     .first-grid__item.--specially {
       background: #3b4048;
@@ -898,7 +897,6 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(8rem + 5vw + 5vh), 1fr));
     grid-gap: 2.5vmin;
-    padding: 2.5vmin;
     grid-auto-flow: dense; }
   .second-grid__item {
     color: #fff; }
@@ -926,6 +924,72 @@ p {
 .learn-js__list {
   display: flex;
   flex-flow: column wrap; }
+
+.parallax-card {
+  width: 250px;
+  height: 280px;
+  border-radius: 15px;
+  margin: 10px; }
+  .parallax-card__holder {
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform; }
+    .parallax-card__holder:hover .parallax-card__front {
+      transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform: rotateY(-180deg);
+      transform-style: preserve-3d; }
+    .parallax-card__holder:hover .parallax-card__back {
+      transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform: rotateY(0deg);
+      transform-style: preserve-3d; }
+  .parallax-card__content {
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    perspective: inherit;
+    z-index: 2;
+    will-change: transform; }
+  .parallax-card__front {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    background-size: cover;
+    min-height: 100%;
+    height: auto;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    will-change: transform; }
+    .parallax-card__front-title {
+      display: block;
+      text-align: center; }
+  .parallax-card__back {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    background: #000;
+    background-size: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    backface-visibility: hidden;
+    font-size: 1.5rem; }
+    .parallax-card__back-descr {
+      display: block;
+      text-align: center; }
 
 .row {
   display: flex;
@@ -958,6 +1022,13 @@ p {
     display: flex;
     justify-content: flex-start;
     background: #cfd7e6; }
+  .row--card {
+    background: #f2f2f2;
+    display: flex;
+    flex-flow: row wrap; }
+  @media screen and (max-width: 768px) {
+    .row {
+      padding: 30px 25px; } }
 
 .btn-section {
   margin-right: 20px; }

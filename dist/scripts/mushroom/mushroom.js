@@ -13,6 +13,8 @@ function canvasApp() {
     var canvas = document.getElementById('mushroom'),
         context = canvas.getContext('2d');
 
+    var jCanvas = $('#mushroom');
+
     // Canvas full width
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -21,6 +23,16 @@ function canvasApp() {
     var HALF_HEIGHT = canvas.height / 2;
     var FULL_WIDTH = canvas.width;
     var FULL_HEIGHT = canvas.height;
+
+    var canvasOffset = jCanvas.offset();
+    var offsetX = canvasOffset.left;
+    var offsetY = canvasOffset.top;
+    var mouseIsDown = false;
+    var lastX = 0;
+    var lastY = 0;
+
+    var mouseX = undefined;
+    var mouseY = undefined;
 
     // Create default points
     var lineOne = {
@@ -150,6 +162,7 @@ function canvasApp() {
 
         drawLeg();
         drawCap();
+        //        drag();
         //        gradient();
     }
 
@@ -175,6 +188,82 @@ function canvasApp() {
         context.fill();
     }
 
+    function handleMouseDown(e) {
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
+
+        // mousedown stuff here
+        lastX = mouseX;
+        lastY = mouseY;
+        mouseIsDown = true;
+    }
+
+    function handleMouseUp(e) {
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
+
+        // mouseup stuff here
+        mouseIsDown = false;
+    }
+
+    function handleMouseMove(e) {
+        if (!mouseIsDown) {
+            return;
+        }
+
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
+
+        var x = e.pageX - canvas.getBoundingClientRect().left;
+        var y = e.pageY - canvas.getBoundingClientRect().top;
+
+        var dx = x - lineOne.end.x,
+            dy = y - lineOne.end.y,
+            dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 80) {
+            // mousemove stuff here
+            lineOne.end.x = mouseX;
+            lineOne.end.y = mouseY;
+            $('body').css('cursor', 'pointer');
+        }
+
+        var dragCp1 = x - lineOne.cp1.x,
+            dragCp2 = y - lineOne.cp1.y,
+            dragCp1Dest = Math.sqrt(dragCp1 * dragCp2 + dragCp2 * dragCp2);
+
+        if (dragCp1Dest < 30) {
+            lineOne.cp1.x = mouseX;
+            lineOne.cp1.y = mouseY;
+        }
+
+        var dragCpp1 = x - lineOne.cp2.x,
+            dragCpp2 = y - lineOne.cp2.y,
+            dragCpp2Dest = Math.sqrt(dragCpp1 * dragCpp2 + dragCpp2 * dragCpp2);
+
+        if (dragCpp2Dest < 30) {
+            lineOne.cp2.x = mouseX;
+            lineOne.cp2.y = mouseY;
+        }
+    }
+
+    jCanvas.mousedown(function (e) {
+        handleMouseDown(e);
+        drawLeg();
+        drawCap();
+    });
+    jCanvas.mousemove(function (e) {
+        handleMouseMove(e);
+        drawLeg();
+        drawCap();
+    });
+    jCanvas.mouseup(function (e) {
+        handleMouseUp(e);
+        drawLeg();
+        drawCap();
+    });
+
+    // init gradient intro leg mushroom
     function gradient() {
 
         var PI = Math.PI;
@@ -198,7 +287,7 @@ function canvasApp() {
 
         function bezierTangent(a, b, c, d, t) {
             return 3 * t * t * (-a + 3 * b - 3 * c + d) + 6 * t * (a - 2 * b + c) + 3 * (-a + b);
-        };
+        }
 
         for (var t = 0; t <= 100; t += 0.25) {
 
