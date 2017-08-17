@@ -100,6 +100,14 @@ var app7 = new Vue({
     }
 });
 
+var exercise1 = new Vue({
+    el: '#exercise-1',
+    data: {
+        message: 'Hi guys',
+        show: false
+    }
+});
+
 var exercise2 = new Vue({
     el: '#exercise-2',
     data: {
@@ -173,13 +181,18 @@ var app9 = new Vue({
 var exercise4 = new Vue({
     el: '#exercise-4',
     data: {
-        'class': 'highlight-vue'
-    },
-    computed: {
-        startEffect: function startEffect() {
-            return {
-                'class': this['class']
-            };
-        }
+        array: [{
+            name: 'asd',
+            age: 25
+        }, {
+            name: 'asd1',
+            age: 25
+        }, {
+            name: 'asd2',
+            age: 25
+        }, {
+            name: 'asd3',
+            age: 25
+        }]
     }
 });

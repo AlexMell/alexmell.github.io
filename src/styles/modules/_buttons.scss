@@ -331,6 +331,43 @@
     }
 }
 
+.btn-prev,
+.btn-next {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    position: relative;
+    &__inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        will-change: transform;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 8px;
+            background: #fff;
+            position: absolute;
+            left: 10px;
+            top: 4px;
+            transform: rotate(-45deg);
+        }
+        &:after {
+            top: 9px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
 .icon-mouse {
     display: block;
     position: relative;

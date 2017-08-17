@@ -1342,7 +1342,6 @@ function less46() {
 //        });
 
         Object.defineProperties(this, {
-
             firstName: {
                 get: function() {
                     return this.fullName.split(' ')[0];
@@ -1351,7 +1350,6 @@ function less46() {
                     this.fullName = newFirstName + ' ' + this.lastName;
                 }
             },
-
             lastName: {
                 get: function() {
                     return this.fullName.split(' ')[1];
@@ -1361,7 +1359,6 @@ function less46() {
                 }
             }
         });
-
     }
     
     let vasya = new User('Василий Попкин');
@@ -1371,6 +1368,40 @@ function less46() {
     console.log(vasya.lastName);
     vasya.lastName = 'Сидоров';
     console.log(vasya.fullName);
-    
 }
-less46();
+
+/*
+    Есть функция sum, которая суммирует все элементы массива:
+
+     function sum(arr) {
+      return arr.reduce(function(a, b) {
+        return a + b;
+      });
+    }
+
+    alert( sum([1, 2, 3]) ); // 6 (=1+2+3)
+    Создайте аналогичную функцию sumArgs(), которая будет суммировать все свои аргументы:
+
+    function sumArgs() {
+    }
+
+    alert( sumArgs(1, 2, 3) ); // 6, аргументы переданы через запятую, без массива
+    Для решения примените метод reduce к arguments, используя call, apply или одалживание метода.
+
+   P.S. Функция sum вам не понадобится, она приведена в качестве примера использования reduce для похожей задачи.
+
+*/
+function less47() {
+
+    function sumArgs() {
+
+        let args = [].slice.call(arguments);
+
+        return args.reduce(function (a, b) {
+            return a + b;
+        });
+        
+    }
+    console.log( sumArgs(1,2,3) );
+}
+less47();

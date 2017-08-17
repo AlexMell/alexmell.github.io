@@ -1,6 +1,6 @@
 'use strict';
 
-var app = new Vue({
+let app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
@@ -17,21 +17,21 @@ var app = new Vue({
     }
 });
 
-var app2 = new Vue({
+let app2 = new Vue({
     el: '#app-2',
     data: {
         message: 'Вот когда вы выгрузили страничку' + new Date()
     }
 });
 
-var app3 = new Vue({
+let app3 = new Vue({
     el: '#app-3',
     data: {
         seen: true
     }
 });
 
-var app4 = new Vue({
+let app4 = new Vue({
    el: '#app-4',
     data: {
        todos: [
@@ -43,7 +43,7 @@ var app4 = new Vue({
 });
 app4.todos.push({ text: 'Text 4 Добавлен'});
 
-var app5 = new Vue({
+let app5 = new Vue({
     el: '#app-5',
     data: {
         message: 'Hello Vue js !',
@@ -56,14 +56,14 @@ var app5 = new Vue({
     }
 });
 
-var app6 = new Vue({
+let app6 = new Vue({
     el: '#app-6',
     data: {
         message: 'hellow vue'
     }
 });
 
-var exercise = new Vue({
+let exercise = new Vue({
     el: '#exercise',
     data: {
         name: 'Alex',
@@ -83,7 +83,7 @@ var exercise = new Vue({
     }
 });
 
-var app7 = new Vue({
+let app7 = new Vue({
     el: '#app-7',
     data: {
         counter: 0,
@@ -104,7 +104,15 @@ var app7 = new Vue({
     }
 });
 
-var exercise2 = new Vue({
+let exercise1 = new Vue({
+    el: '#exercise-1',
+    data: {
+        message: 'Hi guys',
+        show: false
+    }
+});
+
+let exercise2 = new Vue({
     el: '#exercise-2',
     data: {
         value: 'String'
@@ -119,7 +127,7 @@ var exercise2 = new Vue({
     }
 });
 
-var exercise3 = new Vue({
+let exercise3 = new Vue({
     el: '#exercise-3',
     data: {
         value: 0
@@ -144,7 +152,7 @@ var exercise3 = new Vue({
     },
 });
 
-var app8 = new Vue({
+let app8 = new Vue({
     el: '#app-8',
     data: {
         attachRed: false,
@@ -158,7 +166,7 @@ var app8 = new Vue({
     }
 });
 
-var app9 = new Vue({
+let app9 = new Vue({
     el: '#app-9',
     data: {
         color: 'gray',
@@ -174,16 +182,26 @@ var app9 = new Vue({
     }
 });
 
-var exercise4 = new Vue({
+let exercise4 = new Vue({
     el: '#exercise-4',
     data: {
-        class: 'highlight-vue'
-    },
-    computed: {
-        startEffect: function () {
-            return {
-                class: this.class
+        array: [
+            {
+                name: 'asd',
+                age: 25
+            },
+            {
+                name: 'asd1',
+                age: 25
+            },
+            {
+                name: 'asd2',
+                age: 25
+            },
+            {
+                name: 'asd3',
+                age: 25
             }
-        }
+        ],
     }
-});
+})

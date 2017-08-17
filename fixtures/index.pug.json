@@ -32,5 +32,11 @@
             "btn": "Learn Vue.js",
             "url": "pages/learn-vue.html"
         }
+    ],
+    "itemsOfOther": [
+        {
+            "btn": "AMP",
+            "url": "pages/amp.html"
+        }
     ]
 }

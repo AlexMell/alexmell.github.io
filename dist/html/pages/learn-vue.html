@@ -35,6 +35,13 @@
           </div>
         </div>
         <div class="row row__vue">
+          <div id="exercise-1">
+            <input type="text" v-model="message"><span>{{ message }}</span>
+            <button @click="show = !show">Нажми чтобы скрыть квадрат ниже</button>
+            <div class="squire" style="width: 200px; height: 200px; background: #000;" v-if="show"></div>
+          </div>
+        </div>
+        <div class="row row__vue">
           <div id="app-2"><span v-bind:title="message">Подержи курсор надо мной пару секунд, чтобы увидеть динамически связанное значение title!</span></div>
         </div>
         <div class="row row__vue">
@@ -134,32 +141,7 @@
           </div>
         </div>
         <div class="row row__vue">
-          <div id="exercise-4">
-            <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below)-->
-            <div>
-              <button @click="startEffect">Start Effect</button>
-              <div id="effect-vue" v-bind:style="{startEffect: startEffect}"></div>
-            </div>
-            <!-- 2) Create a couple of CSS classes and attach them via the array syntax-->
-            <div>I got no classs (</div>
-            <!-- 3) Let the user enter a class (create some example classes) and attach it-->
-            <div>
-              <input type="text">
-              <div></div>
-            </div>
-            <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes-->
-            <div>
-              <input type="text">
-              <input type="text">
-              <div></div>
-            </div>
-            <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.-->
-            <div>
-              <input type="text">
-              <div></div>
-            </div>
-            <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button.-->
-          </div>
+          <div id="exercise-4"><span>{{ 500 | currency }}</span></div>
         </div>
       </main>
       <!--include layout/footer-->
