@@ -56,12 +56,23 @@ block content
                 .first-grid__item Item
     div(class="row row--grid-two")
         .second-grid
-            .second-grid__title Grid #2
+            .second-grid__title Grid #2 with object-fit
             .second-grid__list
                 - for (var x = 1; x < 19; x++)
                     .second-grid__item
                         img(src="../../images/nature/" + x + ".jpg")
+    div(class="row row--grid-two")
+        .third-grid
+            .third-grid__title Grid #3
+            .third-grid__container
+                .third-grid__header Header
+                .third-grid__left-col Nav
+                .third-grid__main Main
+                .third-grid__right-col Aside
+                .third-grid__footer Footer
+
     div(class="row row--card")
+        .row__title Parallax card (perspective, backface-visibility)
         .parallax-card
             .parallax-card__holder
                 .parallax-card__front(style="background: url(../../images/nature/1.jpg) 50% 50% no-repeat;")
@@ -78,3 +89,9 @@ block content
                 .parallax-card__back
                     .parallax-card__content
                         span.parallax-card__back-descr Description
+    div(class="row row--focus-within")
+        .row__title focus-within
+        .focus-within
+            form(action="#" class="focus-within__form")
+                input(type="text" class="focus-within__input")
+

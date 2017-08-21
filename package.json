@@ -1,5 +1,5 @@
 {
-  "name": "Alex Mell Study",
+  "name": "AlexMell_Study",
   "version": "2.0.0",
   "description": "Education",
   "main": "gulpfile.js",
@@ -19,7 +19,7 @@
     "gulp-plumber": "1.0.0",
     "gulp-pug": "*",
     "gulp-rename": "1.2.2",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "*",
     "gulp-swig": "*",
     "gulp-uglify": "1.2.0",
     "run-sequence": "^2.1.0"

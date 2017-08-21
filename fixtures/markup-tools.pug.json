@@ -1,27 +1,64 @@
 {
     "pageTitle": "Main",
     "bodyClass": "body-tools",
-    "mainTitle": "Markup Tools",
-    "educationList": [
+    "mainTitle": "Other tools",
+    "newsList": [
         {
-            "url": "https://www.codewars.com/",
-            "text": "Codewars",
+            "url": "https://tproger.ru/",
+            "text": "Типичный программист",
+            "lang": "Рус"
+        },
+        {
+            "url": "https://medium.com/",
+            "text": "Medium",
+            "lang": "Рус/Eng"
+        },
+        {
+            "url": "https://geektimes.ru/feed/all/",
+            "text": "GeekTimes",
+            "lang": "Рус"
+        },
+        {
+            "url": "http://habrahabr.ru/",
+            "text": "Habrahabr",
+            "lang": "Рус"
+        },
+        {
+            "url": "https://css-tricks.com/",
+            "text": "CSS Tricks",
             "lang": "Eng"
         },
         {
-            "url": "https://www.codecademy.com/",
-            "text": "CodeAcademy",
-            "lang": "Eng"
+            "url": "http://css-live.ru/",
+            "text": "CSS Live",
+            "lang": "Рус"
+        },
+        {
+            "url": "http://css.yoksel.ru/",
+            "text": "Про CSS",
+            "lang": "Рус"
+        },
+        {
+            "url": "https://toster.ru/",
+            "text": "Тостер",
+            "lang": "Рус"
+        },
+        {
+            "url": "https://ain.ua/",
+            "text": "AIN",
+            "lang": "Рус"
+        }
+    ],
+    "educationList": [
+        {
+            "url": "https://learn.javascript.ru/",
+            "text": "Учебник JavaScript",
+            "lang": "Рус"
         },
         {
             "url": "http://frontendbookshelf.ru/",
             "text": "Books front-end",
             "lang": "Рус"
-        },
-        {
-            "url": "https://www.udemy.com/",
-            "text": "Udemy",
-            "lang": "Eng"
         },
         {
             "url": "https://htmlacademy.ru/",
@@ -37,210 +74,149 @@
             "url": "http://zty.pe/",
             "text": "ZyType",
             "lang": "Eng"
-        }
-    ],
-    "newsList": [
-        {
-            "url": "http://habrahabr.ru/",
-            "text": "Habrahabr",
-            "lang": "Рус"
         },
         {
-            "url": "https://tproger.ru/",
-            "text": "Типичный программист",
-            "lang": "Рус"
-        },
-        {
-            "url": "http://frontender.info/",
-            "text": "Frontender",
-            "lang": "Рус"
-        },
-        {
-            "url": "https://web-standards.ru/",
-            "text": "Веб-стандарты",
-            "lang": "Рус"
-        },
-        {
-            "url": "http://blog.csssr.ru/",
-            "text": "Блог CSS",
-            "lang": "Рус"
-        },
-        {
-            "url": "http://css.yoksel.ru/",
-            "text": "Про CSS",
-            "lang": "Рус"
-        },
-        {
-            "url": "http://css-live.ru/",
-            "text": "CSS Live",
-            "lang": "Рус"
-        },
-        {
-            "url": "http://cssing.org.ua/",
-            "text": "CSSing",
-            "lang": "Рус"
-        },
-        {
-            "url": "https://css-tricks.com/",
-            "text": "CSS Tricks",
+            "url": "https://www.udemy.com/",
+            "text": "Udemy",
             "lang": "Eng"
         }
     ],
     "helpList": [
         {
-            "url": "https://icomoon.io/",
-            "text": "Icomoon"
+            "url": "http://www.colinkeany.com/blend/",
+            "text": "Linear gradient generator"
+        },
+        {
+            "url": "http://www.melanieceraso.com/psd-to-css3/",
+            "text": "Convert box-shadow"
+        },
+        {
+            "url": "https://docs.emmet.io/cheat-sheet/",
+            "text": "Emmet cheat sheet"
+        },
+        {
+            "url": "https://www.fontsquirrel.com/",
+            "text": "Font squirrel"
         },
         {
             "url": "http://caniuse.com/",
             "text": "Can I Use"
         },
         {
-            "url": "https://yoksel.github.io/pixel-glass-js/",
-            "text": "Pixel Glass"
+            "url": "https://icomoon.io/",
+            "text": "Icomoon"
         },
         {
-            "url": "http://cubic-bezier.com/",
-            "text": "Cubic Bezier"
+            "url": "http://yeoman.io/",
+            "text": "YeoMan"
         },
         {
-            "url": "https://www.fontsquirrel.com/",
-            "text": "Font squirrel"
-        },
-        {
-            "url": "https://www.fontsquirrel.com/",
-            "text": "Font squirrel"
-        },
-        {
-            "url": "http://quenchjs.com/",
-            "text": "Gulp generator"
-        },
-        {
-            "url": "http://www.colinkeany.com/blend/",
-            "text": "Linear gradient generator"
+            "url": "https://pin.gy/cli/",
+            "text": "Pingy"
         }
     ],
     "pluginsList": [
         {
-            "url": "https://jquery.com/",
-            "text": "jQuery"
-        },
-        {
-            "url": "https://jquery.com/",
-            "text": "Salvattore"
-        },
-        {
-            "url": "https://owlcarousel2.github.io/OwlCarousel2/",
-            "text": "Owl Carousel"
-        },
-        {
-            "url": "http://idangero.us/swiper/",
-            "text": "Swiper"
+            "url": "http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_examples.html",
+            "text": "Malihu ScrollBar"
         },
         {
             "url": "http://ionden.com/a/plugins/ion.rangeSlider/",
             "text": "Range Slider"
         },
         {
-            "url": "http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_examples.html",
-            "text": "Malihu ScrollBar"
+            "url": "https://jquery.com/",
+            "text": "Salvattore"
+        },
+        {
+            "url": "http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage",
+            "text": "Dut.gui"
+        },
+        {
+            "url": "http://idangero.us/swiper/",
+            "text": "Swiper"
+        },
+        {
+            "url": "https://jquery.com/",
+            "text": "jQuery"
         },
         {
             "url": "https://vuejs.org/",
-            "text": "Vue"
+            "text": "Vue.js"
         }
     ],
     "channelList": [
         {
-            "url": "https://www.youtube.com/user/ArtSorax",
-            "text": "Sorax"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCZeU17nbVfzczAkJVTay9vw",
-            "text": "uWebDesign"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCIIt69f5D44s2cdb9vXQNzA",
-            "text": "LoftBlog"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCY35dlJe-V5J_IqzU-XksAg",
-            "text": "Веб-стандарты"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCIIt69f5D44s2cdb9vXQNzA",
-            "text": "LoftBlog"
+            "url": "https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw",
+            "text": "Google Chrome Developers",
+            "lang": "Eng"
         },
         {
             "url": "https://www.youtube.com/channel/UCe_H8hzx9WV7Ca7Ps5gt72Q",
-            "text": "Web Developer Blog"
+            "text": "Web Developer Blog",
+            "lang": "Рус"
         },
         {
-            "url": "https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw",
-            "text": "Google Chrome Developers"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCORRUYUmW1pffMgLPzU0XCA",
-            "text": "DevColibri"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCyIe-61Y8C4_o-zZCtO4ETQ",
-            "text": "DevTips"
-        },
-        {
-            "url": "https://www.youtube.com/channel/UC0Fl0gKuawQQs8jf35T_kfg",
-            "text": "Master CSS"
+            "url": "https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g",
+            "text": "HTML Academy",
+            "lang": "Рус"
         },
         {
             "url": "https://www.youtube.com/channel/UCyU5wkjgQYGRB0hIHMwm2Sg",
-            "text": "LevelUpTuts"
+            "text": "LevelUpTuts",
+            "lang": "Eng"
         },
         {
-            "url": "https://www.youtube.com/channel/UC7enHM_oJRYJOnyJrcRzwbg",
-            "text": "WebDesign Master"
+            "url": "https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w",
+            "text": "Academind",
+            "lang": "Eng"
         },
         {
-            "url": "https://www.youtube.com/channel/UCD15yBvmQElLP7EFL8vW6Yw",
-            "text": "WebTheory"
+            "url": "https://www.youtube.com/channel/UCIIt69f5D44s2cdb9vXQNzA",
+            "text": "LoftBlog",
+            "lang": "Рус"
         },
         {
-            "url": "https://www.livecoding.tv/",
-            "text": "LiveCoding"
+            "url": "https://www.youtube.com/user/ArtSorax",
+            "text": "Sorax",
+            "lang": "Рус"
+        }
+    ],
+    "podcastList": [
+        {
+            "url": "https://soundcloud.com/frontend-weekend",
+            "text": "Front-end Weekend",
+            "lang": "Рус"
+        },
+        {
+            "url": "https://soundcloud.com/web-standards",
+            "text": "Веб стандарты",
+            "lang": "Рус"
         }
     ],
     "productivityList": [
         {
-            "url": "https://atom.io/",
-            "text": "Atom"
+            "url": "https://www.jetbrains.com/idea/",
+            "text": "IntelliJ IDEA"
         },
         {
             "url": "https://www.jetbrains.com/webstorm/",
             "text": "WebStorm"
         },
         {
-            "url": "https://www.jetbrains.com/idea/",
-            "text": "IntelliJ IDEA"
-        },
-        {
-            "url": "https://itunes.apple.com/us/app/be-focused-focus-timer-goal-tracker-for-work/id973130201?mt=8",
-            "text": "Be Focused (Pomodoro Timer)"
-        },
-        {
             "url": "https://getpocket.com/a/queue/",
             "text": "Get Pocket"
-        }
-    ],
-    "blogList": [
-        {
-            "url": "https://medium.com/",
-            "text": "Medium"
         },
         {
-            "url": "https://ymatuhin.ru/https://ymatuhin.ru/",
-            "text": "Юрий Матюхин"
+            "url": "https://trello.com",
+            "text": "Trello"
         }
     ],
     "cloudList": [
+        {
+            "url": "http://codepen.io/",
+            "text": "CodePen"
+        },
         {
             "url": "https://www.dropbox.com/home",
             "text": "Dropbox"
@@ -250,56 +226,38 @@
             "text": "GitHub"
         },
         {
-            "url": "http://codepen.io/",
-            "text": "CodePen"
-        },
-        {
             "url": "http://icloud.com",
             "text": "iCloud"
-        }
-    ],
-    "linkList": [
-        {
-            "url": "https://www.slack.com",
-            "text": "Slack"
         },
         {
-            "url": "https://skype.com/",
-            "text": "Skype"
-        },
-        {
-            "url": "https://telegram.org/",
-            "text": "Telegram"
+            "url": "https://about.gitlab.com/",
+            "text": "GitLab"
         }
     ],
     "extensionList": [
         {
-            "url": "http://outdatedbrowser.com/ru/",
-            "text": "All Best Browsers"
-        },
-        {
-            "url": "https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?gclid=Cj0KEQiAxeTFBRCGmIq_7rGt_r8BEiQANdPqUrk13j6K-l7sKEkyaXZwJ9zBKwvcGUS6Slm3cFWPQNcaAs0T8P8HAQ",
-            "text": "Pixel Perfect Extension"
+            "url": "https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg",
+            "text": "The Great Suspender Extension"
         },
         {
             "url": "https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=ru2",
             "text": "Google Translate Extension"
         },
         {
-            "url": "http://www.colorzilla.com/chrome/",
-            "text": "ColorZilla Extension"
-        },
-        {
-            "url": "https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg",
-            "text": "The Great Suspender"
+            "url": "https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?gclid=Cj0KEQiAxeTFBRCGmIq_7rGt_r8BEiQANdPqUrk13j6K-l7sKEkyaXZwJ9zBKwvcGUS6Slm3cFWPQNcaAs0T8P8HAQ",
+            "text": "Pixel Perfect Extension"
         },
         {
             "url": "https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd?hl=ru",
             "text": "PushBullet Extension"
         },
         {
-            "url": "http://livestyle.io/",
-            "text": "LiveStyle"
+            "url": "http://www.colorzilla.com/chrome/",
+            "text": "ColorZilla Extension"
+        },
+        {
+            "url": "http://outdatedbrowser.com/ru/",
+            "text": "All Best Browsers"
         }
     ]
 }

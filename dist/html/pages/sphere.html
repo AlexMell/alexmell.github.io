@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Front-End, Web, HTML, CSS">
-    <title>Learn Backbone.js | AlexMell</title>
+    <title>Sphere WebGL | AlexMell</title>
     <link rel="shortcut icon" type="image/png" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../../dist/styles/styles.min.css">
   </head>
-  <body class="body-backbone">
+  <body class="body-sphere">
     <div class="wrapper">
-      <header class="header undefined">
+      <header class="header --transparent">
         <div class="header__author author"><a class="author__name" href="/dist/html/index.html">AlexMell</a><span class="author__job">HTML/CSS Developer in<a class="author__job-link" href="https://branderstudio.com/" target="_blank">Brander</a></span></div>
         <div class="header__soc-net soc-net">
           <ul class="soc-net__list">
@@ -26,32 +26,16 @@
           <div class="soc-net__mail"><a class="soc-net__mail-link" href="mailto:alex2mell@gmail.com">alex2mell@gmail.com</a></div>
         </div>
       </header>
-      <main class="main undefined">
-        <div class="param">
-          <div class="param__list"><a class="btn param__name js-all" href="#">all users</a><a class="btn param__name js-list" href="#">list users</a></div>
-        </div>
-        <div class="tab-content">
-          <div class="tab-users js-tab-all"></div>
-          <div class="tab-quantity js-tab-list">
-            <div>Mister<span class="st-mr"></span></div>
-            <div>Missis<span class="st-ms"></span></div>
-            <div>Miriesesserse<span class="st-mrs"></span></div>
-          </div>
-        </div>
-        <script type="text/template" id="person">
-          <div class="user">
-            <div class="user__img"><img src="&lt;%= picture.medium %&gt;" alt=""></div>
-            <div class="user__info"><i><%= name.title %></i><strong><%= gender %></strong><span><%= name.first %></span><span><%= location.city %></span><span><%= registered %></span></div>
-          </div>
-        </script>
+      <main class="main sphere-page">
+        <canvas id="sphere"></canvas>
       </main>
       <!--include layout/footer-->
     </div>
     <script src="../../../../src/plugins/jquery-3.1.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="../../../../dist/scripts/main/main.js"></script>
-    <script src="../../../src/plugins/underscore.js"></script>
-    <script src="../../../src/plugins/backbone.js"></script>
-    <script src="../../../dist/scripts/backbone/backbone.min.js"></script>
+    <script src="../../../../src/plugins/three.min.js"></script>
+    <script src="../../../../src/plugins/dat.gui.min.js"></script>
+    <script src="../../../../dist/scripts/sphere/sphere.min.js"></script>
   </body>
 </html>

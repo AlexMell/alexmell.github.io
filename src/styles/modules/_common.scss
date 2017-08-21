@@ -6,6 +6,13 @@
     background: #ccc;
     padding: 40px 50px;
     margin-bottom: 20px;
+    &__title {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
     &--canvas {
         padding: 0;
         background: #fafafa;
@@ -42,6 +49,12 @@
         display: flex;
         flex-flow: row wrap;
     }
+    &--focus-within {
+        flex-flow: row wrap;
+        &:focus-within {
+            background-color: #98c379;
+        }
+    }
     @media screen and (max-width: 768px) {
         padding: 30px 25px;
     }
@@ -49,4 +62,30 @@
 
 .btn-section {
     margin-right: 20px;
+}
+
+.dg.main.a {
+    padding: 0;
+    margin-top: 180px;
+}
+
+.icon-list-item {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        width: 2px;
+        height: 8px;
+        background: #a5c850;
+        transform: rotate(-45deg);
+        position: absolute;
+        left: 9px;
+        top: 2px;
+    }
+    &:after {
+        top: 7px;
+        transform: rotate(45deg);
+    }
 }

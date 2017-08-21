@@ -435,3 +435,15 @@
         transform: translateY(10px);
     }
 }
+
+.focus-within {
+    width: 100%;
+    &__input {
+        border-radius: 3px;
+        border: none;
+        background: #fff;
+        height: 30px;
+        font-size: 24px;
+        line-height: 26px;
+    }
+}

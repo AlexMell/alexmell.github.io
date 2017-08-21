@@ -11,6 +11,10 @@
         {
             "btn": "Mushrooms",
             "url": "pages/mushroom.html"
+        },
+        {
+            "btn": "Sphere",
+            "url": "pages/sphere.html"
         }
     ],
     "itemsNative": [

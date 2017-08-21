@@ -4,6 +4,9 @@
 .body-tools {
     background: #fff;
 }
+.body-sphere {
+    background: #000;
+}
 .wrapper {
     display: flex;
     min-height: 100vh;
@@ -18,6 +21,9 @@
     }
     &.mushroom-page {
         background: #ccc;
+        padding: 0;
+    }
+    &.sphere-page {
         padding: 0;
     }
     &.canvas-page {

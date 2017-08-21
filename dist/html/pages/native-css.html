@@ -13,7 +13,7 @@
   <body class="css-tricks">
     <div class="wrapper">
       <header class="header undefined">
-        <div class="header__author author"><a class="author__name" href="/dist/html/index.html">AlexMell</a><span class="author__job">HTML/CSS Developer in<a class="author__job-link" href="http://branderstudio.com/ru/index" target="_blank">Brander</a></span></div>
+        <div class="header__author author"><a class="author__name" href="/dist/html/index.html">AlexMell</a><span class="author__job">HTML/CSS Developer in<a class="author__job-link" href="https://branderstudio.com/" target="_blank">Brander</a></span></div>
         <div class="header__soc-net soc-net">
           <ul class="soc-net__list">
             <li class="soc-net__item"><a class="soc-net__link" href="https://twitter.com/alex2mell" target="_blank"><i class="icon-twitter"></i></a></li>
@@ -81,7 +81,7 @@
         </div>
         <div class="row row--grid-two">
           <div class="second-grid">
-            <div class="second-grid__title">Grid #2</div>
+            <div class="second-grid__title">Grid #2 with object-fit</div>
             <div class="second-grid__list">
               <div class="second-grid__item"><img src="../../images/nature/1.jpg"></div>
               <div class="second-grid__item"><img src="../../images/nature/2.jpg"></div>
@@ -104,7 +104,20 @@
             </div>
           </div>
         </div>
+        <div class="row row--grid-two">
+          <div class="third-grid">
+            <div class="third-grid__title">Grid #3</div>
+            <div class="third-grid__container">
+              <div class="third-grid__header">Header</div>
+              <div class="third-grid__left-col">Nav</div>
+              <div class="third-grid__main">Main</div>
+              <div class="third-grid__right-col">Aside</div>
+              <div class="third-grid__footer">Footer</div>
+            </div>
+          </div>
+        </div>
         <div class="row row--card">
+          <div class="row__title">Parallax card (perspective, backface-visibility)</div>
           <div class="parallax-card">
             <div class="parallax-card__holder">
               <div class="parallax-card__front" style="background: url(../../images/nature/1.jpg) 50% 50% no-repeat;">
@@ -124,6 +137,14 @@
                 <div class="parallax-card__content"><span class="parallax-card__back-descr">Description</span></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row row--focus-within">
+          <div class="row__title">focus-within</div>
+          <div class="focus-within">
+            <form class="focus-within__form" action="#">
+              <input class="focus-within__input" type="text">
+            </form>
           </div>
         </div>
       </main>

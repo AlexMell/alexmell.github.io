@@ -9,16 +9,22 @@ block content
     div.tools
         div.tools__heading-holder
             h1.tools__heading #{mainTitle}
-        div(id="grid", class="tools__grid", data-columns="3")
+        div(id="grid", class="tools__grid", data-columns="4")
 
             mixin list(item)
                 li.tools__item
                     div.tools__frame
-                        i.icon-books
-                    a(class="tools__link", href=item.url)= item.text
+                        i.icon-list-item
+                    a(class="tools__link", href=item.url target="_blank")= item.text
                         if item.lang
                             span.tools__lang= '(' + item.lang + ')'
                         else
+
+            div.tools__division
+                span.tools__title Inspiration/Articles
+                ul.tools__list
+                    for item in newsList
+                        +list(item)
 
             div.tools__division
                 span.tools__title Education
@@ -26,40 +32,35 @@ block content
                     for item in educationList
                         +list(item)
 
-            div.tools__division
-                span.tools__title News/Articles
-                ul.tools__list
-                    for item in newsList
-                        +list(item)
 
             div.tools__division
-                span.tools__title Help/Secondary
+                span.tools__title Helper
                 ul.tools__list
                     for item in helpList
                         +list(item)
 
             div.tools__division
-                span.tools__title Libraries/Plugins
+                span.tools__title Libraries/Frameworks
                 ul.tools__list
                     for item in pluginsList
                         +list(item)
 
             div.tools__division
-                span.tools__title Channels
+                span.tools__title YouTube Channels
                 ul.tools__list
                     for item in channelList
                         +list(item)
 
             div.tools__division
-                span.tools__title Productivity
+                span.tools__title Podcasts
                 ul.tools__list
-                    for item in productivityList
+                    for item in podcastList
                         +list(item)
 
             div.tools__division
-                span.tools__title Blogs
+                span.tools__title Miscellaneous & Productivity
                 ul.tools__list
-                    for item in blogList
+                    for item in productivityList
                         +list(item)
 
             div.tools__division
@@ -69,13 +70,7 @@ block content
                         +list(item)
 
             div.tools__division
-                span.tools__title Link
+                span.tools__title Browsers/Chrome extensions
                 ul.tools__list
-                    for item in cloudList
-                        +list(item)
-
-            div.tools__division
-                span.tools__title Browser/Extension
-                ul.tools__list
-                    for item in cloudList
+                    for item in extensionList
                         +list(item)
