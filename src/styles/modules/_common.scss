@@ -33,6 +33,10 @@
         background: #f2f2f2;
         margin: 0 0 10px;
         color: #424242;
+        flex-wrap: wrap;
+        h3 {
+            width: 100%;
+        }
     }
     &--checkbox {
         display: flex;
@@ -42,7 +46,7 @@
     &--radio {
         display: flex;
         justify-content: flex-start;
-        background: #cfd7e6;
+        background: #001322;
     }
     &--card {
         background: #f2f2f2;
@@ -67,6 +71,25 @@
 .dg.main.a {
     padding: 0;
     margin-top: 180px;
+}
+
+.for-layout {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &__section {
+        margin-right: 20px;
+    }
+    @media screen and (max-width: 980px) {
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        &__section {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .icon-list-item {

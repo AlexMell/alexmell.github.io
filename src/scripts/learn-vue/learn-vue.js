@@ -8,10 +8,10 @@ let app = new Vue({
         someBlock: '<div>Some block is here</div>'
     },
     methods: {
-        sayHello: function () {
+        sayHello: function() {
             this.message2 = "Hi Guys!";
         },
-        changeTitle: function (event) {
+        changeTitle: function(event) {
             this.message = event.target.value;
         }
     }
@@ -32,16 +32,23 @@ let app3 = new Vue({
 });
 
 let app4 = new Vue({
-   el: '#app-4',
+    el: '#app-4',
     data: {
-       todos: [
-           {text: "Text 1"},
-           {text: "Text 2"},
-           {text: "Text 3"}
-       ]
+        todos: [{
+                text: "Text 1"
+            },
+            {
+                text: "Text 2"
+            },
+            {
+                text: "Text 3"
+            }
+        ]
     }
 });
-app4.todos.push({ text: 'Text 4 Добавлен'});
+app4.todos.push({
+    text: 'Text 4 Добавлен'
+});
 
 let app5 = new Vue({
     el: '#app-5',
@@ -50,7 +57,7 @@ let app5 = new Vue({
         link: 'https://alexmell.github.io/'
     },
     methods: {
-        reverseMessage: function () {
+        reverseMessage: function() {
             this.message = this.message.split('').reverse().join('');
         }
     }
@@ -71,13 +78,13 @@ let exercise = new Vue({
         imgLink: 'http://demandware.edgesuite.net/aalw_prd/on/demandware.static/-/Sites-ConverseMaster/default/dw978c25da/images/hi-res/M9166C_standard.jpg'
     },
     methods: {
-        multiplyAge: function () {
+        multiplyAge: function() {
             return this.age * 3
         },
-        randomAge: function () {
+        randomAge: function() {
             return (Math.random(1));
         },
-        changeName: function (event) {
+        changeName: function(event) {
             this.name = event.target.value
         }
     }
@@ -91,14 +98,14 @@ let app7 = new Vue({
         y: 0
     },
     methods: {
-        increase: function (step) {
+        increase: function(step) {
             this.counter += step;
         },
-        updateCoordinates: function (event) {
+        updateCoordinates: function(event) {
             this.x = event.clientX;
             this.y = event.clientY;
         },
-        alertMe: function () {
+        alertMe: function() {
             alert('Alert!');
         },
     }
@@ -118,10 +125,10 @@ let exercise2 = new Vue({
         value: 'String'
     },
     methods: {
-        showAlert: function () {
+        showAlert: function() {
             alert('Alert is showing!');
         },
-        storeValue: function (event) {
+        storeValue: function(event) {
             this.value = event.target.value
         }
     }
@@ -133,19 +140,19 @@ let exercise3 = new Vue({
         value: 0
     },
     computed: {
-        output: function () {
+        output: function() {
             return this.value >= 35 ? 'done!' : 'not there yet'
         },
     },
     methods: {
-        result: function () {
+        result: function() {
             return this.value >= 35 ? 'done!' : 'not there yet'
         }
     },
     watch: {
-        value: function (value) {
+        value: function(value) {
             let vm = this;
-            setTimeout(function () {
+            setTimeout(function() {
                 vm.value = 0
             }, 5000)
         },
@@ -158,7 +165,7 @@ let app8 = new Vue({
         attachRed: false,
         color: 'green'
     },
-    divClass: function (){
+    divClass: function() {
         return {
             red: this.attachRed,
             blue: !this.attachRed
@@ -173,7 +180,7 @@ let app9 = new Vue({
         width: 100
     },
     computed: {
-        myStyle: function () {
+        myStyle: function() {
             return {
                 backgroundColor: this.color,
                 width: this.width + 'px'
@@ -185,23 +192,29 @@ let app9 = new Vue({
 let exercise4 = new Vue({
     el: '#exercise-4',
     data: {
-        array: [
-            {
-                name: 'asd',
-                age: 25
+        users: [{
+                name: 'Vasya',
+                age: 15
             },
             {
-                name: 'asd1',
-                age: 25
+                name: 'Masha',
+                age: 3
             },
             {
-                name: 'asd2',
-                age: 25
+                name: 'Katya',
+                age: 1
             },
             {
-                name: 'asd3',
-                age: 25
+                name: 'Misha',
+                age: 4
             }
         ],
-    }
-})
+    },
+    computed: {
+        filteredUsers: function() {
+            return this.users.filter(function(user) {
+                return user.name.indexOf(this.search) !== -1
+            }.bind(this))
+        }
+    },
+});

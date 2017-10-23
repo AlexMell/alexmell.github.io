@@ -9,6 +9,7 @@
     <title>Learn Vue.js | AlexMell</title>
     <link rel="shortcut icon" type="image/png" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../../dist/styles/styles.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body class="body-vue">
     <div class="wrapper">
@@ -27,46 +28,46 @@
         </div>
       </header>
       <main class="main undefined">
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app">
             <label for="change_title">Изменить текст</label>
             <input type="text" id="change_title" style="display: block; width: 100%; margin: 0 0 5px;" v-on:input="changeTitle"><span>{{ message }}</span><span>{{ sayHello() }}</span>
             <div v-html="someBlock"></div>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="exercise-1">
             <input type="text" v-model="message"><span>{{ message }}</span>
             <button @click="show = !show">Нажми чтобы скрыть квадрат ниже</button>
             <div class="squire" style="width: 200px; height: 200px; background: #000;" v-if="show"></div>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-2"><span v-bind:title="message">Подержи курсор надо мной пару секунд, чтобы увидеть динамически связанное значение title!</span></div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-3"><span v-if="seen">Пропадаем</span></div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-4">
             <ul>
               <li v-for="todo in todos">{{ todo.text }}</li>
             </ul>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-5">
             <p>{{ message }}</p><a v-bind:href="link" target="_blank">Link to alexmell github</a>
             <button v-on:click="reverseMessage">Обратить порядок букв в сообещении</button>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-6">
             <p>{{ message }}</p>
             <input type="text" v-model="message">
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="exercise">
             <!-- 1) Fill the <p> below with your Name and Age - using Interpolation-->
             <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
@@ -82,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-7">
             <button type="submit" v-on:click="increase(2)">Click for add to counter + 2</button>
             <button type="submit" v-on:click="counter++">Click for add to counter</button>
@@ -90,7 +91,7 @@
             <input type="text" v-on:keyup.enter.space="alertMe">
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="exercise-2">
             <!-- 1) Show an alert when the Button gets clicked-->
             <div>
@@ -108,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="exercise-3">
             <!-- 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it-->
             <div>
@@ -124,14 +125,14 @@
             </div>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-8">
             <div class="demo-square" v-bind:click="attachRed = !attachRed" v-bind:class="{red: attachRed, blue: !attachRed}"></div>
             <div class="demo-square" v-bind:class="{red: attachRed}"></div>
             <div class="demo-square" v-bind:class="[color, {red: attachRed}]"></div>
           </div>
         </div>
-        <div class="row row__vue">
+        <div class="row row--vue">
           <div id="app-9">
             <div class="demo-square" v-bind:style="{backgroundColor: color}"></div>
             <div class="demo-square" v-bind:style="myStyle"></div>
@@ -140,8 +141,13 @@
             <input type="text" v-model="width">
           </div>
         </div>
-        <div class="row row__vue">
-          <div id="exercise-4"><span>{{ 500 | currency }}</span></div>
+        <div class="row row--vue">
+          <h3>Filtres</h3>
+          <div id="exercise-4">
+            <ul>
+              <li v-for="item in filteredUsers">{{ item.name }}, {{ item.age }} </li>
+            </ul>
+          </div>
         </div>
       </main>
       <!--include layout/footer-->

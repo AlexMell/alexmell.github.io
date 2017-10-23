@@ -1,7 +1,7 @@
 {
     "pageTitle": "Main",
     "bodyClass": "body-tools",
-    "mainTitle": "Other tools",
+    "mainTitle": "Tools",
     "newsList": [
         {
             "url": "https://tproger.ru/",
@@ -192,6 +192,11 @@
             "url": "https://soundcloud.com/web-standards",
             "text": "Веб стандарты",
             "lang": "Рус"
+        },
+        {
+            "url": "https://radiojs.ru/",
+            "text": "RadioJS",
+            "lang": "Рус"
         }
     ],
     "productivityList": [
@@ -200,12 +205,16 @@
             "text": "IntelliJ IDEA"
         },
         {
+            "url": "https://getpocket.com/a/queue/",
+            "text": "Get Pocket"
+        },
+        {
             "url": "https://www.jetbrains.com/webstorm/",
             "text": "WebStorm"
         },
         {
-            "url": "https://getpocket.com/a/queue/",
-            "text": "Get Pocket"
+            "url": "https://code.visualstudio.com/",
+            "text": "VS Code"
         },
         {
             "url": "https://trello.com",

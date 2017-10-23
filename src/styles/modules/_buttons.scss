@@ -436,6 +436,7 @@
     }
 }
 
+
 .focus-within {
     width: 100%;
     &__input {
@@ -445,5 +446,30 @@
         height: 30px;
         font-size: 24px;
         line-height: 26px;
+    }
+}
+
+.star-rating {
+    display: block;
+    width: 100%;
+    &__input{
+        display: none;
+    }
+    &__wrap {
+        direction: rtl;
+    }
+    &__ico {
+        color: #FDD003;
+    }
+    &__ico:hover:before,
+    &__ico:hover ~ .b-star-rating__ico:before {
+        content: "\f005";
+        color: #FDD003;
+    }
+    &__ico:hover:before,
+    &__ico:hover ~ &__ico:before,
+    &__input:checked ~ &__ico:before {
+        content: "\f005";
+        color: #FDD003;
     }
 }

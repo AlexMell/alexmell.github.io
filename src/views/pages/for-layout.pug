@@ -1,0 +1,22 @@
+extends ../layout
+
+block append scripts
+    script(src='../../../../dist/scripts/for-layout/for-layout.min.js')
+
+block content
+    .for-layout
+        .for-layout__section
+            h2.for-layout__title Accordion
+            div.accordion
+                ul.accordion__list
+                    li.accordion__item.js-accordion-button
+                        .accordion__title Title #1
+                        .accordion__descr.js-accordion-descr Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.
+                    li.accordion__item.js-accordion-button
+                        .accordion__title Title #2
+                        .accordion__descr.js-accordion-descr Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.
+                    li.accordion__item.js-accordion-button
+                        .accordion__title Title #3
+                        .accordion__descr.js-accordion-descr Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.
+        .for-layout__section
+            

@@ -4,7 +4,7 @@
  First lesson learn.js.ru (Variables)
  */
 function less1() {
-    var admin,
+    let admin,
         name;
     name = 'vasiliy';
     admin = name;
@@ -15,30 +15,32 @@ function less1() {
 /*
  Second lesson learn.js.ru (Variables)
  */
-function less2() {
-    var planet = 'Earth',
+function less2(asd) {
+    let planet = 'Earth',
         ourPlanetEarth = 'Earth',
         person = 'Petya',
-        userName = 'Petya';
+        userName = 'Petya',
+        urls = [ 'w', 5, globaWar];
+
+  url = url.replace(/^\s*(.*)/, "$1");
+
     console.log(planet);
     console.log(ourPlanetEarth);
     console.log(person);
     console.log(userName);
 }
-
 /*
  Types dates JS (Sorax)
  */
 function less3() {
-    var obj = {};
+    let obj = {};
     console.log(obj);
 }
-
 /*
  Lesson from learn.js.ru (if else)
  */
 function less4() {
-    var question = prompt('Какое оффициальное название JavaScript?', '');
+    let question = prompt('Какое оффициальное название JavaScript?', '');
     question = (question === 'EcmaScript') ? console.log('Верно!') : console.log('Не знаешь ? Дебил!');
 }
 
@@ -46,10 +48,10 @@ function less4() {
  Lesson from learn.js.ru (if else)
  */
 function less5() {
-    var numberQuestion = +prompt('Число?', '');
+    let numberQuestion = +prompt('Число?', '');
     numberQuestion = (numberQuestion > 0) ? console.log('1') :
         numberQuestion < 0 ? console.log('-1') :
-            numberQuestion === 0 ? console.log('0') : console.log('asd');
+        numberQuestion === 0 ? console.log('0') : console.log('asd');
     console.log(numberQuestion);
 }
 
@@ -57,7 +59,7 @@ function less5() {
  Lesson from learn.js.ru (if else)
  */
 function less6() {
-    var result = a + b < 4 ? 'Мало' : 'Много';
+    let result = a + b < 4 ? 'Мало' : 'Много';
     console.log(result);
 }
 
@@ -65,7 +67,7 @@ function less6() {
  Lesson from learn.js.ru (if else)
  */
 function less7() {
-    var login = 'Вася';
+    let login = 'Вася';
     if (login == 'Вася') {
         less7 = 'Привет';
     } else if (login == 'Директор') {
@@ -82,11 +84,11 @@ function less7() {
  Lesson from learn.js.ru (if else)
  */
 function less8() {
-    var login = 'директор';
-    var message =
-        (login == 'Вася') ? 'Привет' :
-            (login == 'директор') ? 'Здравсуйте' :
-                (login == '') ? 'Нет логина' : '';
+    let login = 'директор';
+    let message =
+        (login === 'Вася') ? 'Привет' :
+        (login == 'директор') ? 'Здравсуйте' :
+        (login == '') ? 'Нет логина' : '';
     console.log(message);
 }
 
@@ -94,11 +96,11 @@ function less8() {
  Lesson from learn.js.ru (Type compare primitive);
  */
 function less9() {
-    var a1 = +'123';
-    var a2 = +NaN;
-    var a3 = +'undefined';
-    var a4 = +null;
-    var a5 = +true;
+    let a1 = +'123';
+    let a2 = +NaN;
+    let a3 = +'undefined';
+    let a4 = +null;
+    let a5 = +true;
     console.log(a1, typeof a1);
     console.log(a2, typeof a2);
     console.log(a3, typeof a3);
@@ -135,7 +137,7 @@ function less10() {
 /*
     Lesson from learn.js.ru (For and Switch )
      Какое последнее значение выведет этот код? Почему?
-     var i = 3;
+     let i = 3;
          while (i) {
          alert( i-- );
      }
@@ -173,7 +175,7 @@ function less13() {
 }
 
 /*
-    Lesson from learn.js.ru (For and Switch ) 
+    Lesson from learn.js.ru (For and Switch )
     При помощи цикла for выведите чётные числа от 2 до 10.
  */
 function less14() {
@@ -246,7 +248,7 @@ function less19(num) {
 
 // Напишите функцию ucFirst(str), которая возвращает строку str с заглавным первым символом, например:
 function less20(str) {
-    var newStr = str[0].toUpperCase() + str.slice(1);
+    let newStr = str[0].toUpperCase() + str.slice(1);
     console.log(newStr);
 }
 
@@ -255,7 +257,7 @@ function less20(str) {
  Напишите функцию checkSpam(str), которая возвращает true, если строка str содержит „viagra“ или „XXX“, а иначе false.
  */
 function less21(str) {
-    var tolowercase = str.toLowerCase();
+    let tolowercase = str.toLowerCase();
 }
 
 /*
@@ -278,7 +280,7 @@ function less22(str, maxlength) {
     // Удалите свойство name из объекта.
 */
 function less23() {
-    var user = {
+    let user = {
         name: 'vasya',
         surname: 'petrov',
     }
@@ -291,15 +293,15 @@ function less23() {
 // Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.
 function less24() {
     function isEmpty(obj) {
-        var counter = 0;
-        for (var key in obj) {
+        let counter = 0;
+        for (let key in obj) {
             counter++;
         }
-        var keyLength = counter;
+        let keyLength = counter;
         console.log(keyLength >= 1 ? 'ne pustoy' : 'pustoy');
     }
 
-    var schedule = {
+    let schedule = {
         name: 'vasya',
         surname: 'pupkin'
     };
@@ -309,19 +311,19 @@ function less24() {
 // Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
 // Если объект пустой, то результат должен быть 0.
 function less25() {
-    var salaries = {
+    let salaries = {
         "Вася": 100,
         "Петя": 300,
         "Даша": 250
     };
-    var summ = 0;
-    for (var key in salaries) {
+    let summ = 0;
+    for (let key in salaries) {
         summ += salaries[key]
     }
     console.log('Cумма', summ);
-    var max = 0;
-    var maxName = '';
-    for (var key in salaries) {
+    let max = 0;
+    let maxName = '';
+    for (let key in salaries) {
         if (max < salaries[key]) {
             max = salaries[key];
             maxName = key;
@@ -336,7 +338,7 @@ function less25() {
     Напишите код для получения последнего элемента goods.
 */
 function less26() {
-    var goods = ["s1", "s2", "s3"];
+    let goods = ["s1", "s2", "s3"];
     console.log(goods.length);
     console.log(goods[goods.length - 1]);
 }
@@ -346,7 +348,7 @@ function less26() {
     У нас есть массив goods. Напишите код для добавления в его конец значения «Компьютер».
 */
 function less27() {
-    var goods = ["s1", "s2", "s3"];
+    let goods = ["s1", "s2", "s3"];
     goods.push('Компютер');
     goods[goods.length] = 'Компьютерasd'
     console.log(goods);
@@ -369,7 +371,7 @@ function less27() {
     Рэп, Регги, Классика, Рок-н-Ролл
 */
 function less28() {
-    var styles = ['Джаз', 'Блюз'];
+    let styles = ['Джаз', 'Блюз'];
     styles.push('Рок-н-ролл');
     styles[styles.length - 2] = "Классика"
     console.log(styles.shift());
@@ -379,22 +381,22 @@ function less28() {
 
 /*
     Напишите код для вывода alert случайного значения из массива:
-    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    let arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
     P.S. Код для генерации случайного целого от min to max включительно:
-    var rand = min + Math.floor(Math.random() * (max + 1 - min));
+    let rand = min + Math.floor(Math.random() * (max + 1 - min));
 */
 function less29() {
-    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
-    var rand = min + Math.floor(Math.random() * (max + 1 - min));
+    let arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    let rand = min + Math.floor(Math.random() * (max + 1 - min));
     console.log(arr[rand]);
 }
 
 /*
     В объекте есть свойство className, которое содержит список «классов» – слов, разделенных пробелом:
-    var obj = {
+    let obj = {
         className: 'open menu'
     }
-    Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет: 
+    Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет:
     addClass(obj, 'new'); // obj.className='open menu new'
     addClass(obj, 'open'); // без изменений (класс уже существует)
     addClass(obj, 'me'); // obj.className='open menu new me'
@@ -403,8 +405,8 @@ function less29() {
 */
 function less30() {
     function addClass(obj, cls) {
-        var classes = obj.className ? obj.className.split(' ') : [];
-        for (var i = 0; i < classes.length; i++) {
+        let classes = obj.className ? obj.className.split(' ') : [];
+        for (let i = 0; i < classes.length; i++) {
             if (classes[i] == cls) {
                 return console.log(obj.className);
             }
@@ -413,7 +415,7 @@ function less30() {
         console.log(classes);
     }
 
-    var obj = {
+    let obj = {
         className: 'open menu'
     }
     addClass(obj, 'open');
@@ -435,8 +437,8 @@ function less30() {
 */
 function less31() {
     function camelize(str) {
-        var arr = str.split('-');
-        for (var i = 0; i < arr.length; i++) {
+        let arr = str.split('-');
+        for (let i = 0; i < arr.length; i++) {
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         }
         return arr.join('');
@@ -448,7 +450,7 @@ function less31() {
 /*
     У объекта есть свойство className, которое хранит список «классов» – слов, разделенных пробелами:
 
-    var obj = {
+    let obj = {
     className: 'open menu'
     };
     Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть:
@@ -466,8 +468,8 @@ function less31() {
 */
 function less32() {
     function removeClass(obj, cls) {
-        var classes = obj.className ? obj.className.split(' ') : [];
-        for (var i = 0; i < classes.length; i++) {
+        let classes = obj.className ? obj.className.split(' ') : [];
+        for (let i = 0; i < classes.length; i++) {
             if (classes[i] === cls) {
                 classes.splice(i, 1); // удалить класс
             }
@@ -476,14 +478,14 @@ function less32() {
         return classes
     }
 
-    var obj = {
+    let obj = {
         className: 'open open suka menu'
     };
     console.log(removeClass(obj, 'open'));
     // Решение заключается в том, чтобы разбить className в массив классов, а затем пройтись по нему циклом. Если класс есть – удаляем его splice, заново объединяем массив в строку и присваиваем объекту.
     // function removeClass(obj, cls) {
-    // var classes = obj.className.split(' ');
-    // for (var i = 0; i < classes.length; i++) {
+    // let classes = obj.className.split(' ');
+    // for (let i = 0; i < classes.length; i++) {
     //     if (classes[i] == cls) {
     //     classes.splice(i, 1); // удалить класс
     //     i--; // (*)
@@ -491,7 +493,7 @@ function less32() {
     // }
     // obj.className = classes.join(' ');
     // }
-    // var obj = {
+    // let obj = {
     // className: 'open menu menu'
     // }
     // removeClass(obj, 'blabla');
@@ -542,7 +544,7 @@ function less35() {
 function less36() {
     function needCounter() {
         let thisCount = 1;
-        return function () {
+        return function() {
             return thisCount++;
         };
     }
@@ -561,13 +563,13 @@ function less37() {
     function makeCounter() {
         let initialCount = 1;
         return {
-            continue: function () {
+            continue: function() {
                 return initialCount++;
             },
-            reset: function () {
+            reset: function() {
                 return initialCount = 1;
             },
-            set: function (value) {
+            set: function(value) {
                 initialCount = value
             }
         }
@@ -608,14 +610,14 @@ function less38() {
     Получить текущее содержимое.
     Задача – реализовать строковый буфер на функциях в JavaScript, со следующим синтаксисом:
 
-    Создание объекта: var buffer = makeBuffer();.
+    Создание объекта: let buffer = makeBuffer();.
     Вызов makeBuffer должен возвращать такую функцию buffer, которая при вызове buffer(value) добавляет значение в некоторое внутреннее хранилище, а при вызове без аргументов buffer() – возвращает его.
 
     Вот пример работы:
 
     function makeBuffer() { Ваш Код}
 
-    var buffer = makeBuffer();
+    let buffer = makeBuffer();
 
     // добавить значения к буферу
     buffer('Замыкания');
@@ -626,7 +628,7 @@ function less38() {
     alert( buffer() ); // Замыкания Использовать Нужно!
     Буфер должен преобразовывать все данные к строковому типу:
 
-        var buffer = makeBuffer();
+        let buffer = makeBuffer();
     buffer(0);
     buffer(1);
     buffer(0);
@@ -637,7 +639,7 @@ function less38() {
 function less39() {
     function makeBuffer() {
         let initValue = '';
-        return function (word) {
+        return function(word) {
             return initValue += word
         }
     }
@@ -654,7 +656,7 @@ function less39() {
       ...ваш код...
     }
 
-    var buffer = makeBuffer();
+    let buffer = makeBuffer();
 
     buffer("Тест");
     buffer(" тебя не съест ");
@@ -741,7 +743,7 @@ function less41() {
 
     users.sort(byField('name'));
     users.forEach(function(user) {
-        console.log(( user.name ));
+        console.log((user.name));
     });
 }
 
@@ -750,7 +752,6 @@ function less41() {
     Создайте набор «готовых фильтров»: inBetween(a,b) – «между a,b», inArray([...]) – "в массиве [...]". Использование должно быть таким:
     filter(arr, inBetween(3,6)) – выберет только числа от 3 до 6,
     filter(arr, inArray([1,2,3])) – выберет только элементы, совпадающие с одним из значений массива.
-
 */
 function less42() {
 
@@ -760,10 +761,9 @@ function less42() {
 
     }
 
-    function inBetween(a,b) {
-    }
+    function inBetween(a, b) {}
 
-    console.log( filter(arr, inBetween(3, 6)) );
+    console.log(filter(arr, inBetween(3, 6)));
 
 }
 
@@ -1028,7 +1028,7 @@ function example8() {
         }
     }
 }
-//example8();
+example8();
 
 // test draw triangle
 function secondCanvas() {
@@ -1125,7 +1125,7 @@ function sixCanvas() {
     let canvas = document.getElementById('six-canvas');
     let c = canvas.getContext('2d');
     let img = new Image();
-    img.onload = function () {
+    img.onload = function() {
         // Рисуем иозображение на холсте
         c.drawImage(img, 0, 0);
         // Получаем данные холста
@@ -1153,7 +1153,7 @@ sixCanvas();
     sum() возвращает сумму этих двух значений
     mul() возвращает произведение этих двух значений
 
-    var calculator = {
+    let calculator = {
       ...ваш код...
     }
 
@@ -1168,15 +1168,15 @@ function less43() {
         a: 0,
         b: 0,
         c: 0,
-        read: function () {
+        read: function() {
             this.a = +prompt('a?', '');
             this.b = +prompt('b?', '');
         },
-        sum: function () {
+        sum: function() {
             this.c = (this.a + this.b);
             alert(this.c);
         },
-        mul: function () {
+        mul: function() {
             alert(this.c * this.c);
         }
     }
@@ -1197,7 +1197,7 @@ function less43() {
     Метод mul() возвращает произведение запомненных свойств.
     Пример использования:
 
-    var calculator = new Calculator();
+    let calculator = new Calculator();
     calculator.read();
 
     alert( "Сумма=" + calculator.sum() );
@@ -1205,14 +1205,14 @@ function less43() {
 */
 function less44() {
     function Calculator() {
-        this.read = function () {
-            this.a = +prompt('a?','');
-            this.b = +prompt('b?','');
+        this.read = function() {
+            this.a = +prompt('a?', '');
+            this.b = +prompt('b?', '');
         };
-        this.summ = function () {
+        this.summ = function() {
             return this.a + this.b;
         };
-        this.mul = function () {
+        this.mul = function() {
             return this.a * this.b
         }
     }
@@ -1234,14 +1234,14 @@ function less44() {
 
     Пример использования:
 
-    var calc = new Calculator;
+    let calc = new Calculator;
     alert( calc.calculate("3 + 7") ); // 10
 
     Второй шаг – добавить калькулятору метод addMethod(name, func), который учит калькулятор новой операции. Он получает имя операции name и функцию от двух аргументов func(a,b), которая должна её реализовывать.
 
     Например, добавим операции умножить *, поделить / и возвести в степень **:
 
-    var powerCalc = new Calculator;
+    let powerCalc = new Calculator;
     powerCalc.addMethod("*", function(a, b) {
       return a * b;
     });
@@ -1252,7 +1252,7 @@ function less44() {
       return Math.pow(a, b);
     });
 
-    var result = powerCalc.calculate("2 ** 3");
+    let result = powerCalc.calculate("2 ** 3");
     alert( result ); // 8
     Поддержка скобок и сложных математических выражений в этой задаче не требуется.
     Числа и операции могут состоять из нескольких символов. Между ними ровно один пробел.
@@ -1301,12 +1301,12 @@ function less45() {
       this.fullName = fullName;
     }
 
-    var vasya = new User("Василий Попкин");
+    let vasya = new User("Василий Попкин");
     Имя и фамилия всегда разделяются пробелом.
 
     Сделайте, чтобы были доступны свойства firstName и lastName, причём не только на чтение, но и на запись, вот так:
 
-    var vasya = new User("Василий Попкин");
+    let vasya = new User("Василий Попкин");
 
     // чтение firstName/lastName
     alert( vasya.firstName ); // Василий
@@ -1323,23 +1323,23 @@ function less46() {
     function User(fullName) {
         this.fullName = fullName;
 
-//        Object.defineProperty(this, "firstName", {
-//            get: function() {
-//                let spliting = fullName.split(" ");
-//                return spliting[0];
-//            }
-//        });
-//
-//        Object.defineProperty(this, "lastName", {
-//            get: function() {
-//                let spliting = fullName.split(" ");
-//                return spliting[1];
-//            },
-//            set: function() {
-//                let spliting = fullName.split(" ");
-//                return this.fullName = spliting[0] + spliting[1];
-//            }
-//        });
+        //        Object.defineProperty(this, "firstName", {
+        //            get: function() {
+        //                let spliting = fullName.split(" ");
+        //                return spliting[0];
+        //            }
+        //        });
+        //
+        //        Object.defineProperty(this, "lastName", {
+        //            get: function() {
+        //                let spliting = fullName.split(" ");
+        //                return spliting[1];
+        //            },
+        //            set: function() {
+        //                let spliting = fullName.split(" ");
+        //                return this.fullName = spliting[0] + spliting[1];
+        //            }
+        //        });
 
         Object.defineProperties(this, {
             firstName: {
@@ -1360,7 +1360,7 @@ function less46() {
             }
         });
     }
-    
+
     let vasya = new User('Василий Попкин');
 
     console.log(vasya);
@@ -1392,16 +1392,355 @@ function less46() {
 
 */
 function less47() {
-
     function sumArgs() {
-
         let args = [].slice.call(arguments);
-
-        return args.reduce(function (a, b) {
+        return args.reduce(function(a, b) {
             return a + b;
         });
-        
     }
-    console.log( sumArgs(1,2,3) );
+    console.log(sumArgs(1, 2, 3));
 }
-less47();
+
+function less48() {
+
+    // Get your shorts on - this is an array workout!
+    // # Array Cardio Day 1
+    // Some data we can work with
+    const inventors = [{
+            first: 'Albert',
+            last: 'Einstein',
+            year: 1879,
+            passed: 1955
+        },
+        {
+            first: 'Isaac',
+            last: 'Newton',
+            year: 1643,
+            passed: 1727
+        },
+        {
+            first: 'Galileo',
+            last: 'Galilei',
+            year: 1564,
+            passed: 1642
+        },
+        {
+            first: 'Marie',
+            last: 'Curie',
+            year: 1867,
+            passed: 1934
+        },
+        {
+            first: 'Johannes',
+            last: 'Kepler',
+            year: 1571,
+            passed: 1630
+        },
+        {
+            first: 'Nicolaus',
+            last: 'Copernicus',
+            year: 1473,
+            passed: 1543
+        },
+        {
+            first: 'Max',
+            last: 'Planck',
+            year: 1858,
+            passed: 1947
+        },
+        {
+            first: 'Katherine',
+            last: 'Blodgett',
+            year: 1898,
+            passed: 1979
+        },
+        {
+            first: 'Ada',
+            last: 'Lovelace',
+            year: 1815,
+            passed: 1852
+        },
+        {
+            first: 'Sarah E.',
+            last: 'Goode',
+            year: 1855,
+            passed: 1905
+        },
+        {
+            first: 'Lise',
+            last: 'Meitner',
+            year: 1878,
+            passed: 1968
+        },
+        {
+            first: 'Hanna',
+            last: 'Hammarström',
+            year: 1829,
+            passed: 1909
+        }
+    ];
+
+    const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+
+    // Array.prototype.filter()
+    // 1. Filter the list of inventors for those who were born in the 1500's
+    let userFifteenYearMore = inventors.filter(function(user) {
+        return user.year >= 1500 && user.year <= 1600
+    });
+    console.log(userFifteenYearMore);
+
+    // Array.prototype.map()
+    // 2. Give us an array of the inventors' first and last names
+
+    // Array.prototype.sort()
+    // 3. Sort the inventors by birthdate, oldest to youngest
+
+    // Array.prototype.reduce()
+    // 4. How many years did all the inventors live?
+
+    // 5. Sort the inventors by years lived
+
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+    // 7. sort Exercise
+
+    // Sort the people alphabetically by last name
+    // 8. Reduce Exercise
+
+    // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+}
+
+/*
+    Напишите функцию printNumbersInterval(), которая последовательно выводит в консоль числа от 1 до 20, с интервалом между числами 100 мс. То есть, весь вывод должен занимать 2000 мс, в течение которых каждые 100 мс в консоли появляется очередное число.
+    P.S. Функция должна использовать setInterval.
+*/
+function less49() {
+
+    function printNumbersInterval() {
+        let number = 0;
+        setInterval(function() {
+            if (number === 20) {
+                clearTimeout();
+            } else {
+                number++
+                console.log(number);
+            }
+        }, 100);
+        // Correct answer
+        let i = 1;
+        let timerId = setInterval(function() {
+            console.log(i);
+            if (i == 20) clearInterval(timerId);
+            i++;
+        }, 100);
+    }
+    printNumbersInterval();
+
+}
+
+/*
+    Сделайте то же самое, что в задаче Вывод чисел каждые 100 мс, но с использованием рекурсивного setTimeout вместо setInterval.
+*/
+function less50() {
+    let i = 1;
+    let timeId = setTimeout(function go() {
+        console.log(i);
+        if (i < 20) setTimeout(go, 100);
+        i++
+    }, 100);
+}
+
+/*
+    Напишите функцию delay(f, ms), которая возвращает обёртку вокруг f, задерживающую вызов на ms миллисекунд.
+*/
+function less51() {
+    function delay(f, ms) {
+        return function() {
+            let that = this
+            let arg = arguments
+
+            setTimeout(function() {
+                f.apply(that, this)
+            }, ms)
+        }
+    }
+
+    function f(x) {
+        alert(x);
+    }
+
+    let f1000 = delay(f, 1000);
+    f1000("тест");
+}
+
+/*
+    Напишите конструктор User для создания объектов:
+
+    С приватными свойствами имя firstName и фамилия surname.
+    С сеттерами для этих свойств.
+    С геттером getFullName(), который возвращает полное имя
+
+    Должен работать так:
+*/
+function less52() {
+
+    function User() {
+
+        let name,
+            surname;
+
+        this.setFirstName = function(newFirstName) {
+            name = newFirstName;
+        }
+
+        this.setSurname = function(newSurname) {
+            surname = newSurname;
+        }
+
+        this.getFullName = function() {
+            return name + " " + surname;
+        }
+
+    }
+
+    var user = new User();
+
+    user.setFirstName("Петя");
+    user.setSurname("Иванов");
+
+    console.log(user.getFullName()); // Петя Иванов
+
+    // function User() {
+
+    //     var firstName, surname;
+
+    //     this.setFirstName = function(newFirstName) {
+    //     firstName = newFirstName;
+    //     };
+
+    //     this.setSurname = function(newSurname) {
+    //     surname = newSurname;
+    //     };
+
+    //     this.getFullName = function() {
+    //     return firstName + ' ' + surname;
+    //     }
+    // }
+
+}
+
+/*
+    Добавьте кофеварке геттер для приватного свойства power, чтобы внешний код мог узнать мощность кофеварки.
+
+    Обратим внимание, что ситуация, когда у свойства power есть геттер, но нет сеттера – вполне обычна.
+
+    Здесь это означает, что мощность power можно указать лишь при создании кофеварки и в дальнейшем её можно прочитать, но нельзя изменить.
+*/
+function less53() {
+
+    function CoffeeMachine(power, capacity) {
+
+            this.waterAmount = function(amount) {
+                if (amount < 0) {
+                    throw new Error("Значение должно быть положительным");
+
+                if (amount > capacity) {
+                    throw new Error("Нельзя залить воды больше, чем " + capacity);
+                }
+
+                var waterAmount = amount;
+            };
+
+            this.getWaterAmount = function() {
+                return waterAmount;
+            };
+
+            this.getPower = function() {
+                return power;
+            };
+
+        }
+    }
+
+    var coffeeMachine = new CoffeeMachine(1000, 500);
+
+    // пример использования
+    coffeeMachine.waterAmount(450);
+    console.log( coffeeMachine.waterAmount() ); // 450
+    console.log( coffeeMachine.getPower() );
+}
+
+function less54() {
+
+    function outerFunc() {
+
+        let num = 0;
+
+        function innerFunc() {
+
+            num += 1
+            console.log(num);
+
+        }
+
+        return innerFunc;
+
+    }
+
+    var closure = outerFunc();
+    closure();
+    closure();
+    closure();
+    closure();
+    closure();
+    closure();
+
+}
+
+function less55() {
+
+    test();
+
+    var a = 5;
+
+    function test() {
+        var a = 10;
+        console.log(a);
+    }
+
+    test();
+
+}
+
+function less56() {
+
+    test();
+    console.log('tut');
+    var a = 5;
+
+    function test() {
+      console.log(a)
+    }
+
+    test();
+
+}
+
+function less56() {
+
+    var a = {
+        prop: 10,
+    };
+
+    var b = a;
+
+    b.prop = 15;
+
+    console.log(a.prop);
+    console.log(b.prop);
+
+}
+less56();

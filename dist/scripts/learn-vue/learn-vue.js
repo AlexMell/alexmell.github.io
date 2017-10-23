@@ -34,10 +34,18 @@ var app3 = new Vue({
 var app4 = new Vue({
     el: '#app-4',
     data: {
-        todos: [{ text: "Text 1" }, { text: "Text 2" }, { text: "Text 3" }]
+        todos: [{
+            text: "Text 1"
+        }, {
+            text: "Text 2"
+        }, {
+            text: "Text 3"
+        }]
     }
 });
-app4.todos.push({ text: 'Text 4 Добавлен' });
+app4.todos.push({
+    text: 'Text 4 Добавлен'
+});
 
 var app5 = new Vue({
     el: '#app-5',
@@ -181,18 +189,25 @@ var app9 = new Vue({
 var exercise4 = new Vue({
     el: '#exercise-4',
     data: {
-        array: [{
-            name: 'asd',
-            age: 25
+        users: [{
+            name: 'Vasya',
+            age: 15
         }, {
-            name: 'asd1',
-            age: 25
+            name: 'Masha',
+            age: 3
         }, {
-            name: 'asd2',
-            age: 25
+            name: 'Katya',
+            age: 1
         }, {
-            name: 'asd3',
-            age: 25
+            name: 'Misha',
+            age: 4
         }]
+    },
+    computed: {
+        filteredUsers: function filteredUsers() {
+            return this.users.filter((function (user) {
+                return user.name.indexOf(this.search) !== -1;
+            }).bind(this));
+        }
     }
 });

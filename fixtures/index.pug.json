@@ -5,7 +5,7 @@
     "headerClass": "--transparent",
     "itemsFun": [
         {
-            "btn": "Markup toools",
+            "btn": "Tools",
             "url": "pages/markup-tools.html"
         },
         {
@@ -15,6 +15,10 @@
         {
             "btn": "Sphere",
             "url": "pages/sphere.html"
+        },
+        {
+            "btn": "Layout",
+            "url": "pages/for-layout.html"
         }
     ],
     "itemsNative": [

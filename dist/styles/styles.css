@@ -1031,6 +1031,34 @@ p {
       display: block;
       text-align: center; }
 
+.accordion {
+  width: 300px; }
+  .accordion__list {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap; }
+  .accordion__item {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ccc; }
+  .accordion__title {
+    width: 100%;
+    background: #505050;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer; }
+  .accordion__descr {
+    padding: 0 20px;
+    max-height: 0;
+    transition: max-height .3s, padding .3s; }
+    .accordion__descr.is-active {
+      max-height: 1000px;
+      padding: 20px 20px; }
+
 .row {
   display: flex;
   align-items: center;
@@ -1059,7 +1087,10 @@ p {
   .row--vue {
     background: #f2f2f2;
     margin: 0 0 10px;
-    color: #424242; }
+    color: #424242;
+    flex-wrap: wrap; }
+    .row--vue h3 {
+      width: 100%; }
   .row--checkbox {
     display: flex;
     justify-content: flex-start;
@@ -1067,7 +1098,7 @@ p {
   .row--radio {
     display: flex;
     justify-content: flex-start;
-    background: #cfd7e6; }
+    background: #001322; }
   .row--card {
     background: #f2f2f2;
     display: flex;
@@ -1086,6 +1117,22 @@ p {
 .dg.main.a {
   padding: 0;
   margin-top: 180px; }
+
+.for-layout {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .for-layout__section {
+    margin-right: 20px; }
+  @media screen and (max-width: 980px) {
+    .for-layout {
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center; }
+      .for-layout__section {
+        margin-right: 0;
+        margin-bottom: 20px; } }
 
 .icon-list-item {
   width: 16px;
@@ -1476,3 +1523,22 @@ p {
     height: 30px;
     font-size: 24px;
     line-height: 26px; }
+
+.star-rating {
+  display: block;
+  width: 100%; }
+  .star-rating__input {
+    display: none; }
+  .star-rating__wrap {
+    direction: rtl; }
+  .star-rating__ico {
+    color: #FDD003; }
+  .star-rating__ico:hover:before,
+  .star-rating__ico:hover ~ .b-star-rating__ico:before {
+    content: "\f005";
+    color: #FDD003; }
+  .star-rating__ico:hover:before,
+  .star-rating__ico:hover ~ .star-rating__ico:before,
+  .star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\f005";
+    color: #FDD003; }

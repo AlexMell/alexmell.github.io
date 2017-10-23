@@ -9,6 +9,7 @@
     <title>Learn CSS | AlexMell</title>
     <link rel="shortcut icon" type="image/png" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../../dist/styles/styles.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body class="css-tricks">
     <div class="wrapper">
@@ -41,7 +42,9 @@
             <button class="btn-prev"><span class="btn-prev__inner js-btn-moving"></span></button>
           </div>
         </div>
-        <div class="row row--arrow-dropdown"><span class="arrow-dropdown js-arrow-dropdown"></span></div>
+        <div class="row row--arrow-dropdown">
+          <div class="btn-section"><span class="arrow-dropdown js-arrow-dropdown"></span></div>
+        </div>
         <div class="row row--icon-user">
           <div class="btn-section"><a class="icon-user" href="#"><span class="icon-user__head"></span><span class="icon-user__body"></span></a></div>
           <div class="btn-section"><a class="icon-mouse" href="#"><span class="icon-mouse__arrow --first"></span><span class="icon-mouse__arrow --second"></span></a></div>
@@ -57,9 +60,27 @@
           </div>
         </div>
         <div class="row row--radio">
-          <div class="radio-circle">
-            <input class="radio-circle__input" type="checkbox" id="radio-circle">
-            <label class="radio-circle__label" for="radio-circle"></label>
+          <div class="btn-section">
+            <div class="radio-circle">
+              <input class="radio-circle__input" type="checkbox" id="radio-circle">
+              <label class="radio-circle__label" for="radio-circle"></label>
+            </div>
+          </div>
+          <div class="btn-section">
+            <div class="star-rating">
+              <div class="star-rating__wrap">
+                <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 out of 5  stars"></label>
+                <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row row--grid-one">

@@ -6,14 +6,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Front-End, Web, HTML, CSS">
-    <title>Mushroom Canvas | AlexMell</title>
+    <title>Map | AlexMell</title>
     <link rel="shortcut icon" type="image/png" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../../dist/styles/styles.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
-  <body class="body-mushroom">
+  <body class="body-tricks">
     <div class="wrapper">
-      <header class="header --transparent">
+      <header class="header undefined">
         <div class="header__author author"><a class="author__name" href="/dist/html/index.html">AlexMell</a><span class="author__job">HTML/CSS Developer in<a class="author__job-link" href="https://branderstudio.com/" target="_blank">Brander</a></span></div>
         <div class="header__soc-net soc-net">
           <ul class="soc-net__list">
@@ -27,37 +27,28 @@
           <div class="soc-net__mail"><a class="soc-net__mail-link" href="mailto:alex2mell@gmail.com">alex2mell@gmail.com</a></div>
         </div>
       </header>
-      <main class="main mushroom-page">
-        <div class="container mushroom">
-          <div class="mushroom__canvas">
-            <canvas class="mushroom-canvas" id="mushroom"></canvas>
-          </div>
-          <div class="mushroom__control">
-            <div class="mushroom__control-holder">
-              <div class="mushroom__control-name">Control points Leg</div>
-              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 1X</span>
-                <input id="range">
-              </div>
-              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 1Y</span>
-                <input id="range2">
-              </div>
-              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 2X</span>
-                <input id="range3">
-              </div>
-              <div class="mushroom__control-slider"><span class="mushroom__control-title">Point 2Y</span>
-                <input id="range4">
-              </div>
-            </div>
-            <div class="mushroom__control-holder">
-              <div class="mushroom__control-name">Move Hat and end points of Leg</div>
-              <div class="mushroom__control-slider"><span class="mushroom__control-title">End X</span>
-                <input id="range-end-x">
-              </div>
-              <div class="mushroom__control-slider"><span class="mushroom__control-title">End Y</span>
-                <input id="range-end-y">
-              </div>
+      <main class="main tricks-page">
+        <div class="for-layout">
+          <div class="for-layout__section">
+            <h2 class="for-layout__title">Accordion</h2>
+            <div class="accordion">
+              <ul class="accordion__list">
+                <li class="accordion__item js-accordion-button">
+                  <div class="accordion__title">Title #1</div>
+                  <div class="accordion__descr js-accordion-descr">Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.</div>
+                </li>
+                <li class="accordion__item js-accordion-button">
+                  <div class="accordion__title">Title #2</div>
+                  <div class="accordion__descr js-accordion-descr">Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.</div>
+                </li>
+                <li class="accordion__item js-accordion-button">
+                  <div class="accordion__title">Title #3</div>
+                  <div class="accordion__descr js-accordion-descr">Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.</div>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="for-layout__section"></div>
         </div>
       </main>
       <!--include layout/footer-->
@@ -65,7 +56,6 @@
     <script src="../../../../src/plugins/jquery-3.1.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="../../../../dist/scripts/main/main.js"></script>
-    <script src="../../../../src/plugins/ion.rangeSlider.js"></script>
-    <script src="../../../../dist/scripts/mushroom/mushroom.min.js"></script>
+    <script src="../../../../dist/scripts/for-layout/for-layout.min.js"></script>
   </body>
 </html>
