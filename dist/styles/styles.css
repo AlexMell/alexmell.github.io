@@ -954,6 +954,10 @@ p {
     .third-grid__footer {
       background: #757575;
       grid-column: span 8; } }
+  @media screen and (max-width: 640px) {
+    .third-grid__container {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr; } }
 
 .learn-js__title {
   display: block;

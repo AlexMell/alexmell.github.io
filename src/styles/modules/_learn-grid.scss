@@ -109,4 +109,10 @@
             grid-column: span 8;
         }
     }
+    @media screen and (max-width: 640px){
+        &__container {
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 }

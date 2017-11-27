@@ -15,17 +15,20 @@ function less1() {
 /*
  Second lesson learn.js.ru (Variables)
  */
-function less2() {
+function less2(asd) {
     var planet = 'Earth',
         ourPlanetEarth = 'Earth',
         person = 'Petya',
-        userName = 'Petya';
+        userName = 'Petya',
+        urls = ['w', 5, globaWar];
+
+    url = url.replace(/^\s*(.*)/, "$1");
+
     console.log(planet);
     console.log(ourPlanetEarth);
     console.log(person);
     console.log(userName);
 }
-
 /*
  Types dates JS (Sorax)
  */
@@ -33,7 +36,6 @@ function less3() {
     var obj = {};
     console.log(obj);
 }
-
 /*
  Lesson from learn.js.ru (if else)
  */
@@ -81,7 +83,7 @@ function less7() {
  */
 function less8() {
     var login = 'директор';
-    var message = login == 'Вася' ? 'Привет' : login == 'директор' ? 'Здравсуйте' : login == '' ? 'Нет логина' : '';
+    var message = login === 'Вася' ? 'Привет' : login == 'директор' ? 'Здравсуйте' : login == '' ? 'Нет логина' : '';
     console.log(message);
 }
 
@@ -168,7 +170,7 @@ function less13() {
 }
 
 /*
-    Lesson from learn.js.ru (For and Switch ) 
+    Lesson from learn.js.ru (For and Switch )
     При помощи цикла for выведите чётные числа от 2 до 10.
  */
 function less14() {
@@ -389,7 +391,7 @@ function less29() {
     let obj = {
         className: 'open menu'
     }
-    Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет: 
+    Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет:
     addClass(obj, 'new'); // obj.className='open menu new'
     addClass(obj, 'open'); // без изменений (класс уже существует)
     addClass(obj, 'me'); // obj.className='open menu new me'
@@ -1563,7 +1565,7 @@ function less51() {
     С приватными свойствами имя firstName и фамилия surname.
     С сеттерами для этих свойств.
     С геттером getFullName(), который возвращает полное имя
-    
+
     Должен работать так:
 */
 function less52() {
@@ -1715,4 +1717,15 @@ function less56() {
     console.log(a.prop);
     console.log(b.prop);
 }
-less56();
+
+function less57() {
+
+    var str = "https://www.youtube.com/watch?feature=youtu.be&v=z8eFzkfto2w";
+
+    var extracted = str.split("https://").find(function (v) {
+        return v.indexOf("youtube") > -1;
+    });
+
+    console.log(extracted);
+}
+less57();

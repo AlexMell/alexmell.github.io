@@ -1743,4 +1743,17 @@ function less56() {
     console.log(b.prop);
 
 }
-less56();
+
+function less57() {
+
+    var str = "https://www.youtube.com/watch?feature=youtu.be&v=z8eFzkfto2w";
+
+    var extracted = str.split("https://").find(function(v){
+        return v.indexOf("youtube") > -1;
+    });
+
+    console.log(extracted);
+
+
+}
+less57();
