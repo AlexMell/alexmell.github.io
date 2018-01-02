@@ -1754,6 +1754,24 @@ function less57() {
 
     console.log(extracted);
 
+}
+
+function less58() {
+
+
+    let car = {
+        ride: true
+    }
+
+    let plane = {
+        fly: true
+    }
+
+    plane.__proto__ = car;
+    
+    console.log(car.ride);
+    console.log(plane.fly);
+    console.log(plane.ride);
 
 }
-less57();
+

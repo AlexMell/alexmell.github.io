@@ -1728,4 +1728,20 @@ function less57() {
 
     console.log(extracted);
 }
-less57();
+
+function less58() {
+
+    var car = {
+        ride: true
+    };
+
+    var plane = {
+        fly: true
+    };
+
+    plane.__proto__ = car;
+
+    console.log(car.ride);
+    console.log(plane.fly);
+    console.log(plane.ride);
+}

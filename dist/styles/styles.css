@@ -556,7 +556,6 @@ p {
     .header .author__job-link {
       color: #fff;
       border-bottom: 1px dotted #fff;
-      margin-left: 5px;
       display: inline-block; }
       .header .author__job-link:hover {
         border: none; }
