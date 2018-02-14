@@ -22,7 +22,9 @@ function less2(asd) {
         userName = 'Petya',
         urls = [ 'w', 5, globaWar];
 
-  url = url.replace(/^\s*(.*)/, "$1");
+    var url
+
+    url = url.replace(/^\s*(.*)/, "$1");
 
     console.log(planet);
     console.log(ourPlanetEarth);
@@ -1142,7 +1144,6 @@ function sixCanvas() {
         c.putImageData(data, 0, 0);
     }
     img.src = '../../images/02.jpg';
-    console.log(img);
 }
 sixCanvas();
 
@@ -1758,7 +1759,6 @@ function less57() {
 
 function less58() {
 
-
     let car = {
         ride: true
     }
@@ -1774,4 +1774,117 @@ function less58() {
     console.log(plane.ride);
 
 }
+
+// Встроенные "классы" в JavaScript
+function less59() {
+
+    var asd = {};
+    
+    console.log(asd);
+
+    console.log({}.__proto__.toString);
+}
+
+// Добавьте всем функциям в прототип метод defer(ms), который возвращает обёртку, откладывающую
+// вызов функции на ms миллисекунд.
+//
+// function f(a, b) {
+//     alert( a + b );
+// }
+//
+// f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
+
+function less60() {
+
+    function f(a, b) {
+        console.log(a + b);
+    }
+
+    Function.prototype.defer = function (ms) {
+        var first = this;
+        return function() {
+            var arg = arguments,
+            context = this;
+
+            setTimeout(function() {
+                first.apply(context, arg)
+            }, ms);
+        }
+    }
+
+    f.defer(2500)(1, 5);
+}
+
+function less61() {
+
+    function Car(brand) {
+        this.brand = brand;
+        this.speed = 0;
+
+        this.setSpeed = function (speed) {
+            this.speed += speed;
+            console.log(this.brand + ' Макс. Скорость ' + speed);
+        }
+
+        this.setStop = function () {
+            this.speed = 0;
+            console.log(this.brand + ' Остановился ');
+        }
+    }
+    
+    var tayota = new Car('Toyota');
+    
+    console.log(tayota.setSpeed(60));
+    console.log(tayota.setStop());
+
+}
+
+function less62() {
+
+    function Car(brand) {
+        this.brand = brand;
+        this.speed = 0;
+    }
+
+    Car.prototype.setSpeed = function (speed) {
+        this.speed += speed;
+        console.log(this.brand + " - Макс Скорость - " + speed);
+    }
+
+    Car.prototype.stop = function () {
+        this.speed = 0;
+        console.log(this.brand + " Остановился");
+    }
+
+    var ford = new Car('Ford');
+    
+    console.log(ford);
+    ford.setSpeed(60);
+    console.log(ford);
+
+    function Hamster() {}
+
+    Hamster.prototype.food = []; // пустой "живот"
+
+    Hamster.prototype.found = function(something) {
+        this.food.push(something);
+    };
+
+    // Создаём двух хомяков и кормим первого
+    var speedy = new Hamster();
+    var lazy = new Hamster();
+
+    speedy.found("яблоко");
+    speedy.found("орех");
+
+    console.log(speedy.food.length ); // 2
+    console.log(lazy.food.length ); // 2 (!??)
+
+}
+
+function less63() {
+
+}
+less63();
+
 

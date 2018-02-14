@@ -7,17 +7,30 @@ block content
     .for-layout
         .for-layout__section
             h2.for-layout__title Accordion
-            div.accordion
-                ul.accordion__list
-                    li.accordion__item.js-accordion-button
-                        .accordion__title Title #1
-                        .accordion__descr.js-accordion-descr Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.
-                    li.accordion__item.js-accordion-button
-                        .accordion__title Title #2
-                        .accordion__descr.js-accordion-descr Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.
-                    li.accordion__item.js-accordion-button
-                        .accordion__title Title #3
-                        .accordion__descr.js-accordion-descr Lorem ipsum dolor sit amet consectetur,  adipisicing elit. Quod repellat illo voluptatibus sapiente mollitia deleniti sed laboriosam velit a porro numquam consequuntur iusto, sunt voluptate.
+            ul#accordion.accordion
+                li
+                    .link
+                        | Web Design
+                        span.arrow-dropdown.js-arrow-dropdown
+                    ul.submenu
+                        li
+                            a(href='#') Photoshop
+                        li
+                            a(href='#') HTML
+                        li
+                            a(href='#') CSS
+                li
+                    .link
+                        | Coding
+                        span.arrow-dropdown.js-arrow-dropdown
+                    ul.submenu
+                        li
+                            a(href='#') Javascript
+                        li
+                            a(href='#') jQuery
+                        li
+                            a(href='#') Ruby
+
         .for-layout__section
             h2.for-layout__title Follow Typing
             .follow

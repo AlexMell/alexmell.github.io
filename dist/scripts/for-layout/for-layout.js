@@ -1,9 +1,35 @@
 'use strict';
 
-$('.js-accordion-button').on('click', function () {
-    $(this).find('.js-accordion-descr').toggleClass('is-active');
-    $(this).siblings().find('.js-accordion-descr').removeClass('is-active');
-});
+function accordion() {
+
+    var Accordion = function Accordion(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+
+        // Variables privadas
+        var links = this.el.find('.link');
+        // Evento
+        links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+    };
+
+    Accordion.prototype.dropdown = function (e) {
+        var $el = e.data.el,
+            $this = $(this),
+            $next = $this.next();
+
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
+        $this.find('.js-arrow-dropdown').toggleClass('is-active');
+
+        if (!e.data.multiple) {
+            $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            $el.find('.submenu').not($next).slideUp().parent().find('.js-arrow-dropdown.is-active').removeClass('is-active');
+        };
+    };
+
+    var accordion = new Accordion($('#accordion'), false);
+}
+accordion();
 
 function followType() {
 

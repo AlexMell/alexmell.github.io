@@ -39,6 +39,10 @@
         {
             "btn": "Learn Vue.js",
             "url": "pages/learn-vue.html"
+        },
+        {
+            "btn": "Learn React.js",
+            "url": "../../react/build/index.html"
         }
     ],
     "itemsOfOther": [

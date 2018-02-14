@@ -10,7 +10,7 @@ $('.js-arrow').on('click', function () {
 
 // Dropdown-arrow
 $('.js-arrow-dropdown').on('click', function () {
-    $(this).toggleClass('is__active');
+    $(this).toggleClass('is-active');
 });
 
 function initMoveInnerBtn() {

@@ -73,17 +73,18 @@
         font-weight: 700;
         margin-bottom: 20px;
     }
-    &__list {
-        display: grid;
-    }
     @supports (display: grid) {
         &__container {
             font-size: 20px;
             line-height: 22px;
             font-weight: 700;
             display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 100px 100px 100px;
-            grid-template-columns: 200px 1fr 200px;
+            grid-gap: 10px;
+            grid-template-areas: "header header header"
+                                 "asideleft main asideright"
+                                 "footer footer footer";
             width: 100%;
             & > div {
                 display: flex;
@@ -93,26 +94,79 @@
         }
         &__header {
             background: #3f51b5;
-            grid-column: span 8;
+            grid-area: header;
         }
         &__left-col {
             background: #84f98b;
+            grid-area: asideleft;
         }
         &__main {
             background: #ff4081;
+            grid-area: main;
         }
         &__right-col {
             background: #84f98b;
+            grid-area: asideright;
         }
         &__footer {
             background: #757575;
-            grid-column: span 8;
+            grid-area: footer;
         }
     }
     @media screen and (max-width: 640px){
         &__container {
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+.fourth-grid {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 20px;
+    }
+    &__item {
+        background: #757575;
+        color: #fff;
+        text-align: center;
+        border: 1px solid #000;
+        padding: 20px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child {
+            //grid-column-start: 1;
+            //grid-column-end: 3;
+            //
+            //grid-row-start: 1;
+            //grid-row-end: 4;
+            //
+            //grid-column: 1 / 3;
+            //grid-row: 1 / 4;
+            //
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+        &:nth-child(7) {
+            grid-column: 1 / -1;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item {
+            &:first-child {
+                grid-column: 1 / 1;
+                grid-row: 1 / 1;
+            }
+            &:nth-child(7) {
+                grid-column: 1 / 1;
+                grid-row: 1 / 1;
+            }
         }
     }
 }

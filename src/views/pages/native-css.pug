@@ -30,6 +30,10 @@ block content
             a(href="#" class="icon-mouse")
                 span(class="icon-mouse__arrow --first")
                 span(class="icon-mouse__arrow --second")
+        .btn-section
+            a(href="#" class="icon-mouse-holisticon")
+                span(class="icon-mouse-holisticon__circle --first")
+                span(class="icon-mouse-holisticon__circle --second")
     div(class="row row--checkbox")
         .checkbox-slider
             input(type="checkbox" id="checkbox-slider" class="checkbox-slider__input")
@@ -109,4 +113,13 @@ block content
         .focus-within
             form(action="#" class="focus-within__form")
                 input(type="text" class="focus-within__input")
+    div(class="row row--grid-fourth")
+        .row__title Grid #4
+        .fourth-grid
+                ul.fourth-grid__list
+                    - for (var x = 1; x < 19; x++)
+                        li.fourth-grid__item
+                            span.fourth-grid__text Lorem
+
+
 
