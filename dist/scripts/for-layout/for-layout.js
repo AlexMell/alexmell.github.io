@@ -48,3 +48,29 @@ function followType() {
     });
 }
 followType();
+
+function customPopup() {
+
+    var $btnShowPopup = $('.js-open-popup');
+    var $btnClosePopup = $('.js-close-popup');
+    var $popup = $('.js-custom-popup');
+
+    $btnShowPopup.on('click', function () {
+
+        var targetPopup = $(this).attr('data-target');
+        $("[data-popup=" + targetPopup + "]").addClass('is-active');
+    });
+
+    $btnClosePopup.on('click', function () {
+        $(this).parents('.is-active').removeClass('is-active');
+    });
+
+    $popup.on('click', function (event) {
+        if (!$(event.target).closest('.js-custom-popup-holder').length && !$(event.target).is('js-custom-popup')) {
+            if ($popup.hasClass('is-active')) {
+                $popup.removeClass('is-active');
+            }
+        }
+    });
+}
+customPopup();

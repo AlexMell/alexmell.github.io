@@ -51,3 +51,7 @@ p {
     font-size: 1.125em;
     line-height: 1.75;
 }
+button {
+    font-size: 16px;
+    @include anim($dur: .2s);
+}
