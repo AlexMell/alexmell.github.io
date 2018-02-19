@@ -25,8 +25,8 @@
         position: relative;
         opacity: 0;
         transform: translateY(-100px);
-        transition: opacity 100ms, transform 100ms;
-        transition-delay: 100ms;
+        transition: opacity 400ms, transform 400ms;
+        transition-delay: 400ms;
     }
     &__title {
         font-size: 28px;
