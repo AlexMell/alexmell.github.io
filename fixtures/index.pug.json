@@ -33,16 +33,20 @@
     ],
     "itemsPlugins": [
         {
-            "btn": "Learn Backbone.js",
+            "btn": "Backbone.js",
             "url": "pages/learn-backbone.html"
         },
         {
-            "btn": "Learn Vue.js",
+            "btn": "Vue.js",
             "url": "pages/learn-vue.html"
         },
         {
-            "btn": "Learn React.js",
+            "btn": "React.js",
             "url": "https://github.com/AlexMell/learn-react"
+        },
+        {
+            "btn": "Boostrap 4",
+            "url": "pages/boostrap-4.html"
         }
     ],
     "itemsOfOther": [

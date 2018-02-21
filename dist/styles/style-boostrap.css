@@ -1,0 +1,16 @@
+.col {
+  background: #353849;
+  border: 1px solid #8f97a4;
+  color: #fff;
+  text-align: center;
+  padding: 20px; }
+
+div[class^='col'], div[class*=' col'] {
+  background: #353849;
+  border: 1px solid #8f97a4;
+  color: #fff;
+  text-align: center;
+  padding: 20px; }
+
+h3 {
+  padding: 20px 0; }
