@@ -643,6 +643,11 @@ button {
       .main.main-page {
         padding: 171px 10px 10px; } }
 
+.page-load {
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0; }
+
 .footer {
   background: #37474f;
   padding: 30px 20px;
