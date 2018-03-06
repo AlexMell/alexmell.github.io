@@ -12,6 +12,16 @@ html
         link(rel="stylesheet" href="../../../../dist/styles/styles.min.css")
         link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
         block otherCSS
+
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-115172071-1")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-115172071-1');
+        
+
     body(class=`page-load ${bodyClass}`)
         div.wrapper
             include layout/header

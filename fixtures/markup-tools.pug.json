@@ -79,12 +79,21 @@
             "url": "https://www.udemy.com/",
             "text": "Udemy",
             "lang": "Eng"
+        },
+        {
+            "url": "http://klava.org/#eng_basic",
+            "text": "Typing",
+            "lang": "Рус"
         }
     ],
     "helpList": [
         {
             "url": "http://www.colinkeany.com/blend/",
             "text": "Linear gradient generator"
+        },
+        {
+            "url": "https://onlinefontconverter.com/",
+            "text": "Online Font Convertor"
         },
         {
             "url": "http://www.melanieceraso.com/psd-to-css3/",
@@ -109,6 +118,10 @@
         {
             "url": "http://yeoman.io/",
             "text": "YeoMan"
+        },
+        {
+            "url": "https://spiritapp.io/",
+            "text": "Spirit"
         },
         {
             "url": "https://pin.gy/cli/",
@@ -200,6 +213,10 @@
         }
     ],
     "productivityList": [
+        {
+            "url": "http://xwavesoft.com/be-focused-pro-for-iphone-ipad-mac-os-x.html",
+            "text": "Pomodoro Timer (Be Focused)"
+        },
         {
             "url": "https://www.jetbrains.com/idea/",
             "text": "IntelliJ IDEA"
