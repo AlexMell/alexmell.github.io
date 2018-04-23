@@ -19,6 +19,10 @@
         {
             "btn": "Layout",
             "url": "pages/for-layout.html"
+        },
+        {
+            "btn": "Blur",
+            "url": "pages/blur.html"
         }
     ],
     "itemsNative": [
