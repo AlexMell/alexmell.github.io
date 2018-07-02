@@ -3,5 +3,6 @@
 .vscode/
 .DS_Store
 .eslintrc.json
+.package-lock.json
 node_modules/
 learn-react/
