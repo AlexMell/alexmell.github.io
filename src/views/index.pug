@@ -3,9 +3,8 @@ block content
     div.pages
 
         mixin list(item)
-            ul.pages__list
-                li.pages__item
-                    a(class="btn pages__link", href=item.url)= item.btn
+            li.pages__item
+                a(class="btn pages__link", href=item.url)= item.btn
 
         div.pages__division
             span.pages__title Just for fun

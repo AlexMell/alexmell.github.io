@@ -211,3 +211,5 @@ var exercise4 = new Vue({
         }
     }
 });
+
+var exercise5 = new Vue({});

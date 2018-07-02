@@ -4,7 +4,7 @@
   "description": "Education",
   "main": "gulpfile.js",
   "scripts": {
-    "Empty": "Empty"
+    "dev": "gulp"
   },
   "author": "https://github.com/AlexMell",
   "devDependencies": {

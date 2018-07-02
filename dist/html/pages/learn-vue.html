@@ -86,7 +86,7 @@
             <!-- 3) Call a function to output a random float between 0 and 1 (Math.random())-->
             <p>Random: {{ randomAge() }}</p>
             <!-- 4) Search any image on Google and output it here by binding the "src" attribute--><br>
-            <div><img v-bind:src="imgLink" style="width:100px; height:100px;"></div>
+            <div><img v-bind:src="imgLink" style="width:100px; height:100px"></div>
             <!-- 5) Pre-Populate this input with your name (set the "value" attribute)-->
             <div>
               <input type="text" v-bind:value="name">
@@ -152,8 +152,8 @@
           </div>
         </div>
         <div class="row row--vue">
-          <h3>Filtres</h3>
-          <div id="exercise-4">
+          <h3>Update</h3>
+          <div id="exercise-5">
             <ul>
               <li v-for="item in filteredUsers">{{ item.name }}, {{ item.age }} </li>
             </ul>

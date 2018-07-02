@@ -19,10 +19,6 @@
         {
             "btn": "Layout",
             "url": "pages/for-layout.html"
-        },
-        {
-            "btn": "Blur",
-            "url": "pages/blur.html"
         }
     ],
     "itemsNative": [
@@ -57,10 +53,6 @@
         {
             "btn": "AMP",
             "url": "pages/amp.html"
-        },
-        {
-            "btn": "WordPress",
-            "url": "pages/learn-wordpress.html"
         }
     ]
 }

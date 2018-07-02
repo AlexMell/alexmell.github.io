@@ -218,3 +218,7 @@ let exercise4 = new Vue({
         }
     },
 });
+
+let exercise5 = new Vue({
+    
+});
